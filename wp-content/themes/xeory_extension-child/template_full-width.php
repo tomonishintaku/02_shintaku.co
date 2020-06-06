@@ -5,10 +5,18 @@ Template Name: Full Width
 <?php get_header(); ?>
 
 <div id="content" class="full-width">
+  
+<?php if( !(is_home() || is_front_page() || is_singular('lp') ) ){ ?>
+  
+  <div class="breadcrumb-area">
+    <div class="wrap">
+      <?php bzb_breadcrumb(); ?>
+    </div>
+  </div>
+    
+<?php } ?>
 
 <div class="wrap">
-
-  
 
   <div id="main" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
     

@@ -23,27 +23,33 @@ $white: #fff;
     color: #06ABC8 !important;
 }
 
-.breadcrumb {
-    padding: 0;
+#header {
     background-color: #fff;
-}
-
-body.color01 #header,
-body.color01 #gnav,
-body.color01 #header-fnav-area #header-fnav-btn a {
-    background: $white !important;
 }
 
 .full-width .main-inner {
     margin-right: 0;
 }
 
+#content {
+    padding: 0;
+}
+
+.breadcrumb-area .wrap {
+    padding: 10px 0 0 50px;
+}
+.post-content h1 {
+    margin-top: 0;
+}
+
 body.color01 .cat-content, body.color01 article.post, body.color01 article.page {
      border: 1px $white solid;
     }
     body.color01 {
-        .post-meta-area, .breadcrumb-area, .post-meta-area .post-meta-comment li, .post-meta-area .post-meta-comment li, .post-author, #comments, .post-header {
-            border: 1px solid $white;
+        .post-meta-area, .breadcrumb-area, .post-meta-area .post-meta-comment li, .post-meta-area .post-meta-comment li, .post-author, #comments, .post-header,.breadcrumb, .breadcrumb-area, #gnav, #header-fnav-area #header-fnav-btn a {
+            border: 0;
+            background: transparent!important;
+            background-color: none!important;
         }
     }
 
@@ -55,6 +61,12 @@ body.color01 .breadcrumb-area {
     border-bottom: 1px solid #fff;
 }
 
+@media screen and (max-width: 767px){
+
+.breadcrumb-area .wrap {
+    padding-left: 24px;
+}
+}
 @media screen and (min-width: 992px){
 .full-width .main-inner, .main-inner {
     margin-right: 0;

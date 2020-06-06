@@ -57,23 +57,6 @@ wp_head();
     <div id="header-right" class="clearfix">
 
     <?php if( has_nav_menu( 'footer_nav' ) ){ ?>
-
-    <div id="header-fnav-area">
-      <p id="header-fnav-btn"><a href="#"><?php echo get_option('footer_menu_title'); ?><br /><i class="fa fa-angle-down"></i></a></p>
-      <nav id="header-fnav" role="navigation" itemscope="itemscope" itemtype="http://scheme.org/SiteNavigationElement">
-      <?php
-        wp_nav_menu(
-          array(
-            'theme_location'  => 'footer_nav',
-            'menu_class'      => 'clearfix',
-            'menu_id'         => 'fnav-h-ul',
-            'container'       => 'div',
-            'container_id'    => 'fnav-h-container',
-            'container_class' => 'fnav-h-container'
-          )
-        );?>  
-      </nav>
-    </div>
     
     <?php } // if footer_nav ?>
     
@@ -129,36 +112,11 @@ wp_head();
           } //if footer_nav 
           ?>
         </div>
-        <div id="header-cont-content" class="grid-6">
-          <h4>ブログコンテンツ</h4>
-                <?php
-        wp_nav_menu(
-          array(
-            'theme_location'  => 'global_nav',
-            'menu_class'      => 'clearfix',
-            'menu_id'         => 'gnav-ul-sp',
-            'container'       => 'div',
-            'container_id'    => 'gnav-container-sp',
-            'container_class' => 'gnav-container'
-          )
-        );?>
-        </div>
-        
     </div>
     
     </div>
   </nav>
 
-
-<?php if( !(is_home() || is_front_page() || is_singular('lp') ) ){ ?>
-  
-  <div class="breadcrumb-area">
-    <div class="wrap">
-      <?php bzb_breadcrumb(); ?>
-    </div>
-  </div>
-    
-<?php } ?>
 
 
 
