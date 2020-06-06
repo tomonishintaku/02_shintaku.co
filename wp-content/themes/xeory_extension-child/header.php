@@ -12,6 +12,10 @@ wp_head();
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <?php echo get_option('analytics_tracking_code');?>
 
+
+<!--公開時には削除するCSS-->
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>">
+
 </head>
 
 <body <?php body_class();?> itemschope="itemscope" itemtype="http://schema.org/WebPage">

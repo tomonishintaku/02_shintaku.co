@@ -1,22 +1,37 @@
 .epsilon-dashboard-tab {
   padding: 20px 0;
   display: none;
-  position: relative; }
-  .epsilon-dashboard-tab.active {
-    display: block; }
-  .epsilon-dashboard-tab .row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; }
-    .epsilon-dashboard-tab .row .col {
-      flex: 1;
-      min-width: 30%; }
-  .epsilon-dashboard-tab .standout {
-    border: 1px dashed #555;
-    background: #fff;
-    width: 100%;
-    padding: 40px;
-    text-align: center;
-    margin-top: 15px; }
+  position: relative;
+}
 
+.epsilon-dashboard-tab.active {
+  display: block;
+}
+
+.epsilon-dashboard-tab .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.epsilon-dashboard-tab .row .col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 30%;
+}
+
+.epsilon-dashboard-tab .standout {
+  border: 1px dashed #555;
+  background: #fff;
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+  margin-top: 15px;
+}
 /*# sourceMappingURL=tabs-content.css.map */

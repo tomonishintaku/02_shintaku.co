@@ -1,11 +1,63 @@
+@charset "UTF-8";
 /*!ss 
 Theme Name: xeory_extension-child
 Template: xeory_extension
 Theme URI: http://xeory.jp/extension
-Description: Xeory拡張テーマ
-Author: バズ部  
+Description: Xeory
+Author: buzz club 
 Text Domain: XeoryExtension Child
 Author URI: https://bazubu.com/
 Version: 0.2.3
 */
+#header {
+  background-color: #fff !important;
+}
+
+#gnav ul li.current-menu-item a,
+#gnav ul li a {
+  background: #fff !important;
+  color: #06ABC8 !important;
+}
+
+.breadcrumb {
+  padding: 0;
+  background-color: #fff;
+}
+
+body.color01 #header,
+body.color01 #gnav,
+body.color01 #header-fnav-area #header-fnav-btn a {
+  background: #fff !important;
+}
+
+.full-width .main-inner {
+  margin-right: 0;
+}
+
+body.color01 .cat-content, body.color01 article.post, body.color01 article.page {
+  border: 1px #fff solid;
+}
+
+body.color01 .post-meta-area, body.color01 .breadcrumb-area, body.color01 .post-meta-area .post-meta-comment li, body.color01 .post-meta-area .post-meta-comment li, body.color01 .post-author, body.color01 #comments, body.color01 .post-header {
+  border: 1px solid #fff;
+}
+
+body.color01 .breadcrumb-area {
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+@media screen and (min-width: 992px) {
+  .full-width .main-inner, .main-inner {
+    margin-right: 0;
+  }
+  #side {
+    float: right;
+  }
+}
+
+/*bloggerから移行の際に、コンテンツにもアイキャッチ画像と同画像が表示されていたため非表示*/
+.mobile-photo {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */

@@ -10,5 +10,32 @@
 *Text Domain: portum-child
 *License: GNU General Public License version 3.0
 *License URI: http://www.gnu.org/licenses/gpl-3.0.html
-*/body,#wrap{color:#777;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;min-height:100vh}body h1,body h2,body h3,body h4,body h5,body h6,body q,body blockquote,#wrap h1,#wrap h2,#wrap h3,#wrap h4,#wrap h5,#wrap h6,#wrap q,#wrap blockquote{color:#777}body #footer,#wrap #footer{margin-top:auto}#footer{color:#ddd !important}#footer p,#footer a{color:#ddd !important}
+*/
+body, #wrap {
+  color: #777;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6, body q, body blockquote, #wrap h1, #wrap h2, #wrap h3, #wrap h4, #wrap h5, #wrap h6, #wrap q, #wrap blockquote {
+  color: #777;
+}
+
+body #footer, #wrap #footer {
+  margin-top: auto;
+}
+
+#footer {
+  color: #ddd !important;
+}
+
+#footer p, #footer a {
+  color: #ddd !important;
+}
 /*# sourceMappingURL=style.css.map */

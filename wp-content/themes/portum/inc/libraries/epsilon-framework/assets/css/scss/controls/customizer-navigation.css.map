@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,wCAAwC,CAAC;EACrC,cAAc,EAAE,GAAG;CACtB;;AAED,AAAA,8BAA8B,CAAC;EAC3B,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,YAAY;CACxB",
+    "sources": [
+        "customizer-navigation.scss"
+    ],
+    "names": [],
+    "file": "customizer-navigation.css"
+}
