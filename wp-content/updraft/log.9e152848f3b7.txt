@@ -1,0 +1,169 @@
+0000.000 (0) Opened log file at time: Thu, 04 Jun 2020 00:52:45 +0000 on https://shintaku.co
+0000.001 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.25 WP: 5.4.1 PHP: 7.3.17 (litespeed, Linux web0096.sh.tyo1 3.10.0-962.3.2.lve1.5.35.el7.x86_64 #1 SMP Tue Apr 14 15:56:28 EDT 2020 x86_64) MySQL: 5.7.27-log WPLANG: ja Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 11.2M | 12M) multisite: N openssl: OpenSSL 1.0.2k  26 Jan 2017 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.002 (0) Free space on disk containing Updraft's temporary directory: 8254446.1 MB
+0000.003 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.006 (0) Semaphore (fd, wp_options) being initialised
+0000.008 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.009 (0) Set semaphore last lock (fd) time to 2020-06-04 00:52:45
+0000.010 (0) Semaphore lock (fd) complete
+0000.012 (0) Backup run: resumption=0, nonce=9e152848f3b7, file_nonce=9e152848f3b7 begun at=1591231965 (0s ago), job type=backup
+0000.013 (0) Scheduling a resumption (1) after 300 seconds (1591232265) in case this run gets aborted
+0000.032 (0) Checking if we have a zip executable available
+0000.032 (0) Testing: /usr/bin/zip
+0000.038 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.039 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.039 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.040 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.040 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.045 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.046 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.047 (0) Working binary zip found: /usr/bin/zip
+0000.048 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.049 (0) Creation of backups of directories: beginning
+0000.051 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0000.107 (0) Total entities for the zip file: 315 directories, 1820 files (0 skipped as non-modified), 36.6 MB
+0000.111 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0000.114 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0000.118 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0000.121 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0000.124 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0000.124 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (15.2 MB, 1820 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0000.756 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: size is now: 4.70 MB
+0000.760 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: 600 files added (on-disk size: 4824.9 KB)
+0000.764 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: 700 files added (on-disk size: 4824.9 KB)
+0000.767 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: 800 files added (on-disk size: 4824.9 KB)
+0000.770 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: 900 files added (on-disk size: 4824.9 KB)
+0000.774 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: 1000 files added (on-disk size: 4824.9 KB)
+0000.774 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (12.3 MB, 1820 files batched, 501 (1002) added so far); re-opening (prior size: 4824.9 KB)
+0001.372 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: size is now: 8.40 MB
+0001.377 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: 1100 files added (on-disk size: 8632 KB)
+0001.381 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: 1200 files added (on-disk size: 8632 KB)
+0001.384 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: 1300 files added (on-disk size: 8632 KB)
+0001.387 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: 1400 files added (on-disk size: 8632 KB)
+0001.391 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: 1500 files added (on-disk size: 8632 KB)
+0001.392 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.1 MB, 1820 files batched, 501 (1503) added so far); re-opening (prior size: 8632 KB)
+0001.604 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: 1600 files added (on-disk size: 9647.2 KB)
+0001.607 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: 1700 files added (on-disk size: 9647.2 KB)
+0001.610 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: 1800 files added (on-disk size: 9647.2 KB)
+0001.823 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip.tmp: size is now: 12.20 MB
+0001.930 (0) Created plugins zip (0) - 12478.7 KB in 1.9 s (6644.4 KB/s) (sha1: da6763bffc8e55e209b9e591d11284ac1ea0b246, sha256: 732964a383584abd385b42ca7c1cfd68e3c949e559adca372deca2e85c6a5e17)
+0001.932 (0) Beginning creation of dump of themes (split every: 400 MB)
+0001.952 (0) Total entities for the zip file: 140 directories, 629 files (0 skipped as non-modified), 20.5 MB
+0001.955 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0001.959 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0001.962 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0001.966 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-themes.zip.tmp: 400 files added (on-disk size: 0 KB)
+0001.969 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-themes.zip.tmp: 500 files added (on-disk size: 0 KB)
+0001.969 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (10 MB, 629 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0002.424 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-themes.zip.tmp: size is now: 4.20 MB
+0002.429 (0) Zip: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-themes.zip.tmp: 600 files added (on-disk size: 4313.8 KB)
+0002.536 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-themes.zip.tmp: size is now: 14.30 MB
+0002.661 (0) Created themes zip (0) - 14594 KB in 0.7 s (20059.6 KB/s) (sha1: 71fafc47cd4a08ad2b5c01feb3d5b7566f823a3a, sha256: 40b00e04765b628dae27fbef0797209cf6b6d000a2091bb24d6051dc07537ea8)
+0002.663 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0002.664 (0) Looking for candidates to backup in: /home/c8378821/public_html/shintaku.co/wp-content/uploads
+0002.665 (0) finding files: 2020: adding to list (1)
+0002.665 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0002.668 (0) Total entities for the zip file: 2 directories, 38 files (0 skipped as non-modified), 0.3 MB
+0002.684 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-uploads.zip.tmp: size is now: 0.30 MB
+0002.690 (0) Created uploads zip (0) - 272.6 KB in 0 s (11704.7 KB/s) (sha1: 2d2aabd6523092780beef09b861b6172843313f1, sha256: ea2b8f4d003aeb2934a2ba19c88b93be5fcdb896a0a737584577db2a274b851b)
+0002.692 (0) Beginning backup of other directories found in the content directory (index: 0)
+0002.693 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0002.693 (0) Looking for candidates to backup in: /home/c8378821/public_html/shintaku.co/wp-content
+0002.694 (0) finding files: upgrade: skipping: excluded by options
+0002.694 (0) finding files: themes: skipping: this is the themes directory
+0002.695 (0) finding files: uploads: skipping: this is the uploads directory
+0002.695 (0) finding files: updraft: skipping: this is the updraft directory
+0002.696 (0) finding files: plugins: skipping: this is the plugins directory
+0002.696 (0) finding files: index.php: adding to list (1)
+0002.697 (0) finding files: languages: adding to list (2)
+0002.699 (0) Total entities for the zip file: 3 directories, 42 files (0 skipped as non-modified), 3.1 MB
+0002.837 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-others.zip.tmp: size is now: 0.90 MB
+0002.848 (0) Created others zip (0) - 875.8 KB in 0.1 s (5848 KB/s) (sha1: 3c827929ac7426af8a850d35200024f5d351eaf9, sha256: 3f9252785f145a01f24b083dcb53346766bf154145b5b331ce3390ee31dcce45)
+0002.851 (0) Saving backup status to database (elements: 8)
+0002.852 (0) Beginning creation of database dump (WordPress DB)
+0002.854 (0) Testing potential mysqldump binary: /usr/bin/mysqldump
+0002.991 (0) Output: /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;\n/*!40103 SET TIME_ZONE='+00:00' */;\n/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;\n/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;\n/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;\n/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;\nDROP TABLE IF EXISTS `wp_options`;\n/*!40101 SET @saved_cs_client     = @@character_set_client */;\n/*!40101 SET character_set_client = utf8 */;\nCRE (truncated - 1234 bytes total)
+0002.992 (0) Working binary mysqldump found: /usr/bin/mysqldump
+0002.996 (0) Table wp_options: Total expected rows (approximate): 232
+0003.011 (0) Table wp_options: Total rows added: 231 in 0.01 seconds
+0003.012 (0) Table wp_options: finishing file (backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_options.table.gz - 79 KB)
+0003.014 (0) Table wp_users: Total expected rows (approximate): 2
+0003.016 (0) Table wp_users: Total rows added: 1 in 0.00 seconds
+0003.017 (0) Table wp_users: finishing file (backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_users.table.gz - 0.6 KB)
+0003.019 (0) Table wp_usermeta: Total expected rows (approximate): 45
+0003.020 (0) Table wp_usermeta: Total rows added: 45 in 0.00 seconds
+0003.021 (0) Table wp_usermeta: finishing file (backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_usermeta.table.gz - 1.6 KB)
+0003.024 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0003.025 (0) Table wp_commentmeta: Total rows added: 0 in 0.00 seconds
+0003.025 (0) Table wp_commentmeta: finishing file (backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_commentmeta.table.gz - 0.4 KB)
+0003.028 (0) Table wp_comments: Total expected rows (approximate): 0
+0003.029 (0) Table wp_comments: Total rows added: 1 in 0.00 seconds
+0003.030 (0) Table wp_comments: finishing file (backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_comments.table.gz - 0.7 KB)
+0003.032 (0) Table wp_links: Total expected rows (approximate): 0
+0003.033 (0) Table wp_links: Total rows added: 0 in 0.00 seconds
+0003.034 (0) Table wp_links: finishing file (backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_links.table.gz - 0.4 KB)
+0003.036 (0) Table wp_postmeta: Total expected rows (approximate): 178
+0003.039 (0) Table wp_postmeta: Total rows added: 178 in 0.00 seconds
+0003.039 (0) Table wp_postmeta: finishing file (backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_postmeta.table.gz - 6.7 KB)
+0003.041 (0) Table wp_posts: Total expected rows (approximate): 67
+0003.045 (0) Table wp_posts: Total rows added: 67 in 0.00 seconds
+0003.046 (0) Table wp_posts: finishing file (backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_posts.table.gz - 13.6 KB)
+0003.048 (0) Table wp_term_relationships: Total expected rows (approximate): 22
+0003.049 (0) Table wp_term_relationships: Total rows added: 23 in 0.00 seconds
+0003.050 (0) Table wp_term_relationships: finishing file (backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_term_relationships.table.gz - 0.4 KB)
+0003.052 (0) Table wp_term_taxonomy: Total expected rows (approximate): 3
+0003.053 (0) Table wp_term_taxonomy: Total rows added: 3 in 0.00 seconds
+0003.053 (0) Table wp_term_taxonomy: finishing file (backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_term_taxonomy.table.gz - 0.4 KB)
+0003.055 (0) Table wp_termmeta: Total expected rows (approximate): 0
+0003.057 (0) Table wp_termmeta: Total rows added: 0 in 0.00 seconds
+0003.057 (0) Table wp_termmeta: finishing file (backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_termmeta.table.gz - 0.4 KB)
+0003.059 (0) Table wp_terms: Total expected rows (approximate): 3
+0003.060 (0) Table wp_terms: Total rows added: 3 in 0.00 seconds
+0003.061 (0) Table wp_terms: finishing file (backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_terms.table.gz - 0.4 KB)
+0003.062 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_options.table.gz (1/12): adding to final database dump
+0003.073 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_users.table.gz (2/12): adding to final database dump
+0003.074 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_usermeta.table.gz (3/12): adding to final database dump
+0003.075 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_commentmeta.table.gz (4/12): adding to final database dump
+0003.075 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_comments.table.gz (5/12): adding to final database dump
+0003.076 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_links.table.gz (6/12): adding to final database dump
+0003.076 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_postmeta.table.gz (7/12): adding to final database dump
+0003.078 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_posts.table.gz (8/12): adding to final database dump
+0003.080 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_term_relationships.table.gz (9/12): adding to final database dump
+0003.081 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_term_taxonomy.table.gz (10/12): adding to final database dump
+0003.081 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_termmeta.table.gz (11/12): adding to final database dump
+0003.081 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db-table-wp_terms.table.gz (12/12): adding to final database dump
+0003.084 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db.gz: finished writing out complete database file (72 KB)
+0003.088 (0) Total database tables backed up: 12 (backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db.gz, size: 104244, sha1: 7c95738e981f33051f086fc600e6782c5c88c9af, sha256: d4a4896a41248e906d15de2a7decf3b42b507aedab7ad68e52ea962621289528)
+0003.091 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0003.091 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0003.092 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0003.092 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-others.zip: others: This file has not yet been successfully uploaded: will queue
+0003.093 (0) backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db.gz: db: This file has not yet been successfully uploaded: will queue
+0003.093 (0) Saving backup history. Total backup size: 27.7 MB
+0003.094 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0003.096 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0003.096 (0) No remote despatch: user chose no remote backup service
+0003.097 (0) Recording as successfully uploaded: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-plugins.zip
+0003.098 (0) Recording as successfully uploaded: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-themes.zip
+0003.099 (0) Recording as successfully uploaded: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-uploads.zip
+0003.100 (0) Recording as successfully uploaded: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-others.zip
+0003.101 (0) Recording as successfully uploaded: backup_2020-06-04-0952_SHINTAKU_9e152848f3b7-db.gz
+0003.103 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0003.103 (0) Number of backup sets in history: 1; groups (db): 1
+0003.104 (0) Examining (for databases) backup set with group_id=0, nonce=9e152848f3b7, datestamp=1591231965 (Jun 04 2020 00:52:45)
+0003.104 (0) This backup set is the backup set just made, so will not be deleted.
+0003.104 (0) Number of backup sets in history: 1; groups (files): 1
+0003.105 (0) Examining (for files) backup set with nonce=9e152848f3b7, datestamp=1591231965 (Jun 04 2020 00:52:45)
+0003.105 (0) This backup set is the backup set just made, so will not be deleted.
+0003.105 (0) This backup set is the backup set just made, so will not be deleted.
+0003.105 (0) This backup set is the backup set just made, so will not be deleted.
+0003.105 (0) This backup set is the backup set just made, so will not be deleted.
+0003.105 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0003.106 (0) Retain: saving new backup history (sets now: 1) and finishing retain operation
+0003.107 (0) Resume backup (9e152848f3b7, 0): finish run
+0003.109 (0) Decremented the semaphore (fd) by 1
+0003.110 (0) Semaphore (fd) unlocked
+0003.111 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0003.112 (0) The backup apparently succeeded and is now complete
+0003.113 (0) No email will/can be sent - the user has not configured an email address.
+0003.113 (0) バックアップは成功したようで、現在は完了しています
