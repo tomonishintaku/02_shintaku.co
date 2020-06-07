@@ -42,7 +42,7 @@ Template Name: Full Width
       </div>
       <?php endif; ?>
 
-      <section class="post-content" itemprop="text">
+      <section class="post-content p-2 p-md-5" itemprop="text">
 
       <h1><?php the_title(); ?></h1>
         <?php

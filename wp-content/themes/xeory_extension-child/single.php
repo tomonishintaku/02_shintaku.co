@@ -60,7 +60,7 @@
       </div>
       <?php endif; ?>
 
-      <section class="post-content" itemprop="text">
+      <section class="post-content p-0" itemprop="text">
         <!--VAR-->
         <?php $image = get_field('image'); ?>
         <?php $amazon_url = get_field('amazon_url'); ?>
