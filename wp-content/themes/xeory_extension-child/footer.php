@@ -42,6 +42,11 @@
       ?>
             <div id="footer-cont-sns" class="gr4">
               <?php footer_social_buttons();?>
+              
+              <!--今後移行すること-->
+              <ul><li><a target="_blank" href="https://www.linkedin.com/in/tomonishintaku/"><i class="fa fa-linkedin" aria-hidden="true"></i>Linkedin</a></li><li><a href="https://www.youtube.com/channel/UCDnt1pKShw7vYrD1JavHBkg" target="_blank"><i class="fa fa-youtube-square"></i>Youtube</a></li><li class="header-feedly"><a target="_blank" href="https://www.instagram.com/tomonishintaku/"><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</a></li></ul>
+              <!--今後移行すること-->
+              
             </div>
           </div>
         </div>

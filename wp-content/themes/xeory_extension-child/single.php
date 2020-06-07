@@ -3,7 +3,7 @@
 
 <div id="content">
 
-<div class="wrap">
+<div class="wrap mt-5">
 
   
 
@@ -25,7 +25,7 @@
     ?>
     <article id="post-<?php the_id(); ?>" <?php post_class(); ?> itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
-      <header class="post-header">
+      <header class="post-header pt-4 pl-md-4 pr-md-4">
         <div class="cat-name">
           <span>
             <?php
@@ -60,18 +60,22 @@
       </div>
       <?php endif; ?>
 
-      <section class="post-content p-0" itemprop="text">
+      <section class="post-content p-0 pl-md-4 pr-md-4" itemprop="text">
         <!--VAR-->
         <?php $image = get_field('image'); ?>
         <?php $amazon_url = get_field('amazon_url'); ?>
         <?php $author = get_field('author'); ?>
         <?php $publisher = get_field('publisher'); ?>
 
+        <?php if(empty($image)):?><!--Conditional branch VAR none-->
+        <?php else:?><!--Conditional branch VAR-->
         <div class="row text-center mb-5">
           <div class="col-12">
             <img src="<?php echo $image; ?>" alt="書籍「<?php the_title(); ?>」の表紙画像">
           </div>
-        </div>    
+        </div>
+        <?php endif;?><!--END Conditional branch VAR-->
+
         <?php
           the_content(); 
 
@@ -85,6 +89,8 @@
           wp_link_pages($args);
         ?>
 
+        <?php if(empty($amazon_url)):?><!--Conditional branch VAR none-->
+        <?php else:?><!--Conditional branch VAR-->
         <div class="row">
            <div class="col-12 col-md-8">
                <a href="<?php echo $amazon_url; ?>" target="_blank">Amazon <strong><?php the_title(); ?>(<?php echo $author; ?>/<?php echo $publisher; ?>)</strong> 販売ページへ</a>
@@ -93,6 +99,7 @@
                 <a href="<?php echo $amazon_url; ?>" target="_blank"><img src="/wp-content/uploads/common/shop_amazon-60d46fe34ec005ea5e127b67168d9ea73d5a168f41e905b961c3aa1844510c1a.svg" alt="Amazon販売ページへのリンク"></a>
            </div>
         </div>
+        <?php endif;?><!--END Conditional branch VAR-->
       </section>
 
       <footer class="post-footer">

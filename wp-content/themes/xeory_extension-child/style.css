@@ -34,6 +34,10 @@ body.home #main_visual p {
   background-color: #fff !important;
 }
 
+#side {
+  width: auto;
+}
+
 #gnav ul li.current-menu-item a,
 #gnav ul li a {
   background: #fff !important;
@@ -76,6 +80,14 @@ textarea {
 
 #gnav ul li.current-menu-item a, #gnav ul li a {
   color: #555 !important;
+}
+
+body.color01 .post-content h3 {
+  text-align: center;
+  border-bottom: none;
+  border-top: 2px dotted #00acee;
+  font-weight: bold;
+  padding-top: 4rem;
 }
 
 body.color01 .cat-content,

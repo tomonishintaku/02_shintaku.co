@@ -14,7 +14,7 @@
 
 <div id="recent_post_content" class="front-loop">
 
-<h2><i class="fa fa-clock-o"></i> 最近の投稿</h2>
+<h2>NEWS</h2>
 <div class="wrap">
   <div class="front-loop-cont">
 <?php
@@ -75,80 +75,10 @@
 
 
 
-<!-- クローズアップ -->
-<div id="front-contents" class="front-main-cont">
-<?php
-  $icon = 'none';
-  $bzb_ruby = '';
-  $bzb_catch = '';
-  $title = '';
-  $ruby = '';
-  $bzb_contents_header_array = get_option('bzb_contents_header');
-  if(is_array($bzb_contents_header_array)){
-    extract($bzb_contents_header_array) ;
-  }
-?>
-  <header class="category_title main_title front-cont-header">
-    <div class="cont-icon"><i class="<?php echo $icon;?>"></i></div>
-    <h2 class="cont-title"><?php echo $title;?></h2>
-    <p class="cont-ruby"><?php echo $ruby;?></p>
-    <div class="tri-border"><span></span></div>
-  </header>
-
-<?php
-  $i = 1;
-  $bzb_contents = get_option('bzb_contents');
-  if(is_array($bzb_contents)){
-    $left_right = "";
-  foreach((array)$bzb_contents as $key => $value){
-    $left_right = ($i % 2 == 1) ? 'left' : 'right';
-    extract(make_info_4top($value));
-?>
-  <section id="front-contents-1" class="c_box c_box_<?php echo $left_right;?>">
-    <div class="wrap">
-      <div class="c_box_inner">
-        <div class="c_title">
-          <p class="c_number"><?php echo $i;?></p>
-          <h3><?php echo $title; ?></h3>
-          <p class="c_english"><?php echo $bzb_ruby;?></p>
-        </div>
-        <div class="c_img_box" style="background-image:url(<?php echo $image;?>)"></div>
-        <div class="c_text">
-          <h4><?php echo nl2br($bzb_catch);?></h4>
-          <p><?php echo $content;?></p>
-          <?php if($button_url != ''){ ?>
-          <p class="c_btn"><a href="<?php echo $button_url;?>" class="btn"><?php echo $button_text;?></a></p>
-          <?php }else{ ?>
-          <p class="c_btn"><a href="<?php echo $url;?>" class="btn">詳しく見る</a></p>
-          <?php } ?>
-        </div>
-      </div>
-    </div>
-  </section>
-<?php 
-  $i++;
-    }
-  } 
-?>
-
-
-</div><!-- /front-contents -->
 
 
 
-<!-- サービス紹介 -->
-<?php
-  $icon = 'none';
-  $title = '';
-  $ruby = '';
-  $bzb_ruby = '';
-  $bzb_catch = '';
-  $bzb_service_header_array = get_option('bzb_service_header');
-  if(is_array($bzb_service_header_array)){
-    extract($bzb_service_header_array) ;
-  }
 
-?>
 <div id="front-service" class="front-main-cont">
 
   <header class="category_title main_title front-cont-header">
@@ -159,39 +89,6 @@
   </header>
 
 
-  <div class="wrap">
-    <div class="front-service-inner">
-
-<?php
-  $i = 1;
-  $bzb_service = get_option('bzb_service');
-  if(isset($bzb_service)){
-  foreach((array)$bzb_service as $key => $value){
-    extract(make_info_4top($value));
-?>
-      <section id="front-service-1" class="c_box">
-        <div class="c_title">
-          <h3><?php echo $title;?></h3>
-          <p class="c_english"><?php echo $bzb_ruby;?></p>
-        </div>
-        <div class="c_text">
-          <h4><?php echo nl2br($bzb_catch);?></h4>
-          <p><?php echo $service;?></p>
-          <?php if(isset($button_text) && $button_text !== '') { ?>
-            <p class="c_btn"><a href="<?php echo $button_url;?>" class="btn"><?php echo $button_text;?></a></p>
-          <?php }else{ ?>
-            <p class="c_btn"><a href="<?php echo $url;?>" class="btn">詳しく見る</a></p>
-          <?php } ?>
-        </div>
-      </section>
-  <?php
-    }
-  }
-  ?>    
-    </div>
-  </div>
-
-</div><!-- /front-contents -->
 
 <!-- 会社概要 -->
 <div id="front-company" class="front-main-cont">

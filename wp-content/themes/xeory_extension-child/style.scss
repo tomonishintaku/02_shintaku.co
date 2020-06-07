@@ -37,6 +37,9 @@ p {
 #header {
     background-color: $white !important;
 }
+#side {
+    width: auto;
+}
 
 #gnav ul li.current-menu-item a,
 #gnav ul li a {
@@ -84,6 +87,15 @@ textarea {
 }
 
 body.color01 {
+
+    .post-content h3 {
+        text-align: center;
+        border-bottom: none;
+        border-top: 2px dotted #00acee;
+        font-weight: bold;
+        padding-top: 4rem;
+        }
+    
     .cat-content,
     article.post,
     article.page {
