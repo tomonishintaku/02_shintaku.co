@@ -10,28 +10,41 @@ Author URI: https://bazubu.com/
 Version: 0.2.3
 */
 
-$corporate-color: #00acee;
-$sub-color:#000080;
-$normal-text-color:#555;
-$white: #fff;
+@import "part-of-bootstrap";
+@import "variables";
 
 body {
-    background: url(./lib/images/bg-stripe_2.png);
-    background-size: 300px;
+    background-image: linear-gradient(
+        100deg,
+        #eeeeee 14.29%,
+        #ffffff 14.29%,
+        #ffffff 50%,
+        #eeeeee 50%,
+        #eeeeee 64.29%,
+        #ffffff 64.29%,
+        #ffffff 100%
+    );
+    background-size: 7.11px 40.31px;
 }
 
+.corporate-color{color:$corporate-color;}
+.sub-color{color:$sub-color;}
+.gray{color:$gray;}
+.red{color:$red;}
+.pink{color:$pink;}
+.white{color:$white;}
+
 body.home #main_visual {
-    background-image: url(./lib/images/bg-stripe_2.png)!important;
-    color: $sub-color!important;
-    height: 440px!important;
-    h2{
-    margin-top: -6rem;
-    font-weight: bold;
-}
-p {
-    font-size: 20px;
-    width: 800px;
-}
+    color: $sub-color !important;
+    height: 440px !important;
+    h2 {
+        margin-top: -6rem;
+        font-weight: bold;
+    }
+    p {
+        font-size: 20px;
+        width: 800px;
+    }
 }
 
 #header {
@@ -39,12 +52,15 @@ p {
 }
 #side {
     width: auto;
+    .side-widget a {
+        text-decoration: none;
+    }
 }
 
 #gnav ul li.current-menu-item a,
 #gnav ul li a {
     background: $white !important;
-    color: #06ABC8 !important;
+    color: #06abc8 !important;
 }
 
 #header {
@@ -67,6 +83,22 @@ p {
     margin-top: 0;
 }
 
+.faq {
+    &__unit {
+        .a {
+            color: $pink;
+        }
+
+        .q,
+        .a {
+            span {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
 form input[type="text"],
 form input[type="email"],
 form input[type="url"],
@@ -78,30 +110,37 @@ button,
 input,
 select,
 textarea {
-    width: 45vw !important;
+    width: 34.5vw !important;
 }
 
-
-#gnav ul li.current-menu-item a, #gnav ul li a {
+#gnav ul li.current-menu-item a,
+#gnav ul li a {
     color: $normal-text-color !important;
 }
 
 body.color01 {
-
+    .post-loop-wrap .post-footer {
+        border-top: none;
+        a.morelink {
+            background: none;
+            color: $corporate-color !important;
+            border: none;
+        }
+    }
     .post-content h3 {
         text-align: center;
         border-bottom: none;
         border-top: 2px dotted #00acee;
         font-weight: bold;
         padding-top: 4rem;
-        }
-    
+    }
+
     .cat-content,
     article.post,
     article.page {
         border: 1px $white solid;
     }
-    
+
     .post-meta-area,
     .breadcrumb-area,
     .post-meta-area .post-meta-comment li,
@@ -135,71 +174,62 @@ body.color01 {
         border-left: 8px solid $corporate-color;
         background: none;
         color: #555;
-         }
-
-}//close body.color01
+    }
+} //close body.color01
 .post-loop-wrap h2.post-title {
     font-size: 24px;
 }
 
 @media screen and (max-width: 991px) {
     #gnav-sp {
-        background:#000;
+        background: #000;
         opacity: 0.6;
         height: 100%;
-        }
-        #header {
-
-            #logo {
-                height: 50px;
-                line-height: 44px;
-                img {
-                    max-height: 32px;
-                }
-        
+    }
+    #header {
+        #logo {
+            height: 50px;
+            line-height: 44px;
+            img {
+                max-height: 32px;
             }
-    
         }
-    
-        #header-nav-btn {
-            width: 116px;
-            float: right;
-            line-height: 92px;
+    }
+
+    #header-nav-btn {
+        width: 116px;
+        float: right;
+        line-height: 92px;
         margin: -24px -7vw 0 0;
-    
-            a {
-                font-size: 2rem;
-                color: $sub-color!important;
-                background: $white;
-            }
-    
-        }
-        body.home {
-            #main_visual{
-                height: 480px!important;
-                
-                h2 {
-                    line-height: 3rem;
-            font-size: 2.4rem;
-            margin-top: 0;
-                  }
-                p {
-                    width: 85%;
-                }
-            
 
+        a {
+            font-size: 2rem;
+            color: $sub-color !important;
+            background: $white;
+        }
+    }
+    body.home {
+        #main_visual {
+            height: 480px !important;
+
+            h2 {
+                line-height: 3rem;
+                font-size: 2.4rem;
+                margin-top: 0;
+            }
+            p {
+                width: 85%;
             }
         }
-}//close max-width: 991px
+    }
+} //close max-width: 991px
 
 @media screen and (max-width: 767px) {
-
     .breadcrumb-area .wrap {
         padding-left: 24px;
     }
 
     body.color01 {
-
         form input[type="text"],
         form input[type="email"],
         form input[type="url"],
@@ -218,15 +248,11 @@ body.color01 {
     }
 
     #header-nav-btn {
-    margin: -54px -7vw 0 0;
-}
-
-}//close max-width: 767px
-
-
+        margin: -54px -7vw 0 0;
+    }
+} //close max-width: 767px
 
 @media screen and (min-width: 992px) {
-
     .full-width .main-inner,
     .main-inner {
         margin-right: 0;
@@ -235,14 +261,9 @@ body.color01 {
     #side {
         float: right;
     }
-
-    .w-md-50 {
-        width: 50% !important;
-    }
 }
 
 //close min-width: 992px
-
 
 /*bloggerから移行の際に、コンテンツにもアイキャッチ画像と同画像が表示されていたため非表示*/
 .mobile-photo {

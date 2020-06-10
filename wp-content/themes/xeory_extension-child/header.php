@@ -9,8 +9,7 @@
 wp_head();
 ?>
 <link rel="icon" href="/wp-content/uploads/common/favicon.ico">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link rel='stylesheet' href='/wp-content/themes/xeory_extension-child/lib/css/bootstrap-grid.min.css' type='text/css' media='all' />
 <?php echo get_option('analytics_tracking_code');?>
 
 

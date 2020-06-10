@@ -34,19 +34,7 @@
             ?>
           </span>
         </div>
-
-        <!--VAR-->
-        <?php $image = get_field('image'); ?>
-        <?php $amazon_url = get_field('amazon_url'); ?>
-        <?php $author = get_field('author'); ?>
-        <?php $publisher = get_field('publisher'); ?>
-
-        <h1 class="post-title" itemprop="headline"><?php the_title(); ?>
-        <?php if(empty($author)):?><!--Conditional branch VAR none-->
-        <?php else:?><!--Conditional branch VAR-->
-          <br><small>(<?php echo $author; ?>/<?php echo $publisher; ?>)</small>
-        <?php endif;?><!--END Conditional branch VAR-->
-        </h1>
+        <h1 class="post-title" itemprop="headline"><?php the_title(); ?></h1>
         <div class="post-sns">
           <?php bzb_social_buttons();?>
         </div>
@@ -73,11 +61,17 @@
       <?php endif; ?>
 
       <section class="post-content p-0 pl-md-4 pr-md-4" itemprop="text">
+        <!--VAR-->
+        <?php $image = get_field('image'); ?>
+        <?php $amazon_url = get_field('amazon_url'); ?>
+        <?php $author = get_field('author'); ?>
+        <?php $publisher = get_field('publisher'); ?>
+
         <?php if(empty($image)):?><!--Conditional branch VAR none-->
         <?php else:?><!--Conditional branch VAR-->
         <div class="row text-center mb-5">
           <div class="col-12">
-            <img src="<?php echo $image; ?>" alt="書籍「<?php the_title(); ?>(<?php echo $author; ?>/<?php echo $publisher; ?>)」の表紙画像">
+            <img src="<?php echo $image; ?>" alt="書籍「<?php the_title(); ?>」の表紙画像">
           </div>
         </div>
         <?php endif;?><!--END Conditional branch VAR-->
