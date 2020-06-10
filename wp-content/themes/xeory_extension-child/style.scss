@@ -16,11 +16,11 @@ Version: 0.2.3
 body {
     background-image: linear-gradient(
         100deg,
-        #eeeeee 14.29%,
+        #fafafa 14.29%,
         #ffffff 14.29%,
         #ffffff 50%,
-        #eeeeee 50%,
-        #eeeeee 64.29%,
+        #fafafa 50%,
+        #fafafa 64.29%,
         #ffffff 64.29%,
         #ffffff 100%
     );
@@ -119,6 +119,11 @@ textarea {
 }
 
 body.color01 {
+    .post-content h4 {
+        border-left: none;
+        padding-left: 0;
+        font-size: 1.4rem;
+        }
     .post-loop-wrap .post-footer {
         border-top: none;
         a.morelink {
