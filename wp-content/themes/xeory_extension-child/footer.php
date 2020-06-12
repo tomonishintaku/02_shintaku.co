@@ -52,14 +52,63 @@
         </div>
         <div class="gr6">
           <div class="row">
-        <?php
-         $facebook_page_url = get_option('facebook_page_url');
-         if(isset($facebook_page_url) && $facebook_page_url !== ''){
+
+
+<!-- 会社概要 -->
+<div class="front-main-cont">
+  <?php 
+    $companies = get_option('company');
+    $use_company_map = get_option('use_company_map');
+    $company_map = "";
+    $company_map_class = '';
+    
+    if(isset($use_company_map) && $use_company_map !== ''){
+      $company_map = get_option('company_map');
+    }else{
+      $company_map_class='no-company-map';
+    }
+
+  $icon = 'none';
+  $titile = '';
+  $ruby = '';
+  $bzb_company_header_array = get_option('bzb_company_header');
+  if(is_array($bzb_company_header_array)){
+    extract($bzb_company_header_array) ;
+  }
+
+  ?>
+
+  <header class="main_title">
+    <div class="cont-icon"><i class="<?php echo $icon;?>"></i></div>
+    <h2 class="cont-title"><?php echo $title;?></h2>
+    <p class="cont-ruby"><?php echo $ruby;?></p>
+  </header>
+
+
+  <section id="front-contents-1" class="c_box c_box_left <?php echo $company_map_class; ?>">
+    <div class="c_img_box">
+      <?php echo $company_map;?>
+    </div>
+
+    <div class="wrap">
+      <div class="c_box_inner">
+        <?php 
+        if(isset($companies) && $companies !== ''){
+          $i = 1;
+          foreach((array)$companies as $key => $company){
+            echo '<dl id="front-company-'.$i.'">';
+            echo "<dt><span>" . $company['name'] . "</span></dt><dd><span>" . $company['val'] . "</span></dd>";
+            echo "</dl>";
+            $i++;
+          }
+        }
         ?>
-        <div id="footer-facebook" class="gr12 text-right">
-            <div class="fb-page" data-href="<?php echo $facebook_page_url;?>" data-width="500" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="<?php echo $facebook_page_url;?>"><a href="<?php echo $facebook_page_url;?>"><?php echo get_option('site_name');?></a></blockquote></div></div>
-        </div>
-        <?php } ?>
+      </div>
+    </div>
+  </section>
+</div><!-- front-company -->
+
+
           </div>
         </div>
       </div>
