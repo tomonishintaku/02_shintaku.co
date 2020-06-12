@@ -155,11 +155,13 @@ form {
     @include contact-width;
     input[type="submit"] {
         border-radius: 5px;
-        margin-left: 1.5vw;
+        margin-left: 2vw;
         letter-spacing: 10px;
         font-size: 1.25rem;
+        width: 30vw;
     }
 }
+
 
 }
 #gnav ul li.current-menu-item a,
@@ -168,6 +170,19 @@ form {
 }
 
 body.color01 {
+    .comment-form{
+        .form-submit{
+            text-align: center;
+        }
+        }
+    .faq{
+        &__unit{
+        border-bottom:dotted 1px $gray;
+        margin-bottom: 2rem;
+        &:last-child{border-bottom:none!important;}
+    }
+
+}
     .front-loop {
         margin-left: 0;
     }
