@@ -84,7 +84,7 @@ wp_head();
       
 
       <div id="header-nav-btn">
-        <a href="#"><i class="fa fa-align-justify"></i></a>
+        <a href="#"><img src="/wp-content/themes/xeory_extension-child/lib/images/common/mobile-menu-button.png" alt="Menu Button for Mobile"></a>
       </div>
       
     <?php } ?>

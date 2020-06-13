@@ -120,7 +120,7 @@
   <div class="footer-02">
     <div class="wrap">
       <p class="footer-copy">
-        © Copyright <?php echo date('Y'); ?> <?php echo get_bloginfo('name'); ?>. All rights reserved.
+        © Copyright <?php echo date('Y'); ?> SHINTAKU。. All rights reserved.
       </p>
     </div><!-- /wrap -->
   </div><!-- /footer-02 -->

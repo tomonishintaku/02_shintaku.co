@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*!ss 
+/*! 
 Theme Name: xeory_extension-child
 Template: xeory_extension
 Theme URI: http://xeory.jp/extension
@@ -49,10 +49,15 @@ body {
 .white {
     color: $white;
 }
+body.home.color01 #main_visual {
+        height: 480px !important;
+    background-color: transparent;
+    color: $white!important;
+  text-shadow:1px 1px 0 $gray, -1px -1px 0 $gray,
+  -1px 1px 0 $gray, 1px -1px 0 $gray,
+  0px 1px 0 $gray,  0-1px 0 $gray,
+  -1px 0 0 $gray, 1px 0 0 $gray;
 
-body.home #main_visual {
-    color: $sub-color !important;
-    height: 440px !important;
 
     h2 {
         margin-top: -6rem;
@@ -61,7 +66,7 @@ body.home #main_visual {
 
     p {
         font-size: 20px;
-        width: 800px;
+        font-weight: bold;
     }
 }
 
@@ -170,6 +175,16 @@ form {
 }
 
 body.color01 {
+
+    .about-list{
+        dt{
+            float: left;
+          }
+          dd{
+            margin-left: 80px;
+          }
+    }
+
     .bzb-sns-btn li.bzb-facebook {
         margin-right: 12px;
     }
@@ -331,13 +346,58 @@ p{
 }
 
 @media screen and (max-width: 991px) {
+
+    body.home.color01{
+
+        #main_visual{
+                background-image: url(/wp-content/themes/xeory_extension-child/lib/images/front-main-visual-web-design-shintaku_sp.jpg)!important;
+            p {
+        width: auto;
+        }
+        h2 {
+            margin-top: -1rem;
+            font-size: 2.2rem;
+        }
+ }
+}
+
+    #footer{
+        #footer-brand-area, .menu-primary-container, #footer-cont-sns ul{
+            padding: 0 1rem;
+        }
+        .c_box_inner{
+            padding: 0 2rem;
+        }
+        }
+        
+    .post-content {
+        h1 {
+        margin-top: 2rem;
+    }
+    h2{line-height: 2.6rem;}
+        }
     #gnav-sp {
+        top: 94px!important;
+        overflow: hidden;
         background: #000;
         opacity: 0.6;
         height: 100%;
+        .menu-primary-container li a{
+            font-size: 18px;
+        }
     }
 
+    .faq__unit {
+        .q span, .a span{
+        padding-left: 0.8rem;
+    }
+    }
     #header {
+        position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 9;
+    top: 0;
         #logo {
             height: 50px;
             line-height: 44px;
@@ -349,15 +409,16 @@ p{
     }
 
     #header-nav-btn {
-        width: 116px;
+        width: 30px;
         float: right;
         line-height: 92px;
-        margin: -24px -7vw 0 0;
-
+        margin: -56px 0 0 0;
         a {
             font-size: 2rem;
             color: $sub-color !important;
             background: $white;
+            img{width: 25px;
+            }
         }
     }
 
@@ -420,9 +481,6 @@ p{
         border-bottom: none;
     }}
 
-    #header-nav-btn {
-        margin: -54px -7vw 0 0;
-    }
 }
 
 //close max-width: 767px

@@ -5,6 +5,14 @@ function theme_enqueue_styles() {
   wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array('parent-style')
 );
 }
+add_action('wp_enqueue_scripts', 'prfx_frontend_enqueue');
+function prfx_frontend_enqueue() {
+  wp_enqueue_script( 'parent-style', plugins_url('/lib/js/jquery.pagetop.js', __FILE__) );
+  wp_enqueue_script( 'child-style', plugins_url('/lib/js/jquery.pagetop.js', __FILE__), array('parent-style'));
+}
+
+
+
 
 /* 【管理画面】管理画面にもファビコンを表示 */
 function admin_favicon() {
