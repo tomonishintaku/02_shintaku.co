@@ -86,7 +86,6 @@ if( !function_exists('bzb_breadcrumb') ){
   {
     $list_item  = '<li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">';
     $list_item .= ( $href === '' ) ? '' : '<a itemprop="item" href="' . esc_url($href) . '">';
-    $list_item .= '<i class="fa fa-' . $fa . '"></i> ';
     $list_item .= '<span itemprop="name">' . $name . '</span>';
     $list_item .= ( $href === '' ) ? '' : '</a>';
     $list_item .= '<meta itemprop="position" content="' . $position . '">';

@@ -1,25 +1,6 @@
 <footer id="footer">
   <div class="footer-01">
-    <div class="wrap">
-
-      <div id="footer-brand-area" class="row">
-        <div class="footer-logo gr6">
-        <?php
-        $logo_image = get_option('footer-logo');
-          if( isset($logo_image) && $logo_image !== '' ){
-        ?>
-          <img src="<?php echo get_option('footer-logo');?>" alt="<?php echo get_bloginfo('name'); ?>" />
-        <?php
-          }else{
-            echo get_bloginfo('name');
-          }
-        ?>
-        </div>
-        <div class="footer-address gr6">
-          <?php echo get_option('footer-address');?>
-        </div>
-      </div><!-- /footer-brand-area -->
-
+    <div class="wrap container">
       <div id="footer-content-area" class="row">
         <div id="footer-list-area" class="gr6">
           <div class="row">
@@ -56,6 +37,7 @@
 
 <!-- 会社概要 -->
 <div class="front-main-cont">
+  <?php echo get_option('footer-address');?>
   <?php 
     $companies = get_option('company');
     $use_company_map = get_option('use_company_map');
@@ -196,6 +178,19 @@ $(function(){
     return false;
   });
 });
+
+// sp-nav hide and seek
+var startPos = 0,winScrollTop = 0;
+$(window).on('scroll',function(){
+    winScrollTop = $(this).scrollTop();
+    if (winScrollTop >= startPos) {
+        $('#header').addClass('hide');
+    } else {
+        $('#header').removeClass('hide');
+    }
+    startPos = winScrollTop;
+});
+
 
 })(jQuery);
 

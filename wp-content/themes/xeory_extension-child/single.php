@@ -37,6 +37,7 @@
 
         <!--VAR-->
         <?php $image = get_field('image'); ?>
+        <?php $book_star = get_field('book_star'); ?>
         <?php $amazon_url = get_field('amazon_url'); ?>
         <?php $author = get_field('author'); ?>
         <?php $publisher = get_field('publisher'); ?>
@@ -54,7 +55,7 @@
 
       <div class="post-meta-area">
         <ul class="post-meta list-inline">
-          <li class="date" itemprop="datePublished" datetime="<?php the_time('c');?>"><i class="fa fa-clock-o"></i> <?php the_time('Y.m.d');?></li>
+          <li class="date" itemprop="datePublished" datetime="<?php the_time('c');?>"> <?php the_time('Y.m.d');?></li>
         </ul>
         <ul class="post-meta-comment">
           <li class="author">
@@ -80,6 +81,11 @@
             <img src="<?php echo $image; ?>" alt="書籍「<?php the_title(); ?>(<?php echo $author; ?>/<?php echo $publisher; ?>)」の表紙画像">
           </div>
         </div>
+        <?php endif;?><!--END Conditional branch VAR-->
+
+        <?php if(empty($book_star)):?><!--Conditional branch VAR none-->
+        <?php else:?><!--Conditional branch VAR-->
+            <p class="book_star">評価:<span><?php echo $book_star; ?></span></p>
         <?php endif;?><!--END Conditional branch VAR-->
 
         <?php
@@ -113,11 +119,11 @@
         
         <?php echo bzb_social_buttons();?>
         <ul class="post-footer-list">
-          <li class="cat"><i class="fa fa-folder"></i> <?php the_category(', ');?></li>
+          <li class="cat"><?php the_category(', ');?></li>
           <?php 
           $posttags = get_the_tags();
           if($posttags){ ?>
-          <li class="tag"><i class="fa fa-tag"></i> <?php the_tags('');?></li>
+          <li class="tag"><?php the_tags('');?></li>
           <?php } ?>
         </ul>
       </footer>
