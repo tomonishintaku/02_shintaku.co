@@ -39,6 +39,14 @@
 </div><!-- /container -->
 </div><!-- /front-root-cont -->
 
+<div class="container">
+<h2>全国どこでも無料見積もり</h2>
+<div class="row my-5">
+<div class="col-12">
+<?php echo get_option('footer-address');?>
+</div>
+</div>
+
 <!-- /START past-works -->
 <article class="front-past-works">
 <div class="container">
@@ -69,7 +77,7 @@
 </article>
 <!-- /past-works END-->
 
-</div><!-- /wrap -->
+</><!-- /wrap -->
 </div><!-- /recent_post_content -->
 </div><!-- /main -->
   

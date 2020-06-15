@@ -37,7 +37,6 @@
 
 <!-- 会社概要 -->
 <div class="front-main-cont">
-  <?php echo get_option('footer-address');?>
   <?php 
     $companies = get_option('company');
     $use_company_map = get_option('use_company_map');

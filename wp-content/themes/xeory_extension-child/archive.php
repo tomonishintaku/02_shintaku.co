@@ -7,8 +7,7 @@
   <div id="main" <?php bzb_layout_main(); ?> role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
     <div class="main-inner">
 
-    <h1 class="post-title" >....<?php the_title(); ?></h1>
-
+    <h1 class="post-title" ><?php the_category(); ?></h1>
     <div class="post-loop-wrap">
 
     <?php if( is_category() ) { ?>
@@ -25,6 +24,8 @@
     <article id="post-<?php echo the_ID(); ?>" <?php post_class(); ?> itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
       <header class="post-header">
+        <div class="row">
+        <div class="col-4">
         <div class="cat-name">
           <span>
             <?php
@@ -33,35 +34,37 @@
             ?>
           </span>
         </div>
-        <h2 class="post-title" itemprop="headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-      </header>
-
-      <div class="post-meta-area">
-        <ul class="post-meta list-inline">
-          <li class="date" itemprop="datePublished" datetime="<?php the_time('c');?>"><i class="fa fa-clock-o"></i> <?php the_time('Y.m.d');?></li>
-        </ul>
-        <ul class="post-meta-comment">
+        </div>
+        <div class="col-8 text-right text-gray">
+          <span class="date" itemprop="datePublished" datetime="<?php the_time('c');?>"><?php the_time('Y.m.d');?></span>
+        <!--ul class="post-meta-comment">
           <li class="author">
             by <?php the_author(); ?>
           </li>
           <li class="comments">
             <i class="fa fa-comments"></i> <span class="count"><?php comments_number('0', '1', '%'); ?></span>
           </li>
-        </ul>
+        </ul-->
+      </div>
       </div>
 
-      <?php if( get_the_post_thumbnail() ) { ?>
-      <div class="post-thumbnail">
+
+        <h2 class="post-title" itemprop="headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+      </header>
+
+
+      <!--?php if( get_the_post_thumbnail() ) { ?-->
+      <!--div class="post-thumbnail">
         <a href="<?php the_permalink(); ?>" rel="nofollow"><?php the_post_thumbnail('big_thumbnail'); ?></a>
-      </div>
-      <?php } ?>
+      </div-->
+      <!--?php } ?-->
 
-      <section class="post-content" itemprop="text">
+      <!--section class="post-content" itemprop="text">
         <?php the_excerpt(); ?>
-      </section>
+      </section-->
 
       <footer class="post-footer">
-        <a class="morelink" href="<?php the_permalink(); ?>" rel="nofollow">続きを読む ≫</a>
+        <a class="morelink" href="<?php the_permalink(); ?>" rel="nofollow">続きを読む</a>
       </footer>
 
     </article>

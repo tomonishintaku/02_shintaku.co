@@ -1,11 +1,7 @@
 <?php get_header(); ?>
 
-
 <div id="content">
-
 <div class="wrap mt-5">
-
-  
 
   <div id="main" <?php bzb_layout_main(); ?> role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
     
@@ -83,7 +79,7 @@
         </div>
         <?php endif;?><!--END Conditional branch VAR-->
 
-        <?php if(empty($book_star)):?><!--Conditional branch VAR none-->
+        <?php if(empty($author)):?><!--Conditional branch VAR none-->
         <?php else:?><!--Conditional branch VAR-->
             <p class="book_star">評価:<span><?php echo $book_star; ?></span></p>
         <?php endif;?><!--END Conditional branch VAR-->
@@ -103,7 +99,7 @@
 
         <?php if(empty($amazon_url)):?><!--Conditional branch VAR none-->
         <?php else:?><!--Conditional branch VAR-->
-        <div class="row">
+        <div class="row amazon-link">
            <div class="col-12 col-md-8">
                <a href="<?php echo $amazon_url; ?>" target="_blank">Amazon <strong><?php the_title(); ?>(<?php echo $author; ?>/<?php echo $publisher; ?>)</strong> 販売ページへ</a>
            </div>
@@ -119,7 +115,7 @@
         
         <?php echo bzb_social_buttons();?>
         <ul class="post-footer-list">
-          <li class="cat"><?php the_category(', ');?></li>
+          <li class="cat">カテゴリー: <?php the_category(', ');?></li>
           <?php 
           $posttags = get_the_tags();
           if($posttags){ ?>
