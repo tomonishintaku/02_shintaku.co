@@ -10,12 +10,12 @@ Author URI: https://bazubu.com/
 Version: 0.2.3
 */
 
-@import "part-of-bootstrap";
-@import "variables";
-@import "front-page";
-@import "general";
-@import "pages";
-@import "contact-form";
+@import "lib/scss/part-of-bootstrap";
+@import "lib/scss/variables";
+@import "lib/scss/front-page";
+@import "lib/scss/general";
+@import "lib/scss/pages";
+@import "lib/scss/contact-form";
 
 
 // Extra small devices (portrait phones, less than 576px)
@@ -119,20 +119,12 @@ Version: 0.2.3
     }
 }
 
-.bzb-sns-btn li.bzb-facebook {
-    margin-right: 12px;
-}
-
 .post-meta-area .post-meta .date {
     padding: 12px 10px;
 }
 
 .post-header {
     padding: 0;
-}
-
-.post-footer {
-    padding: 0 20px;
 }
 
 .comment-form {
@@ -520,10 +512,7 @@ body form button {
                 }
             }
 
-            article.post {
-                padding: 0 15px;
-            }
-
+        
             form {
                 .contact-form {
                     width: 88vw;

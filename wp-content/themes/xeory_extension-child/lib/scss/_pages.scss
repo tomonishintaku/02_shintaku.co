@@ -1,3 +1,17 @@
+//bloggerから移行の際に、コンテンツにもアイキャッチ画像と同画像が表示されていたため非表示
+.mobile-photo{
+    display: none;
+}
+
+.category-book-review .post-thumbnail img {
+    width: 50%;
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+body .wrap article.post {
+    padding: 0 10px;
+}
 
 .post-header{
     .date{padding-left:1rem;
@@ -11,19 +25,8 @@
     font-weight: bold;
     border-radius: 8px 0 8px 0;
 }   
+} 
 
-
-.category-book-review .post-thumbnail img {
-    width: 50%;
-    display: block;
-    margin: 0 auto 2rem;
-}
-
-
-//bloggerから移行の際に、コンテンツにもアイキャッチ画像と同画像が表示されていたため非表示
-.mobile-photo img {
-    display: none;
-}
 
 //category colors
 .web {
@@ -93,3 +96,31 @@ font-size:0.8rem;
         }
     }
 }
+
+
+@media (max-width: 575.98px) { 
+    article.post{
+     .post-header {
+        padding: 0;
+    } 
+}
+.post-footer{
+    padding: 0;
+}
+.bzb-sns-btn {
+    white-space:nowrap;
+    .btn .label {
+        margin-left: 0;
+    }
+     li {
+        margin: 2px 0 2px 2px;
+        &.bzb-facebook {
+            margin-right: 8px;
+        }
+    }
+    
+}
+
+}
+//close max-width: 575.98px
+

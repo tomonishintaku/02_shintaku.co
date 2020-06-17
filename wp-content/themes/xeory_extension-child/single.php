@@ -22,13 +22,22 @@
     <article id="post-<?php the_id(); ?>" <?php post_class(); ?> itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
       <header class="post-header pt-4 pl-md-4 pr-md-4">
+        <div class="row">
+          <div class="col-12">
       <span class="category <?php $category = get_the_category(); $cat_slug = $category[0]->category_nicename; echo $cat_slug; ?>">
             <?php
               $category = get_the_category();
               echo $category[0]->cat_name;
             ?>
           </span>
-
+          <span class="date" itemprop="datePublished" datetime="<?php the_time('c');?>"> <?php the_time('Y.m.d');?></span>
+          <!--div class="col-6">
+          <div class="post-meta-area">
+                   by <?php the_author(); ?>
+         </div>
+          </div-->
+          </div>
+        </div>
         <!--VAR-->
         <?php $image = get_field('image'); ?>
         <?php $book_star = get_field('book_star'); ?>
@@ -48,11 +57,12 @@
         </div>
       </header>
 
-      <div class="post-meta-area">
+      <!--div class="post-meta-area">
         <ul class="post-meta list-inline">
-          <li class="date" itemprop="datePublished" datetime="<?php the_time('c');?>"> <?php the_time('Y.m.d');?></li>
         </ul>
         <ul class="post-meta-comment">
+        <li class="date" itemprop="datePublished" datetime="<?php the_time('c');?>"> <?php the_time('Y.m.d');?></li>
+
           <li class="author">
             by <?php the_author(); ?>
           </li>
@@ -60,7 +70,7 @@
             <i class="fa fa-comments"></i> <span class="count"><?php comments_number('0', '1', '%'); ?></span>
           </li>
         </ul>
-      </div>
+      </div-->
       
       <?php if( get_the_post_thumbnail() ) : ?>
       <div class="post-thumbnail">
@@ -127,6 +137,12 @@
           <li class="tag"><?php the_tags('');?></li>
           <?php } ?>
         </ul>
+        <p style="border:solid 1px #c71585;padding:1rem;">
+        <a href="/service-and-price/" style="color:#000!important;display:block;">
+        <strong style="display:block;">国内外のIT企業でWebデザイナー歴10年以上のWEBのプロ SHINTAKU。</strong>
+	WEBサイト制作・ブログ設置(WordPress)やSNS運用・アクセス解析など最小15分750円～。詳細は<strong><span style="color:#2497cc;">サービスと料金</strong>をご覧下さい。</a>
+</p>
+
       </footer>
 
       <?php echo bzb_get_cta($post->ID); ?>
@@ -139,9 +155,7 @@
       
     </article>
       
- <?php bzb_show_avatar();?>
-    
-    
+    <?php bzb_show_avatar();?>
     <?php comments_template( '', true ); ?>
 
         <?php
