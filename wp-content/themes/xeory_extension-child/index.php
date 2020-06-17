@@ -9,6 +9,12 @@
 
     <?php if( !is_front_page()){?>
           <h1 class="post-title" ><?php echo get_the_title(get_option('page_for_posts')); ?></h1>
+          <ul class="row text-center">
+              <li class="col-3"><a href="/category/web/"><?php echo $cat_name = get_the_category_by_ID( 29 ); ?></a><!--web--></li>
+              <li class="col-3"><a href="/category/art/"><?php echo $cat_name = get_the_category_by_ID( 31 ); ?></a><!--art--></li>
+              <li class="col-3"><a href="/category/work/"><?php echo $cat_name = get_the_category_by_ID( 27 ); ?></a><!--work--></li>
+              <li class="col-3"><a href="/category/book-review/"><?php echo $cat_name = get_the_category_by_ID( 12 ); ?></a><!--book-review--></li>
+          </ul>      
     <?php } ?>
         <div class="post-loop-wrap">
 
@@ -21,7 +27,6 @@
 			if ( have_posts() ) :
 
 				while ( have_posts() ) : the_post();
-
         $cf = get_post_meta($post->ID); ?>
     <article id="post-<?php echo the_ID(); ?>" <?php post_class(); ?> itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
@@ -29,7 +34,7 @@
     <a class="article-block-link" href="<?php the_permalink(); ?>">
         <div class="row">
         <div class="col-12">
-          <span class="category">
+          <span class="category <?php $category = get_the_category(); $cat_slug = $category[0]->category_nicename; echo $cat_slug; ?>">
             <?php
               $category = get_the_category();
               echo $category[0]->cat_name;

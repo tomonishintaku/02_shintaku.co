@@ -1,0 +1,95 @@
+
+.post-header{
+    .date{padding-left:1rem;
+    color:$gray;}
+    .category {
+    border: none;
+    color: #fff;
+    display: inline-block;
+    padding: 0 16px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 8px 0 8px 0;
+}   
+
+
+.category-book-review .post-thumbnail img {
+    width: 50%;
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+
+//bloggerから移行の際に、コンテンツにもアイキャッチ画像と同画像が表示されていたため非表示
+.mobile-photo img {
+    display: none;
+}
+
+//category colors
+.web {
+    background: $category-color-web;
+}   
+.art {
+    background: $category-color-art;
+}   
+.work {
+    background:$category-color-work ;
+}   
+.book-review {
+    background: $category-color-book-review;
+}   
+}
+
+
+//20文字でまとめると…
+.summary{
+      position: relative; /* 三角の位置を固定するために設定 */
+      margin:2rem 0;
+      padding: 0 0 0.5rem 0;
+      background: #fff; /* 背景色 */
+      border-bottom: 1px solid $pink; /* 線色 */
+    &::before,
+    &::after { /* 三角 */
+      content: '';
+      border: 14px solid transparent;
+      position: absolute;
+      left: 50%;
+      margin-left: -14px;
+    }
+    &::before { /* 線になる部分 */
+      border-top-color: $pink; /* 吹き出しの線の色と同じ色 */
+      bottom: -28px;
+    }
+    &::after { /* 地の部分 */
+      border-top-color: #fff; /* 吹き出しの背景色と同じ色 */
+      bottom: -27px;
+    }
+    strong{
+font-size:0.8rem;
+    }
+    p{
+        font-size:1.1rem;
+        margin-bottom: 0;
+    }
+}
+
+//FAQ page
+.faq {
+    &__unit {
+        text-indent: -2.5em;
+        line-height: 1.9rem;
+        padding-left: 2em;
+
+        .a {
+            color: $pink;
+        }
+
+        .q,
+        .a {
+            span {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+        }
+    }
+}

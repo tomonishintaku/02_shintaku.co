@@ -1,0 +1,73 @@
+body {
+    line-height: 1.85rem;
+    background-image: linear-gradient(100deg,
+            #fafafa 14.29%,
+            #ffffff 14.29%,
+            #ffffff 50%,
+            #fafafa 50%,
+            #fafafa 64.29%,
+            #ffffff 64.29%,
+            #ffffff 100%);
+    background-size: 7.11px 40.31px;
+
+    &.page-id-14 {
+        background-image: none;
+    }
+}
+
+
+.corporate-color {
+    color: $corporate-color;
+}
+
+.sub-color {
+    color: $sub-color;
+}
+
+.gray {
+    color: $gray;
+}
+
+.red {
+    color: $red;
+}
+
+.pink {
+    color: $pink;
+}
+
+.white {
+    color: $white;
+}
+
+
+//hover links
+a, a:hover {
+    color:$link-color!important;
+    text-decoration: none;
+}
+.article-block-link{
+    &:hover{
+        color:$link-color!important;
+    }
+
+    h2{
+        color:$normal-text-color;
+        &:hover{
+            color:$link-color!important;
+        }
+
+    }
+}
+
+
+// fixed anchor link
+.pagetop {
+    bottom: 30px;
+    right: 30px;
+    opacity: 0.5;
+
+    .fa {
+        line-height: 1.3;
+    }
+}

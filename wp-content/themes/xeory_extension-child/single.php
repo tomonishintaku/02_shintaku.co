@@ -22,14 +22,12 @@
     <article id="post-<?php the_id(); ?>" <?php post_class(); ?> itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
       <header class="post-header pt-4 pl-md-4 pr-md-4">
-        <div class="cat-name">
-          <span>
+      <span class="category <?php $category = get_the_category(); $cat_slug = $category[0]->category_nicename; echo $cat_slug; ?>">
             <?php
-              $category = get_the_category(); 
+              $category = get_the_category();
               echo $category[0]->cat_name;
             ?>
           </span>
-        </div>
 
         <!--VAR-->
         <?php $image = get_field('image'); ?>
@@ -37,8 +35,9 @@
         <?php $amazon_url = get_field('amazon_url'); ?>
         <?php $author = get_field('author'); ?>
         <?php $publisher = get_field('publisher'); ?>
+        <?php $summary = get_field('summary'); ?>
 
-        <h1 class="post-title" itemprop="headline"><?php the_title(); ?>
+        <h1 class="post-title mt-3" itemprop="headline"><?php the_title(); ?>
         <?php if(empty($author)):?><!--Conditional branch VAR none-->
         <?php else:?><!--Conditional branch VAR-->
           <br><small>(<?php echo $author; ?>/<?php echo $publisher; ?>)</small>
@@ -74,7 +73,7 @@
         <?php else:?><!--Conditional branch VAR-->
         <div class="row text-center mb-5">
           <div class="col-12">
-            <img src="<?php echo $image; ?>" alt="書籍「<?php the_title(); ?>(<?php echo $author; ?>/<?php echo $publisher; ?>)」の表紙画像">
+          <a href="<?php echo $amazon_url; ?>" target="_blank"><img src="<?php echo $image; ?>" alt="書籍<?php the_title(); ?>(<?php echo $author; ?>/<?php echo $publisher; ?>)」の表紙画像"></a>
           </div>
         </div>
         <?php endif;?><!--END Conditional branch VAR-->
@@ -83,7 +82,13 @@
         <?php else:?><!--Conditional branch VAR-->
             <p class="book_star">評価:<span><?php echo $book_star; ?></span></p>
         <?php endif;?><!--END Conditional branch VAR-->
-
+        <?php if(empty($summary)):?><!--Conditional branch VAR none-->
+        <?php else:?><!--Conditional branch VAR-->
+            <div class="summary">
+                <strong><i class="fa fa-rocket pink" aria-hidden="true"></i> 20文字でまとめると…</strong>
+                <p><?php echo $summary; ?></p>
+            </div>
+        <?php endif;?><!--END Conditional branch VAR-->
         <?php
           the_content(); 
 

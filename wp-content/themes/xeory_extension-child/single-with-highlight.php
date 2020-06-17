@@ -47,21 +47,21 @@ code {
     <article id="post-<?php the_id(); ?>" <?php post_class(); ?> itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
       <header class="post-header pt-4 pl-md-4 pr-md-4">
-        <div class="cat-name">
-          <span>
+        <span class="category <?php $category = get_the_category(); $cat_slug = $category[0]->category_nicename; echo $cat_slug; ?>">
             <?php
-              $category = get_the_category(); 
+              $category = get_the_category();
               echo $category[0]->cat_name;
             ?>
           </span>
-        </div>
 
         <!--VAR-->
         <?php $image = get_field('image'); ?>
+        <?php $book_star = get_field('book_star'); ?>
         <?php $amazon_url = get_field('amazon_url'); ?>
         <?php $author = get_field('author'); ?>
         <?php $publisher = get_field('publisher'); ?>
-
+        <?php $summary = get_field('summary'); ?>
+        
         <h1 class="post-title" itemprop="headline"><?php the_title(); ?>
         <?php if(empty($author)):?><!--Conditional branch VAR none-->
         <?php else:?><!--Conditional branch VAR-->
@@ -94,6 +94,13 @@ code {
       <?php endif; ?>
 
       <section class="post-content p-0 pl-md-4 pr-md-4" itemprop="text">
+      <?php if(empty($summary)):?><!--Conditional branch VAR none-->
+        <?php else:?><!--Conditional branch VAR-->
+            <div class="summary">
+                <strong><i class="fa fa-rocket pink" aria-hidden="true"></i> 20文字でまとめると…</strong>
+                <p><?php echo $summary; ?></p>
+            </div>
+        <?php endif;?><!--END Conditional branch VAR-->
         <?php if(empty($image)):?><!--Conditional branch VAR none-->
         <?php else:?><!--Conditional branch VAR-->
         <div class="row text-center mb-5">

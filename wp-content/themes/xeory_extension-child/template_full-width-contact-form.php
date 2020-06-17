@@ -1,5 +1,5 @@
 <!--
-Template Name: Full Width
+Template Name: Full Width + Contact Form
 -->
 
 <?php get_header(); ?>
@@ -57,7 +57,10 @@ Template Name: Full Width
 
           wp_link_pages($args);
         ?>
+        <?php echo do_shortcode( '[contact-form-7 id="8" title="main-contact-form"]' ); ?>
       </section>
+
+   
 
       <?php echo bzb_get_cta($post->ID); ?>
       
