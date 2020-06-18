@@ -81,7 +81,7 @@
       <section class="post-content p-0 pl-md-4 pr-md-4" itemprop="text">
         <?php if(empty($image)):?><!--Conditional branch VAR none-->
         <?php else:?><!--Conditional branch VAR-->
-        <div class="row text-center mb-5">
+        <div class="row text-center mb-3">
           <div class="col-12">
           <a href="<?php echo $amazon_url; ?>" target="_blank"><img src="<?php echo $image; ?>" alt="書籍<?php the_title(); ?>(<?php echo $author; ?>/<?php echo $publisher; ?>)」の表紙画像"></a>
           </div>
@@ -139,7 +139,7 @@
         </ul>
         <p style="border:solid 1px #c71585;padding:1rem;">
         <a href="/service-and-price/" style="color:#000!important;display:block;">
-        <strong style="display:block;">国内外のIT企業でWebデザイナー歴10年以上のWEBのプロ SHINTAKU。</strong>
+        <strong style="display:block;"><i class="fa fa-hand-o-up pink" aria-hidden="true"></i> 国内外のIT企業でWebデザイナー歴10年以上のWEBのプロ SHINTAKU。</strong>
 	WEBサイト制作・ブログ設置(WordPress)やSNS運用・アクセス解析など最小15分750円～。詳細は<strong><span style="color:#2497cc;">サービスと料金</strong>をご覧下さい。</a>
 </p>
 

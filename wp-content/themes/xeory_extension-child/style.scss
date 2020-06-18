@@ -38,12 +38,11 @@ Version: 0.2.3
 }
 }
 // Large devices (desktops, less than 1200px)
-@mixin for-phone-only {
+@mixin for-desktops {
 @media (max-width: 1199.98px) { 
     @content;
 }
 }
-
 
 #header {
     background-color: $white !important;
@@ -57,6 +56,25 @@ Version: 0.2.3
         }
     }
 }
+
+#footer {
+    color: $normal-text-color;
+    border-top:none;
+    .footer-01 {
+        background: $white;
+        padding: 0;
+        width: 1140px;
+        margin: 0 auto;
+    }
+    .footer-02 {//copyright
+        background: none;
+    }
+    .front-main-cont{
+        color: $normal-text-color;
+
+    }
+}
+
 
 #side {
     width: auto;
@@ -84,8 +102,7 @@ Version: 0.2.3
 }
 
 #content {
-    padding: 0;
-
+    padding: 0; 
     .breadcrumb-area {
         padding-bottom: 0.5rem;
 
@@ -220,7 +237,6 @@ Version: 0.2.3
 .post-loop-wrap{ 
     .post-footer {
     border-top: none;
-
     a.morelink {
         background: none;
         color: $corporate-color !important;
@@ -307,7 +323,7 @@ body form button {
     .amazon-link{
         padding: 0.7rem 0;
         border: 1px solid #a9a9a9;
-        margin: 0 0.5vw;
+        margin: 0;
         font-size: 0.8rem;
         line-height: 1.3rem;
         img{
@@ -317,7 +333,7 @@ body form button {
     }
     }
     .book_star{
-    border-bottom: 1px dotted $gray;
+        text-align: center;
     padding-bottom: 0.5rem;
     .fa{
         padding: 0 2px;
@@ -360,7 +376,6 @@ body form button {
         }
 
         &.home {
-
             #main_visual {
                 background-image: url(/wp-content/themes/xeory_extension-child/lib/images/front-main-visual-web-design-shintaku_sp.jpg) !important;
 
@@ -548,10 +563,14 @@ body form button {
 
     }
 
-    //close max-width: 767px
+}
+//close max-width: 767px
 
     @media screen and (min-width: 992px) {
-
+        .post-footer {
+            padding: 20px 24px;
+            }
+    
         .full-width .main-inner,
         .main-inner {
             margin-right: 0;
@@ -560,8 +579,14 @@ body form button {
         #side {
             float: right;
         }
+body{
+        &.home{
+            .main-inner {
+                margin: 40px 0 0 30px;
+                padding: 0;
+            }
+        }
     }
-
     //close min-width: 992px
 }
 
@@ -569,6 +594,8 @@ body form button {
 
     body {
         #content {
+                width: 1140px;
+                margin: 0 auto;
             .wrap {
                 margin-left: 36px;
                 margin-right: 36px;

@@ -41,7 +41,7 @@ body .wrap article.post {
 .book-review {
     background: $category-color-book-review;
 }   
-}
+
 
 
 //20文字でまとめると…
@@ -105,7 +105,7 @@ font-size:0.8rem;
     } 
 }
 .post-footer{
-    padding: 0;
+    padding: 0!important;
 }
 .bzb-sns-btn {
     white-space:nowrap;
