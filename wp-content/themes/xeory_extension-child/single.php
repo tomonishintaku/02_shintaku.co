@@ -139,7 +139,7 @@
         </ul>
         <p style="border:solid 1px #c71585;padding:1rem;">
         <a href="/service-and-price/" style="color:#000!important;display:block;">
-        <strong style="display:block;"><i class="fa fa-hand-o-up pink" aria-hidden="true"></i> 国内外のIT企業でWebデザイナー歴10年以上のWEBのプロ SHINTAKU。</strong>
+        <strong style="display:block;"><i class="fa fa-hand-o-up pink" aria-hidden="true"></i> 国内外のIT企業でWebデザイナー歴10年超のWEBのプロ SHINTAKU。</strong>
 	WEBサイト制作・ブログ設置(WordPress)やSNS運用・アクセス解析など最小15分750円～。詳細は<strong><span style="color:#2497cc;">サービスと料金</strong>をご覧下さい。</a>
 </p>
 

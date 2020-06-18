@@ -33,13 +33,13 @@ Version: 0.2.3
 }
 // Medium devices (tablets, less than 992px)
 @mixin for-tablets {
-@media (max-width: 991.98px) { 
+@media (min-width: 991.98px) { 
     @content;
 }
 }
 // Large devices (desktops, less than 1200px)
 @mixin for-desktops {
-@media (max-width: 1199.98px) { 
+@media (min-width: 1199.98px) { 
     @content;
 }
 }
@@ -63,7 +63,9 @@ Version: 0.2.3
     .footer-01 {
         background: $white;
         padding: 0;
+        @include for-desktops {
         width: 1140px;
+    }
         margin: 0 auto;
     }
     .footer-02 {//copyright
