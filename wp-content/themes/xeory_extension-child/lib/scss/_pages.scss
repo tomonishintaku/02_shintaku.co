@@ -11,6 +11,11 @@
 
 body .wrap article.post {
     padding: 0 10px;
+    
+    .reading_time{
+        text-align: right;
+        padding: 0.3rem 0 0.3rem 0.5rem;
+    }
 }
 
 .post-header{

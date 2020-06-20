@@ -30,6 +30,12 @@
               echo $category[0]->cat_name;
             ?>
           </span>
+          <span class="category <?php $category = get_the_category(); $cat_slug = $category[1]->category_nicename; echo $cat_slug; ?>">
+            <?php
+              $category = get_the_category();
+              echo $category[1]->cat_name;
+            ?>
+          </span>
           <span class="date" itemprop="datePublished" datetime="<?php the_time('c');?>"> <?php the_time('Y.m.d');?></span>
           <!--div class="col-6">
           <div class="post-meta-area">
@@ -92,10 +98,11 @@
         <?php else:?><!--Conditional branch VAR-->
             <p class="book_star">評価:<span><?php echo $book_star; ?></span></p>
         <?php endif;?><!--END Conditional branch VAR-->
+        <p class="reading_time"><i class="fa fa-eye"></i> <?php my_reading_time(); ?></p><!--reading time guide-->
         <?php if(empty($summary)):?><!--Conditional branch VAR none-->
         <?php else:?><!--Conditional branch VAR-->
             <div class="summary">
-                <strong><i class="fa fa-rocket pink" aria-hidden="true"></i> 20文字でまとめると…</strong>
+                <strong>20文字でまとめると…</strong>
                 <p><?php echo $summary; ?></p>
             </div>
         <?php endif;?><!--END Conditional branch VAR-->

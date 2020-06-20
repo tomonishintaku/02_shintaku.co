@@ -30,7 +30,7 @@ function bzb_show_avatar(){
           </div>
         </div>
         <div class="post-author-meta">
-          <h4 itemprop="name">{$author_meta_name}</h4>
+          <h4 style="font-weight:bold;" itemprop="name">{$author_meta_name}</h4>
           <p itemprop="discription">{$disp_author_description}</p>
         </div>
       </div>
