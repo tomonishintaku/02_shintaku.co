@@ -72,7 +72,7 @@
     </div>
 
     <div class="wrap">
-      <div class="c_box_inner">
+      <div class="c_box_inner horizon-dl-list">
         <?php 
         if(isset($companies) && $companies !== ''){
           $i = 1;

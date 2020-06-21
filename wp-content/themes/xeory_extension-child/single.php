@@ -51,6 +51,8 @@
         <?php $author = get_field('author'); ?>
         <?php $publisher = get_field('publisher'); ?>
         <?php $summary = get_field('summary'); ?>
+        <?php $price = get_field('price'); ?>
+        <?php $no_price = get_field('no_price'); ?>
 
         <h1 class="post-title mt-3" itemprop="headline"><?php the_title(); ?>
         <?php if(empty($author)):?><!--Conditional branch VAR none-->
@@ -58,9 +60,6 @@
           <br><small>(<?php echo $author; ?>/<?php echo $publisher; ?>)</small>
         <?php endif;?><!--END Conditional branch VAR-->
         </h1>
-        <div class="post-sns">
-          <?php bzb_social_buttons();?>
-        </div>
       </header>
 
       <!--div class="post-meta-area">
@@ -93,9 +92,13 @@
           </div>
         </div>
         <?php endif;?><!--END Conditional branch VAR-->
-
         <?php if(empty($author)):?><!--Conditional branch VAR none-->
         <?php else:?><!--Conditional branch VAR-->
+          <?php if(empty($price)):?><!--Conditional branch VAR none-->
+            <p class="text-center mb-0"><span class="px-2"><?php echo $no_price; ?></span></p>
+        <?php else:?><!--Conditional branch VAR-->
+            <p class="text-center mb-0">購入価格:<span class="px-2"><?php echo $price; ?></span>円</p>
+        <?php endif;?><!--END Conditional branch VAR-->
             <p class="book_star">評価:<span><?php echo $book_star; ?></span></p>
         <?php endif;?><!--END Conditional branch VAR-->
         <p class="reading_time"><i class="fa fa-eye"></i> <?php my_reading_time(); ?></p><!--reading time guide-->
@@ -133,9 +136,6 @@
       </section>
 
       <footer class="post-footer">
-      
-        
-        <?php echo bzb_social_buttons();?>
         <ul class="post-footer-list">
           <li class="cat">カテゴリー: <?php the_category(', ');?></li>
           <?php 

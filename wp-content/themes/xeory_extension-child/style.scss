@@ -12,8 +12,11 @@ Version: 0.2.3
 
 @import "lib/scss/part-of-bootstrap";
 @import "lib/scss/variables";
+
+@import "lib/scss/structure";
+@import "lib/scss/skin";
+
 @import "lib/scss/front-page";
-@import "lib/scss/general";
 @import "lib/scss/pages";
 @import "lib/scss/contact-form";
 
@@ -63,9 +66,6 @@ Version: 0.2.3
     .footer-01 {
         background: $white;
         padding: 0;
-        @include for-desktops {
-        width: 1140px;
-    }
         margin: 0 auto;
     }
     .footer-02 {//copyright
@@ -126,16 +126,6 @@ Version: 0.2.3
 #gnav ul li.current-menu-item a,
 #gnav ul li a {
     color: $normal-text-color !important;
-}
-
-.about-list {
-    dt {
-        float: left;
-    }
-
-    dd {
-        margin-left: 80px;
-    }
 }
 
 .post-meta-area .post-meta .date {
@@ -296,6 +286,9 @@ body form button {
     border-left: 8px solid $corporate-color;
     background: none;
     color: #555;
+    &:first-child{
+    margin-top: 4rem;
+    }
 }
 .post-loop-wrap{
     .format-standard{
