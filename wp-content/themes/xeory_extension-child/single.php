@@ -59,7 +59,7 @@
         <h1 class="post-title mt-3" itemprop="headline"><?php the_title(); ?>
         <?php if(empty($author)):?><!--Conditional branch VAR none-->
         <?php else:?><!--Conditional branch VAR-->
-          <br><small>(<?php echo $author; ?>/<?php echo $publisher; ?>)</small>
+          <br><small class="font-weight-normal">(<?php echo $author; ?>/<?php echo $publisher; ?>)</small>
         <?php endif;?><!--END Conditional branch VAR-->
         </h1>
       </header>
@@ -127,7 +127,7 @@
         <?php if(empty($amazon_url)):?><!--Conditional branch VAR none-->
         <?php else:?><!--Conditional branch VAR-->
         <div class="row amazon-link">
-           <div class="col-12 col-md-8">
+           <div class="col-12 col-md-8 px-0">
                <a href="<?php echo $amazon_url; ?>" target="_blank"><strong><?php the_title(); ?></strong>販売ページ</a>
            </div>
            <div class="col-12 col-md-4 text-center">
