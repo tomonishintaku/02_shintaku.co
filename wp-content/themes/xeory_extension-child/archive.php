@@ -6,10 +6,13 @@
 
   <div id="main" <?php bzb_layout_main(); ?> role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
     <div class="main-inner">
-<h1 class="post-title" ><?php the_category(); ?></h1>
-    <?php if( !is_front_page()){?>
-                <h1 class="post-title" ><?php echo get_the_title(get_option('page_for_posts')); ?></h1>
+    <div class="m-3 pt-3 pt-md-0">
+<?php bzb_breadcrumb(); ?>
+</div>
 
+<!--h1 class="post-title" ><?php the_category(); ?></h1-->
+    <?php if( !is_front_page()){?>
+   
       <!--?php
         $category = get_the_category(); $cat_slug = $category[0]->category_nicename; 
         $cat = get_category(29);
@@ -20,6 +23,8 @@
          $cat_slug_for_class = other;
         }
          ?-->
+  
+       
 
           <ul class="row text-center">
               <li class="col-3 <?php echo $cat_slug_for_class; ?>"><a href="/category/web/"><?php echo $cat_name = get_the_category_by_ID( 29 ); ?></a><!--web--></li>
@@ -51,6 +56,12 @@
             <?php
               $category = get_the_category();
               echo $category[0]->cat_name;
+            ?>
+          </span>
+          <span class="category <?php $category = get_the_category(); $cat_slug = $category[1]->category_nicename; echo $cat_slug; ?>">
+            <?php
+              $category = get_the_category();
+              echo $category[1]->cat_name;
             ?>
           </span>
           <span class="date" itemprop="datePublished" datetime="<?php the_time('c');?>"><?php the_time('Y.m.d');?></span>

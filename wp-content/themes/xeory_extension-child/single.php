@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 
 <div id="content">
-<div class="wrap mt-5">
-
+<div class="wrap mt-3">
+<div class="m-3 pt-3 pt-md-0">
+<?php bzb_breadcrumb(); ?>
+</div>
   <div id="main" <?php bzb_layout_main(); ?> role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
     
     <div class="main-inner">
@@ -126,7 +128,7 @@
         <?php else:?><!--Conditional branch VAR-->
         <div class="row amazon-link">
            <div class="col-12 col-md-8">
-               <a href="<?php echo $amazon_url; ?>" target="_blank">Amazon <strong><?php the_title(); ?>(<?php echo $author; ?>/<?php echo $publisher; ?>)</strong> 販売ページへ</a>
+               <a href="<?php echo $amazon_url; ?>" target="_blank"><strong><?php the_title(); ?></strong>販売ページ</a>
            </div>
            <div class="col-12 col-md-4 text-center">
                 <a href="<?php echo $amazon_url; ?>" target="_blank"><img src="/wp-content/uploads/common/shop_amazon-60d46fe34ec005ea5e127b67168d9ea73d5a168f41e905b961c3aa1844510c1a.svg" alt="Amazon販売ページへのリンク"></a>
@@ -136,15 +138,15 @@
       </section>
 
       <footer class="post-footer">
-        <ul class="post-footer-list">
+        <!--ul class="post-footer-list">
           <li class="cat">カテゴリー: <?php the_category(', ');?></li>
           <?php 
           $posttags = get_the_tags();
           if($posttags){ ?>
           <li class="tag"><?php the_tags('');?></li>
           <?php } ?>
-        </ul>
-        <p style="border:solid 1px #c71585;padding:1rem;">
+        </ul-->
+        <p class="mt-3" style="border:solid 1px #c71585;padding:1rem;">
         <a href="/service-and-price/" style="color:#000!important;display:block;">
         <strong style="display:block;"><i class="fa fa-hand-o-up pink" aria-hidden="true"></i> 国内外のIT企業でWebデザイナー歴10年超のWEBのプロ SHINTAKU。</strong>
 	WEBサイト制作・ブログ設置(WordPress)やSNS運用・アクセス解析など最小15分750円～。詳細は<strong><span style="color:#2497cc;">サービスと料金</strong>をご覧下さい。</a>

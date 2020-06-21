@@ -1,8 +1,17 @@
 <!DOCTYPE HTML>
 <html lang="ja" prefix="og: http://ogp.me/ns#">
 <head>
-	<meta charset="UTF-8">
-	<title><?php bzb_title(); ?></title>
+  <meta charset="UTF-8">
+  <?php if ( is_home() || is_front_page() ) : ?>
+    <title><?php bzb_title(); ?></title>
+  <?php elseif ( is_singular()): ?>
+    <title><?php echo get_the_title(); ?> | <?php bloginfo('name')?></title>
+  <?php else: ?>
+    <title><?php bzb_title(); ?> | <?php bloginfo('name')?></title>
+  <?php endif; ?>
+
+
+
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <?php 

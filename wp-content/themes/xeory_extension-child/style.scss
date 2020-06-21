@@ -12,6 +12,7 @@ Version: 0.2.3
 
 @import "lib/scss/part-of-bootstrap";
 @import "lib/scss/variables";
+@import "lib/scss/media";
 
 @import "lib/scss/structure";
 @import "lib/scss/skin";
@@ -20,32 +21,6 @@ Version: 0.2.3
 @import "lib/scss/pages";
 @import "lib/scss/contact-form";
 
-
-// Extra small devices (portrait phones, less than 576px)
-// use this >> @include for-phone-only {}
-@mixin for-phone-only {
-@media (max-width: 575.98px) { 
-    @content;
-}
-}
-// Small devices (landscape phones, less than 768px)
-@mixin for-landscape-phones {
-@media (max-width: 767.98px) { 
-    @content;
-}
-}
-// Medium devices (tablets, less than 992px)
-@mixin for-tablets {
-@media (min-width: 991.98px) { 
-    @content;
-}
-}
-// Large devices (desktops, less than 1200px)
-@mixin for-desktops {
-@media (min-width: 1199.98px) { 
-    @content;
-}
-}
 
 #header {
     background-color: $white !important;
@@ -67,6 +42,11 @@ Version: 0.2.3
         background: $white;
         padding: 0;
         margin: 0 auto;
+        @include for-desktops {
+        .container{
+            max-width: 1040px;
+        }
+    }
     }
     .footer-02 {//copyright
         background: none;
@@ -134,6 +114,11 @@ Version: 0.2.3
 
 .post-header {
     padding: 0;
+    .post-loop-wrap &{
+        padding: 20px;
+    }
+
+
 }
 
 .comment-form {

@@ -1,7 +1,7 @@
 <footer id="footer">
   <div class="footer-01">
     <div class="wrap container">
-      <div id="footer-content-area" class="row">
+      <div id="footer-content-area">
         <div id="footer-list-area" class="gr6">
           <div class="row">
 

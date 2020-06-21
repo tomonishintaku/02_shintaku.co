@@ -1,5 +1,7 @@
+@import "media";
+
 //bloggerから移行の際に、コンテンツにもアイキャッチ画像と同画像が表示されていたため非表示
-.mobile-photo{
+.mobile-photo {
     display: none;
 }
 
@@ -11,72 +13,91 @@
 
 body .wrap article.post {
     padding: 0 10px;
-    
-    .reading_time{
+
+    .reading_time {
         text-align: right;
         padding: 0.3rem 0 0.3rem 0.5rem;
     }
 }
 
-.post-header{
-    .date{padding-left:1rem;
-    color:$gray;}
+.post-header {
+    .date {
+        padding-left: 1rem;
+        color: $gray;
+    }
+
     .category {
-    border: none;
-    color: #fff;
-    display: inline-block;
-    padding: 0 16px;
-    font-size: 13px;
-    font-weight: bold;
-    border-radius: 8px 0 8px 0;
-}   
-} 
+        border: none;
+        color: #fff;
+        display: inline-block;
+        padding: 0 16px;
+        font-size: 13px;
+        font-weight: bold;
+        border-radius: 8px 0 8px 0;
+    }
+}
 
 
 //category colors
 .web {
     background: $category-color-web;
-}   
+}
+
 .art {
     background: $category-color-art;
-}   
+}
+
 .work {
-    background:$category-color-work ;
-}   
+    background: $category-color-work;
+}
+
 .book-review {
     background: $category-color-book-review;
-}   
+}
 
 
 
 //20文字でまとめると…
-.summary{
-      position: relative; /* 三角の位置を固定するために設定 */
-      margin:2rem 0;
-      padding: 0 0 0.5rem 0;
-      background: #fff; /* 背景色 */
-      border-bottom: 1px solid $pink; /* 線色 */
+.summary {
+    position: relative;
+    /* 三角の位置を固定するために設定 */
+    margin: 2rem 0;
+    padding: 0 0 0.5rem 0;
+    background: #fff;
+    /* 背景色 */
+    border-bottom: 1px solid $pink;
+
+    /* 線色 */
     &::before,
-    &::after { /* 三角 */
-      content: '';
-      border: 14px solid transparent;
-      position: absolute;
-      left: 50%;
-      margin-left: -14px;
+    &::after {
+        /* 三角 */
+        content: '';
+        border: 14px solid transparent;
+        position: absolute;
+        left: 50%;
+        margin-left: -14px;
     }
-    &::before { /* 線になる部分 */
-      border-top-color: $pink; /* 吹き出しの線の色と同じ色 */
-      bottom: -28px;
+
+    &::before {
+        /* 線になる部分 */
+        border-top-color: $pink;
+        /* 吹き出しの線の色と同じ色 */
+        bottom: -28px;
     }
-    &::after { /* 地の部分 */
-      border-top-color: #fff; /* 吹き出しの背景色と同じ色 */
-      bottom: -27px;
+
+    &::after {
+        /* 地の部分 */
+        border-top-color: #fff;
+        /* 吹き出しの背景色と同じ色 */
+        bottom: -27px;
     }
-    strong{
-font-size:0.8rem;
+
+    strong {
+        font-size: 0.8rem;
     }
-    p{
-        font-size:1.1rem;
+
+    p {
+        font-size: 1.1rem;
         margin-bottom: 0;
     }
 }
@@ -103,29 +124,53 @@ font-size:0.8rem;
 }
 
 
-@media (max-width: 575.98px) { 
-    article.post{
-     .post-header {
-        padding: 0;
-    } 
-}
-.post-footer{
-    padding: 0!important;
-}
-.bzb-sns-btn {
-    white-space:nowrap;
-    .btn .label {
-        margin-left: 0;
-    }
-     li {
-        margin: 2px 0 2px 2px;
-        &.bzb-facebook {
-            margin-right: 8px;
+@media (max-width: 575.98px) {
+    article.post {
+        .post-header {
+            padding: 0;
         }
     }
-    
-}
+
+    .post-footer {
+        padding: 0 !important;
+    }
+
+    .bzb-sns-btn {
+        white-space: nowrap;
+
+        .btn .label {
+            margin-left: 0;
+        }
+
+        li {
+            margin: 2px 0 2px 2px;
+
+            &.bzb-facebook {
+                margin-right: 8px;
+            }
+        }
+
+    }
 
 }
+
 //close max-width: 575.98px
 
+@include for-landscape-phones {
+    .post-author {
+        .post-author-meta {
+            padding-top: 0;
+
+            h4 {
+                margin: 0 0 1rem 0;
+                padding-top: 0;
+                font-size: 1.3rem;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+
+        }
+
+    }
+
+}

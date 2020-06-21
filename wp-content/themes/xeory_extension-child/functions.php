@@ -1,4 +1,11 @@
 <?php
+
+/*親テーマで修正したファイル一覧
+C:\Dropbox\02_web\02_shintaku.co\wp-content\themes\xeory_extension\lib\functions\bzb-functions.php
+C:\Dropbox\02_web\02_shintaku.co\wp-content\themes\xeory_extension\lib\functions\show_avatar.php
+
+*/
+
 /* ファンクション 子テーマを優先して読み込む
 get_template_directory_uri関数は親テーマのディレクトリURIを返し、get_stylesheet_directory_uri関数はそのテーマのスタイルシートがあるディレクトリのURIを返します。
 

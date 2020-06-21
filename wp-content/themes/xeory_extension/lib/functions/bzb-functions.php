@@ -116,7 +116,7 @@ if( !function_exists('bzb_breadcrumb') ){
 
     if( is_home() ){
       // 記事一覧ページ
-      $bc .= get_bzb_breadcrumb_listitem( '', 'list-alt', ' 最新記事一覧', $count );
+      $bc .= get_bzb_breadcrumb_listitem( '', 'list-alt', ' ブログ', $count );
     } elseif( is_search() ) {
       // 検索結果ページ
       $bc .= get_bzb_breadcrumb_listitem( '', 'search', ' 「' . get_search_query() . '」の検索結果', $count );

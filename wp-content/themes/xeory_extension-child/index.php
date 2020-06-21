@@ -6,6 +6,7 @@
 
   <div id="main" <?php bzb_layout_main(); ?> role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
     <div class="main-inner">
+    <?php bzb_breadcrumb(); ?>
 
     <?php if( !is_front_page()){?>
           <h1 class="post-title" ><?php echo get_the_title(get_option('page_for_posts')); ?></h1>
