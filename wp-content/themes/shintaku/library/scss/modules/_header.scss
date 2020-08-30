@@ -1,0 +1,50 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Form Styles
+
+We put all the form and button styles in here to setup a consistent
+look. If we need to customize them, we can do this in the main
+stylesheets and just override them. Easy Peasy.
+
+You're gonna see a few data-uri thingies down there. If you're not
+sure what they are, check this link out:
+http://css-tricks.com/data-uris/
+If you want to create your own, use this helpful link:
+http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
+
+******************************************************************/
+@import "../breakpoints/mixin-media-screen";
+@import "../partials/variables";
+
+/* USE THIS
+@include for-481up {}  
+@include for-768up {}
+@include for-1030up {}
+@include for-1240up {}
+
+@include for-480below {}  
+@include for-767below {}
+@include for-1029below {}
+@include for-1239below {}
+*/
+
+.header {}
+
+.header-logo {
+	text-align: center;
+	line-height: 4rem;
+
+	&__image {
+		width: 200px;
+	}
+}
+
+#logo {
+	margin: 0;
+
+	a {
+		color: $white;
+	}
+}

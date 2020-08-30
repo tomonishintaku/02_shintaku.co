@@ -1,0 +1,421 @@
+/*
+ * Bones Scripts File
+ * Author: Eddie Machado
+ *
+
+ * This file should contain any js scripts you want to add to the site.
+
+ * Instead of calling it in the header or throwing it inside wp_head()
+
+ * this file will be called automatically in the footer so as not to
+
+ * slow the page load.
+
+ *
+
+ * There are a lot of example functions and tools in here. If you don't
+
+ * need any of it, just remove it. They are meant to be helpers and are
+
+ * not required. It's your world baby, you can do whatever you want.
+
+ */
+
+
+
+
+
+/*
+
+ * Get Viewport Dimensions
+
+ * returns object with viewport dimensions to match css in width and height properties
+
+ * ( source: http://andylangton.co.uk/blog/development/get-viewport-size-width-and-height-javascript )
+
+ */
+
+function updateViewportDimensions() {
+
+    var w = window,
+
+        d = document,
+
+        e = d.documentElement,
+
+        g = d.getElementsByTagName('body')[0],
+
+        x = w.innerWidth || e.clientWidth || g.clientWidth,
+
+        y = w.innerHeight || e.clientHeight || g.clientHeight;
+
+    return {
+
+        width: x,
+
+        height: y
+
+    };
+
+}
+
+// setting the viewport width
+
+var viewport = updateViewportDimensions();
+
+
+/*
+
+ * Throttle Resize-triggered Events
+
+ * Wrap your actions in this function to throttle the frequency of firing them off, for better performance, esp. on mobile.
+
+ * ( source: http://stackoverflow.com/questions/2854407/javascript-jquery-window-resize-how-to-fire-after-the-resize-is-completed )
+
+ */
+
+var waitForFinalEvent = (function () {
+
+    var timers = {};
+
+    return function (callback, ms, uniqueId) {
+
+        if (!uniqueId) {
+
+            uniqueId = "Don't call this twice without a uniqueId";
+
+        }
+
+        if (timers[uniqueId]) {
+
+            clearTimeout(timers[uniqueId]);
+
+        }
+
+        timers[uniqueId] = setTimeout(callback, ms);
+
+    };
+
+})();
+
+
+
+// how long to wait before deciding the resize has stopped, in ms. Around 50-100 should work ok.
+
+var timeToWaitForLast = 100;
+
+
+
+
+
+/*
+
+ * Here's an example so you can see how we're using the above function
+
+ *
+
+ * This is commented out so it won't work, but you can copy it and
+
+ * remove the comments.
+
+ *
+
+ *
+
+ *
+
+ * If we want to only do it on a certain page, we can setup checks so we do it
+
+ * as efficient as possible.
+
+ *
+
+ * if( typeof is_home === "undefined" ) var is_home = $('body').hasClass('home');
+
+ *
+
+ * This once checks to see if you're on the home page based on the body class
+
+ * We can then use that check to perform actions on the home page only
+
+ *
+
+ * When the window is resized, we perform this function
+
+ * $(window).resize(function () {
+
+ *
+
+ *    // if we're on the home page, we wait the set amount (in function above) then fire the function
+
+ *    if( is_home ) { waitForFinalEvent( function() {
+
+ *
+
+ *  // update the viewport, in case the window size has changed
+
+ *  viewport = updateViewportDimensions();
+
+ *
+
+ *      // if we're above or equal to 768 fire this off
+
+ *      if( viewport.width >= 768 ) {
+
+ *        console.log('On home page and window sized to 768 width or more.');
+
+ *      } else {
+
+ *        // otherwise, let's do this instead
+
+ *        console.log('Not on home page, or window sized to less than 768.');
+
+ *      }
+
+ *
+
+ *    }, timeToWaitForLast, "your-function-identifier-string"); }
+
+ * });
+
+ *
+
+ * Pretty cool huh? You can create functions like this to conditionally load
+
+ * content and other stuff dependent on the viewport.
+
+ * Remember that mobile devices and javascript aren't the best of friends.
+
+ * Keep it light and always make sure the larger viewports are doing the heavy lifting.
+
+ *
+
+ */
+
+
+
+/*
+
+ * We're going to swap out the gravatars.
+
+ * In the functions.php file, you can see we're not loading the gravatar
+
+ * images on mobile to save bandwidth. Once we hit an acceptable viewport
+
+ * then we can swap out those images since they are located in a data attribute.
+
+ */
+
+function loadGravatars() {
+
+    // set the viewport using the function above
+
+    viewport = updateViewportDimensions();
+
+    // if the viewport is tablet or larger, we load in the gravatars
+
+    if (viewport.width >= 768) {
+
+        jQuery('.comment img[data-gravatar]').each(function () {
+
+            jQuery(this).attr('src', jQuery(this).attr('data-gravatar'));
+
+        });
+
+    }
+
+} // end function
+
+
+
+
+
+/*
+
+ * Put all your regular jQuery in here.
+
+ */
+
+jQuery(document).ready(function ($) {
+
+
+
+    /*
+
+     * Let's fire off the gravatar function
+
+     * You can remove this if you don't need it
+
+     */
+
+    loadGravatars();
+
+
+
+}); /* end of as page load scripts */
+
+
+
+
+
+// HUMBURGER menu
+
+//parts: (1) {_mobile-menu.scss}, (2) "HUMBURGER menu" section in {scripts.js}, (3) "HUMBURGER menu" section in {header.php} 
+
+
+
+function toggleNav() {
+
+    var body = document.body;
+
+    var hamburger = document.getElementById('js-hamburger');
+
+    var blackBg = document.getElementById('js-black-bg');
+
+
+
+    hamburger.addEventListener('click', function () {
+
+        body.classList.toggle('nav-open');
+
+    });
+
+    blackBg.addEventListener('click', function () {
+
+        body.classList.remove('nav-open');
+
+    });
+
+}
+
+toggleNav();
+
+
+
+// Close menu when you click an anchor link on MOBILE version
+
+$('.navigation a[href]').on('click', function (event) {
+
+    $('.hamburger').trigger('click');
+
+});
+
+
+
+// HUMBURGER menu END
+
+
+
+
+
+
+
+// ADD class when scroll
+
+//https://webdesignday.jp/inspiration/technique/jquery-js/3657/
+
+
+
+var startPos = 0,
+
+    winScrollTop = 0;
+
+$(window).on('scroll', function () {
+
+    winScrollTop = $(this).scrollTop();
+
+    if (winScrollTop >= startPos) {
+
+        $('.hamburger').addClass('transform');
+
+    } else {
+
+        $('.hamburger').removeClass('transform');
+
+    }
+
+    startPos = winScrollTop;
+
+});
+
+
+
+// ADD class when scroll END
+
+
+
+
+
+// modal window
+
+$(function () {
+
+    $('.js-modal-open').on('click', function () {
+
+        $('.js-modal').fadeIn();
+
+        return false;
+
+    });
+
+    $('.js-modal-close').on('click', function () {
+
+        $('.js-modal').fadeOut();
+
+        return false;
+
+    });
+
+});
+
+// modal window END
+
+
+
+$(function () {
+    $('#js-copybtn').on('click', function () {
+        // コピーする文章の取得
+        let text = $('#js-copytext').text();
+        // テキストエリアの作成
+        let $textarea = $('<textarea></textarea>');
+        // テキストエリアに文章を挿入
+        $textarea.text(text);
+        //　テキストエリアを挿入
+        $(this).append($textarea);
+        //　テキストエリアを選択
+        $textarea.select();
+        // コピー
+        document.execCommand('copy');
+        // テキストエリアの削除
+        $textarea.remove();
+        // アラート文の表示
+        $('#js-copyalert').show().delay(2000).fadeOut(400);
+    });
+});
+
+
+// ADD class when the element showing
+$(window).on('load scroll', function () {
+    add_class_in_scrolling($('.scrl-add-class_1'));
+    add_class_in_scrolling($('.scrl-add-class_2'));
+    add_class_in_scrolling($('.scrl-add-class_3'));
+    add_class_in_scrolling($('.scrl-add-class_4'));
+    add_class_in_scrolling($('.scrl-add-class_5'));
+    add_class_in_scrolling($('.scrl-add-class_6'));
+    add_class_in_scrolling($('.scrl-add-class_7'));
+    add_class_in_scrolling($('.scrl-add-class_8'));
+    add_class_in_scrolling($('.scrl-add-class_9'));
+});
+
+
+// スクロールで要素が表示された時にclassを付与する
+function add_class_in_scrolling(target) {
+    var winScroll = $(window).scrollTop();
+    var winHeight = $(window).height();
+    var scrollPos = winScroll + winHeight;
+
+    if (target.offset().top < scrollPos) {
+        target.addClass('is-show');
+    }
+}
+// ADD class when the element showing END

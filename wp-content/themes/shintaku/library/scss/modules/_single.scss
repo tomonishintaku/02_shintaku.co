@@ -1,0 +1,211 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Single page's Styles
+We put all the form and button styles in here to setup a consistent
+look. If we need to customize them, we can do this in the main
+stylesheets and just override them. Easy Peasy.
+
+You're gonna see a few data-uri thingies down there. If you're not
+sure what they are, check this link out:
+http://css-tricks.com/data-uris/
+If you want to create your own, use this helpful link:
+http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
+
+******************************************************************/
+@import "../breakpoints/mixin-media-screen";
+@import "../partials/variables";
+
+/* USE THIS
+@include for-481up {}  
+@include for-768up {}
+@include for-1030up {}
+@include for-1240up {}
+
+@include for-480below {}  
+@include for-767below {}
+@include for-1029below {}
+@include for-1239below {}
+*/
+
+//投稿ページ用 style
+
+//blog-category-nav
+.blog-category-nav {
+    li {
+        a {
+            font-weight: bold;
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 4px;
+            padding: 0.5rem 0;
+            margin: 0 auto;
+            border: 1px solid $white;
+        }
+
+        &.web {
+            a {
+                color: $category-color-web;
+                border-color: $category-color-web;
+            }
+
+            &-current a {
+                color: $white;
+                background-color: $category-color-web;
+            }
+        }
+
+        &.art {
+            a {
+                color: $category-color-art;
+                border-color: $category-color-art;
+            }
+
+            &-current a {
+                color: $white;
+                background-color: $category-color-art;
+            }
+        }
+
+        &.work {
+            a {
+                color: $category-color-work;
+                border-color: $category-color-work;
+            }
+
+            &-current a {
+                color: $white;
+                background-color: $category-color-work;
+            }
+        }
+
+        &.book-review {
+            a {
+                color: $category-color-book-review;
+                border-color: $category-color-book-review;
+            }
+
+            &-current a {
+                color: $white;
+                background-color: $category-color-book-review;
+            }
+        }
+    }
+
+}
+
+//blog-category-nav END
+
+@mixin post-width-desktop {
+    width: 668px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.type-post {
+    @include for-1030up {
+        @include post-width-desktop;
+    }
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    &__main-image {
+        text-align: center;
+    }
+
+    .entry-title {
+        &__book-info {
+            font-size: 1rem;
+        }
+    }
+
+    .book-info {
+        text-align: center;
+        white-space: nowrap;
+        margin: 0;
+
+        p {
+            margin: 0;
+        }
+
+        &__star {
+            span {
+                color: $star-color;
+                padding-left: 0.5em;
+            }
+        }
+    }
+
+    .post-outline {
+
+        &__reading_time {
+            margin-top: 1rem;
+            text-align: right;
+            padding: 0.3rem 0 0.3rem 0.5rem;
+        }
+
+        &__summary {
+            position: relative;
+            margin: 0 0 2rem 0;
+            padding: 0 0 0.5rem 0;
+            background: #fff;
+            border-bottom: 1px solid $pink;
+
+            p {
+                margin: 0;
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                border: 14px solid transparent;
+                border-top-color: transparent;
+                position: absolute;
+                left: 50%;
+                margin-left: -14px;
+            }
+
+            &::before {
+                border-top-color: $pink;
+                bottom: -28px;
+            }
+
+            &::after {
+                border-top-color: $white;
+                bottom: -27px;
+            }
+
+        }
+    }
+}
+
+.single-post {
+    .post-footer {
+        @include for-1030up {
+            @include post-width-desktop;
+        }
+    }
+}
+
+
+.article-list {
+    &__image {
+        object-fit: cover;
+        -webkit-box-shadow: 4px 4px 5px -4px rgba(0, 0, 0, 0.43);
+        -moz-box-shadow: 4px 4px 5px -4px rgba(0, 0, 0, 0.43);
+        box-shadow: 4px 4px 5px -4px rgba(0, 0, 0, 0.43);
+
+        width: 100px;
+        height: 100px;
+
+        @include for-768up {
+            width: 148px;
+            height: 148px;
+        }
+    }
+}

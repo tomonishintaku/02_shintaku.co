@@ -53,25 +53,25 @@
 <h2>豊富なWEBサイト制作実績</h2>
 <div class="row my-5">
   <div class="col-4 col-md-2 mb-4 mb-md-0">
-    <a href=""><img src="/wp-content/themes/xeory_extension-child/lib/images/past-works_01.png" alt="食品メーカーWEBサイトの制作実績のサムネイル画像"></a>
+    <a href="/user-registration/"><img src="/wp-content/themes/xeory_extension-child/lib/images/past-works_01.png" alt="食品メーカーWEBサイトの制作実績のサムネイル画像"></a>
   </div>
   <div class="col-4 col-md-2 mb-4 mb-md-0">
-    <a href=""><img src="/wp-content/themes/xeory_extension-child/lib/images/past-works_02.png" alt="飲食系WEBサイトの制作実績のサムネイル画像"></a>
+    <a href="/user-registration/"><img src="/wp-content/themes/xeory_extension-child/lib/images/past-works_02.png" alt="飲食系WEBサイトの制作実績のサムネイル画像"></a>
   </div>
   <div class="col-4 col-md-2 mb-4 mb-md-0">
-    <a href=""><img src="/wp-content/themes/xeory_extension-child/lib/images/past-works_03.png" alt="健康食品通信販売ECサイトの制作実績のサムネイル画像"></a>
+    <a href="/user-registration/"><img src="/wp-content/themes/xeory_extension-child/lib/images/past-works_03.png" alt="健康食品通信販売ECサイトの制作実績のサムネイル画像"></a>
   </div>
   <div class="col-4 col-md-2">
-    <a href=""><img src="/wp-content/themes/xeory_extension-child/lib/images/past-works_04.png" alt="自動車保険サービスWEBサイトの制作実績のサムネイル画像"></a>
+    <a href="/user-registration/"><img src="/wp-content/themes/xeory_extension-child/lib/images/past-works_04.png" alt="自動車保険サービスWEBサイトの制作実績のサムネイル画像"></a>
   </div>
   <div class="col-4 col-md-2">
-    <a href=""><img src="/wp-content/themes/xeory_extension-child/lib/images/past-works_05.png" alt="大手建築会社WEBサイトの制作実績のサムネイル画像"></a>
+    <a href="/user-registration/"><img src="/wp-content/themes/xeory_extension-child/lib/images/past-works_05.png" alt="大手建築会社WEBサイトの制作実績のサムネイル画像"></a>
   </div>
   <div class="col-4 col-md-2">
-    <a href=""><img src="/wp-content/themes/xeory_extension-child/lib/images/past-works_06.png" alt="一般IT企業のWEBサイトの制作実績のサムネイル画像"></a>
+    <a href="/user-registration/"><img src="/wp-content/themes/xeory_extension-child/lib/images/past-works_06.png" alt="一般IT企業のWEBサイトの制作実績のサムネイル画像"></a>
   </div>  
 </div>
-<p>飲食、建築、サプリメント、医療、エンターテイメント、一般企業、あらゆる業界のWEBサイトの制作経験があります。ユーザー登録していただくと、詳細な内容をご覧いただけます。
+<p>飲食、建築、サプリメント、医療、エンターテイメント、一般企業、あらゆる業界のWEBサイトの制作経験があります。<a href="/user-registration/">ユーザー登録</a>していただくと、詳細な内容をご覧いただけます。
 </p>
 </div>
 </article>

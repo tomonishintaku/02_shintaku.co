@@ -56,6 +56,13 @@
         <?php $price = get_field('price'); ?>
         <?php $no_price = get_field('no_price'); ?>
 
+
+
+      <!--この箇所はfor文を使い、5回まで対応できるようにすることdev公開時には実装すること -->
+        <?php $reread = get_field('reread'); ?>
+        <?php $text = get_field('text'); ?>
+
+
         <h1 class="post-title mt-3" itemprop="headline"><?php the_title(); ?>
         <?php if(empty($author)):?><!--Conditional branch VAR none-->
         <?php else:?><!--Conditional branch VAR-->
@@ -80,8 +87,14 @@
       </div-->
       
       <?php if( get_the_post_thumbnail() ) : ?>
-      <div class="post-thumbnail">
+      <div class="post-thumbnail mb-3">
+        <?php if(empty($amazon_url)):?><!--Conditional branch VAR none-->
         <?php the_post_thumbnail(array(1200, 630, true)); ?>
+        <?php else:?>
+        <a href="<?php echo $amazon_url; ?>" target="_blank" class="text-center d-block">
+        <?php the_post_thumbnail('thumbnail', array('class' => 'w-75'), array(1200, 630, true)); ?>
+        </a>
+        <?php endif;?>
       </div>
       <?php endif; ?>
 
@@ -124,16 +137,25 @@
           wp_link_pages($args);
         ?>
 
+  <?php if(empty($reread)):?><!--Conditional branch VAR none-->
+        <?php else:?><!--Conditional branch VAR-->
+        <article style="margin-bottom: 3rem;">
+                <span style="display: block;"><time datetime="<?php echo $reread; ?>"><?php echo $reread; ?></time> <span class="reread-text">再読</span></span>
+                <?php echo $text; ?>
+        </article>
+        <?php endif;?><!--END Conditional branch VAR-->
+
         <?php if(empty($amazon_url)):?><!--Conditional branch VAR none-->
         <?php else:?><!--Conditional branch VAR-->
-        <div class="row amazon-link">
+        <!--div class="row amazon-link">
            <div class="col-12 col-md-8 px-0">
+           <span class="pink">*</span>営利目的のアフィリエイトリンクではありません。</span><br>
                <a href="<?php echo $amazon_url; ?>" target="_blank"><strong><?php the_title(); ?></strong>販売ページ</a>
            </div>
            <div class="col-12 col-md-4 text-center">
                 <a href="<?php echo $amazon_url; ?>" target="_blank"><img src="/wp-content/uploads/common/shop_amazon-60d46fe34ec005ea5e127b67168d9ea73d5a168f41e905b961c3aa1844510c1a.svg" alt="Amazon販売ページへのリンク"></a>
            </div>
-        </div>
+        </div-->
         <?php endif;?><!--END Conditional branch VAR-->
       </section>
 
@@ -146,11 +168,11 @@
           <li class="tag"><?php the_tags('');?></li>
           <?php } ?>
         </ul-->
-        <p class="mt-3" style="border:solid 1px #c71585;padding:1rem;">
+        <p style="border:solid 1px #c71585;padding:1rem;">
         <a href="/service-and-price/" style="color:#000!important;display:block;">
-        <strong style="display:block;"><i class="fa fa-hand-o-up pink" aria-hidden="true"></i> 国内外のIT企業でWebデザイナー歴10年超のWEBのプロ SHINTAKU。</strong>
-	WEBサイト制作・ブログ設置(WordPress)やSNS運用・アクセス解析など最小15分750円～。詳細は<strong><span style="color:#2497cc;">サービスと料金</strong>をご覧下さい。</a>
-</p>
+        <strong style="display:block;"><i class="fa fa-info-circle pr-2 pink" aria-hidden="true"></i>このブログはWEBデザインSHINTAKU。が運営しています</strong>
+        当記事をご覧になった方に限り<strong><u>30分無料クーポン(1500円相当)</u></strong>を進呈。WEBサイト制作・ブログ設置(WordPress)等にご利用可能です。詳細は<strong><span style="color:#2497cc;">サービスと料金</strong>をご覧下さい。</a>
+       </p>
 
       </footer>
 

@@ -27,6 +27,9 @@ function bzb_show_avatar(){
         <div class="post-author-img">
           <div class="inner">
           {$avatar_image}
+          <p class="post-author__button_sns_noramal"> 
+          <a class="pl-4 pr-2" target="_blank" href="https://twitter.com/tomonishintaku" rel="noopener noreferrer"><i class="fa fa-twitter-square"></i></a><a class="pr-2" href="https://www.facebook.com/tomoni.shintaku" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook-square"></i></a>
+          </p>
           </div>
         </div>
         <div class="post-author-meta">

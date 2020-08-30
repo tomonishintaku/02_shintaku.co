@@ -1,0 +1,66 @@
+/*********************
+MIXIN MEDIA ONLY SCREEN
+*********************/
+
+//USE THIS IMPORT in parical
+//@import "../breakpoints/mixin-media-screen";
+//USE THIS IMPORT in outside
+//@import "breakpoints/mixin-media-screen";
+
+
+// USE THIS  @include for-481up {}  
+@mixin for-481up {
+  @media only screen and (min-width: 481px) {
+    @content;
+  }
+}
+
+// USE THIS  @include for-768up {}
+@mixin for-768up {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+// USE THIS  @include for-1030up {}
+@mixin for-1030up {
+  @media only screen and (min-width: 1030px) {
+    @content;
+  }
+}
+
+// USE THIS  @include for-1240up {}
+@mixin for-1240up {
+  @media only screen and (min-width: 1240px) {
+    @content;
+  }
+}
+
+
+// USE THIS  @include for-480below {}  
+@mixin for-480below {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+// USE THIS  @include for-767below {}
+@mixin for-767below {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+// USE THIS  @include for-1029below {}
+@mixin for-1029below {
+  @media only screen and (max-width: 1029px) {
+    @content;
+  }
+}
+
+// USE THIS  @include for-1239below {}
+@mixin for-1239below {
+  @media only screen and (max-width: 1239px) {
+    @content;
+  }
+}
