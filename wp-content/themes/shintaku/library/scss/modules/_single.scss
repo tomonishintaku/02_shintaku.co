@@ -33,11 +33,34 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
 //blog-category-nav
 .blog-category-nav {
+    @include mobile-width-setting;
+
+    @include for-1030up {
+        width: 668px;
+        margin: 0 auto 1.5rem auto;
+        padding: 0;
+
+        ul {
+            margin: 0;
+        }
+
+    }
+
+    //for-1030up END
+
+
     li {
+        padding-right: 15px;
+
+        &:last-child {
+            padding-right: 0;
+
+        }
+
         a {
             font-weight: bold;
             display: block;
-            color: #fff;
+            color: $white;
             text-decoration: none;
             text-align: center;
             border-radius: 4px;
@@ -99,6 +122,48 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
 //blog-category-nav END
 
+.tag-shape {
+    text-decoration: none;
+    color: #fff;
+    padding: 4px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+$tag: ".article-list__tag a";
+
+.category-art {
+    #{$tag} {
+        @extend .tag-shape;
+        background-color: $category-color-art;
+    }
+}
+
+.category-book-review {
+    #{$tag} {
+
+        @extend .tag-shape;
+        background-color: $category-color-book-review;
+    }
+}
+
+.category-web {
+    #{$tag} {
+
+        @extend .tag-shape;
+        background-color: $category-color-web;
+    }
+}
+
+.category-work {
+    #{$tag} {
+
+        @extend .tag-shape;
+        background-color: $category-color-work;
+    }
+}
+
+
 @mixin post-width-desktop {
     width: 668px;
     margin: 0 auto;
@@ -119,8 +184,11 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     }
 
     .entry-title {
+        font-size: 2rem;
+
         &__book-info {
             font-size: 1rem;
+            display: block;
         }
     }
 
@@ -155,6 +223,10 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
             padding: 0 0 0.5rem 0;
             background: #fff;
             border-bottom: 1px solid $pink;
+
+            strong {
+                font-size: 0.8rem;
+            }
 
             p {
                 margin: 0;
@@ -192,20 +264,69 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     }
 }
 
+.category {
+    h1 {
+        margin: 0;
+    }
+
+    &__title-wrap {
+        padding: 0 1.5rem;
+    }
+
+}
+
+@mixin article-list-img {
+    object-fit: cover;
+    -webkit-box-shadow: 4px 4px 5px -4px rgba(0, 0, 0, 0.43);
+    -moz-box-shadow: 4px 4px 5px -4px rgba(0, 0, 0, 0.43);
+    box-shadow: 4px 4px 5px -4px rgba(0, 0, 0, 0.43);
+    width: 100px;
+    height: 100px;
+
+    @include for-768up {
+        width: 148px;
+        height: 148px;
+    }
+
+}
+
 
 .article-list {
-    &__image {
-        object-fit: cover;
-        -webkit-box-shadow: 4px 4px 5px -4px rgba(0, 0, 0, 0.43);
-        -moz-box-shadow: 4px 4px 5px -4px rgba(0, 0, 0, 0.43);
-        box-shadow: 4px 4px 5px -4px rgba(0, 0, 0, 0.43);
 
-        width: 100px;
-        height: 100px;
-
-        @include for-768up {
-            width: 148px;
-            height: 148px;
-        }
+    .byline {
+        text-align: right;
     }
+
+    .hentry {
+        padding: 0;
+    }
+
+    &__tag {
+        margin-bottom: 1rem;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        margin-top: 0;
+    }
+
+    &__books-info {
+        font-size: 1rem;
+        display: block;
+        line-height: 1.5rem;
+    }
+
+    &__image,
+    .wp-post-image {
+        @include article-list-img;
+    }
+}
+
+.popular-articles img {
+    @include article-list-img;
 }

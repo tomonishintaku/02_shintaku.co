@@ -40,13 +40,19 @@ $links[$code]['native_name'] = 'JP';
 return $links;
 }
 
+//Add template path short code
+function shortcode_templateurl() {
+    return get_bloginfo('template_url');
+}
+add_shortcode('template_url', 'shortcode_templateurl');
+
 
 //delete generate default JS files to header
 //function my_delete_local_jquery() {wp_deregister_script('jquery');}
 //add_action( 'wp_enqueue_scripts', 'my_delete_local_jquery' );
 
 //STOP generate auto P tag
-/*add_action('init', function() {
+add_action('init', function() {
 remove_filter('the_excerpt', 'wpautop');
 remove_filter('the_content', 'wpautop');
 });
@@ -55,6 +61,6 @@ $init['wpautop'] = false;
 $init['apply_source_formatting'] = ture;
 return $init;
 });
-*/
+
 
 ?>

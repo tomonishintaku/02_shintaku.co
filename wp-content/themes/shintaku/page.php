@@ -16,20 +16,18 @@
 
                     <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 
-<style type="text/css">
-    
-    .wp-post-image{
-            width: 100%;
-    height: auto;
-}
-    }
-
-</style>
-      <?php if( get_the_post_thumbnail() ) : ?>
-      <div class="post-thumbnail">
-        <?php the_post_thumbnail(array(1200,630), true); ?>
-      </div>
-      <?php endif; ?>
+                    <style type="text/css">
+                    .wp-post-image {
+                        width: 100%;
+                        height: auto;
+                    }
+                    }
+                    </style>
+                    <?php if( get_the_post_thumbnail() ) : ?>
+                    <div class="post-thumbnail">
+                        <?php the_post_thumbnail(array(1200,630), true); ?>
+                    </div>
+                    <?php endif; ?>
 
 
                     <!--p class="byline vcard">
@@ -63,9 +61,12 @@
 										) );
 									?>
                 </section> <?php // end article section ?>
-
                 <footer class="article-footer cf">
- <?php echo do_shortcode( '[contact-form-7 id="8" title="main-contact-form"]' ); ?>
+                    <?php if(is_page(array( 69, 6519 ))): ?>
+                    <!-- none -->
+                    <?php else: ?>
+                    <?php echo do_shortcode( '[contact-form-7 id="8" title="main-contact-form"]' ); ?>
+                    <?php endif; ?>
                 </footer>
 
                 <?php comments_template(); ?>

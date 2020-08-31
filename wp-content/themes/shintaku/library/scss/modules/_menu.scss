@@ -36,17 +36,33 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         margin-left: 22px;
 
         @include for-1030up {
-            margin: 0;
+            margin: 0.5rem 0 0 0;
             float: right;
         }
     }
+
+
 }
 
 .footer {
 
+    .copyright {
+        font-size: 0.75rem;
+    }
+
     .sns {
         @include for-1030up {
             float: right;
+            margin-top: 0.75rem;
+        }
+    }
+
+    .navigation {
+        .bogo-language-switcher {
+            display: flex;
+            float: right;
+            padding-right: 2rem;
+            margin-top: 0.75rem;
         }
     }
 
@@ -70,6 +86,8 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     .top-nav {
         @include for-1030up {
             float: right;
+            margin: 0 -1.5rem;
+
         }
 
     }
@@ -77,6 +95,7 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     .bogo-language-switcher {
         display: flex;
         padding-left: 1rem;
+        margin-top: 0.75rem;
 
         .current {
             color: $lighter-dark;

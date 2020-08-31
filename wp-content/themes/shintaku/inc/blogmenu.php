@@ -18,8 +18,8 @@
 endif; ?>
 <nav class="blog-category-nav">
     <ul class="row text-center">
-        <li class="col-3 web<?php echo $current_web ?>"><a
-                href="/category/web/"><?php echo $current_cat_name = get_the_category_by_ID( 29 ); ?></a>
+        <li class="col-3 book-review<?php echo $current_bookreview ?>"><a
+                href="/category/book-review/"><?php echo $cat_name = get_the_category_by_ID( 12 ); ?></a>
         </li>
         <li class="col-3 art<?php echo $current_art ?>"><a
                 href="/category/art/"><?php echo $cat_name = get_the_category_by_ID( 31 ); ?></a>
@@ -27,8 +27,8 @@ endif; ?>
         <li class="col-3 work<?php echo $current_work ?>"><a
                 href="/category/work/"><?php echo $cat_name = get_the_category_by_ID( 27 ); ?></a>
         </li>
-        <li class="col-3 book-review<?php echo $current_bookreview ?>"><a
-                href="/category/book-review/"><?php echo $cat_name = get_the_category_by_ID( 12 ); ?></a>
+        <li class="col-3 web<?php echo $current_web ?>"><a
+                href="/category/web/"><?php echo $current_cat_name = get_the_category_by_ID( 29 ); ?></a>
         </li>
     </ul>
 </nav>

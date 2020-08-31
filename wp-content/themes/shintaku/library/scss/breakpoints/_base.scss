@@ -10,13 +10,26 @@ possible. This is called at the top of the main stylsheet
 and will be used across all viewports.
 
 ******************************************************************/
+@import "../breakpoints/mixin-media-screen";
+@import "../partials/variables";
 
+/* USE THIS
+@include for-481up {}  
+@include for-768up {}
+@include for-1030up {}
+@include for-1240up {}
+
+@include for-480below {}  
+@include for-767below {}
+@include for-1029below {}
+@include for-1239below {}
+*/
 /*********************
 GENERAL STYLES
 *********************/
 
 body {
-    font-family: $lato;
+    font-family: $font-setting;
     color: $text-color;
     background-color: $gray;
     -webkit-font-smoothing: antialiased;
@@ -27,17 +40,6 @@ body {
     background-size: 7.11px 40.31px;
     background-color: white;
     line-height: 1.9rem;
-}
-
-
-/*********************
-GENERAL MIX IN
-*********************/
-
-@mixin mobile-width-setting {
-    padding: 0 4%;
-    width: 92%;
-    margin: 0 auto;
 }
 
 /********************
@@ -352,6 +354,10 @@ POSTS & CONTENT STYLES
     border-radius: 3px;
     margin-bottom: 1.5em;
 
+    @include for-1030up {
+        padding: 1rem 2.5rem 3rem 2.5rem;
+    }
+
     header {
         padding: 1.5em;
     }
@@ -403,7 +409,6 @@ POSTS & CONTENT STYLES
 /* post meta */
 .byline {
     color: $meta-gray;
-    font-style: italic;
     margin: 0;
 
     time {}
@@ -480,8 +485,21 @@ POSTS & CONTENT STYLES
 
 
     //blockquote layout
+
     blockquote {
         border: none;
+
+
+        .sub_txt {
+            text-align: right;
+            margin-top: 1rem;
+            font-size: 0.75em;
+            color: #888;
+            line-height: 1.5em;
+            display: block;
+
+        }
+
 
         &:before {
             content: '';
@@ -496,6 +514,7 @@ POSTS & CONTENT STYLES
         overflow: hidden;
 
         p {
+
             margin-bottom: 0;
 
             &:before,
@@ -526,7 +545,6 @@ POSTS & CONTENT STYLES
             }
 
         }
-
     }
 
     dl {}
@@ -541,7 +559,8 @@ POSTS & CONTENT STYLES
     }
 
     img {
-        margin: 0 0 1.5em 0;
+        margin: 0 auto 1.5em auto;
+        display: block;
         max-width: 100%;
         height: auto;
     }

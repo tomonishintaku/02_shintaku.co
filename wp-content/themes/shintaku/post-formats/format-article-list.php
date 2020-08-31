@@ -5,19 +5,21 @@
             <article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
 
                 <header class="article-header">
-                    <?php printf( get_the_category_list(', ') ); ?>
-                    <p class="byline entry-meta vcard">
-                        <?php printf( __( 'Posted').' %1$s',
-                                                    /* the time the post was published */
-                                                    '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
-                                                       /* the author of the post 
-                                                       IF you want to display author name you should replace this line to first line 
-                                                       *** <?php printf( __( 'Posted', 'bonestheme' ).' %1$s %2$s', ***
-                                                       '<span class="by">'.__( 'by', 'bonestheme').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-                                                       */
-                                                ); ?>
-                    </p>
-                    <section class="row article-list">
+                    <div class="row">
+                        <div class="article-list__tag col-4">
+                            <?php printf( get_the_category_list(', ') ); ?>
+                        </div>
+                        <div class="col-8">
+                            <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"
+                                class="article-list__link">
+                                <p class="byline entry-meta vcard">
+                                    <?php printf( __( '').' %1$s',
+                                '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
+                            ); ?>
+                                </p>
+                        </div>
+                    </div>
+                    <section class="row article-list__unit">
                         <div class="col-4">
                             <!-- Set thumb image size -->
                             <?php $ImgSize = 148; ?>
@@ -35,16 +37,13 @@
                             <?php $author = get_field('author'); ?>
                             <?php $publisher = get_field('publisher'); ?>
 
-                            <h3 class="article-list__title"><a href="<?php the_permalink() ?>" rel="bookmark"
-                                    title="<?php the_title_attribute(); ?>"><?php the_title(); ?>
-                                    <?php if(empty($author || $publisher)):?>
-                                    <!--none-->
-                                    <?php else:?>
-                                    <span
-                                        class="article-list__books-info">(<?php echo $author; ?>/<?php echo $publisher; ?>)</span>
-                                    <?php endif;?>
-
-                                </a>
+                            <h3 class="article-list__title"><?php the_title(); ?>
+                                <?php if(empty($author || $publisher)):?>
+                                <!--none-->
+                                <?php else:?>
+                                <span
+                                    class="article-list__books-info">(<?php echo $author; ?>/<?php echo $publisher; ?>)</span>
+                                <?php endif;?>
                             </h3>
                         </div>
                     </section>
@@ -54,15 +53,15 @@
                 <?php //the_content(); ?>
                 <?php //</section> hidden article body END ?>
 
-                <footer class="article-footer cf">
+                <!--footer class="article-footer cf">
                     <?php //hidden comment <p class="footer-comment-count"> ?>
                     <?php //comments_number( __( '<span>No</span> Comments', 'bonestheme' ), __( '<span>One</span> Comment', 'bonestheme' ), __( '<span>%</span> Comments', 'bonestheme' ) );?>
                     <?php //hidden comment END ?>
 
                     <?php //the_tags( '<p class="footer-tags tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
 
-                </footer>
-
+                </footer-->
+                </a>
             </article>
 
             <?php endwhile; ?>

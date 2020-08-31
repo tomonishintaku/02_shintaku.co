@@ -49,7 +49,7 @@ $link-hover: darken($link-color, 9%);
 $star-color: #ffbb00;
 
 //category COLOR
-$category-color-web:#559F4F;
+$category-color-web:#32cd32;
 $category-color-art:#FE7483;
 $category-color-work:#D9C772;
 $category-color-book-review:#4572A9;
@@ -101,6 +101,17 @@ $email: #c71610;
 
 .email i {
     color: $email;
+}
+
+
+/*********************
+GENERAL MIX IN
+*********************/
+
+@mixin mobile-width-setting {
+    padding: 0 4%;
+    width: 92%;
+    margin: 0 auto;
 }
 
 //ADD shintaku END *********************

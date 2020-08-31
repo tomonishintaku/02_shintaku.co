@@ -30,6 +30,20 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 @include for-1239below {}
 */
 
+.red {
+    color: $red;
+}
+
+.pink {
+    color: $pink;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+
 @include for-480below {
     .for-480below {
         display: none;
@@ -44,3 +58,23 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 @mixin full-width {
     margin: 0 calc(50% - 50vw);
 }
+
+//image crop CSS
+//for about page
+/*
+.crop-A {
+    border-radius: 56% 44% 73% 27% / 50% 60% 40% 50%;
+}
+
+.crop-B {
+    border-radius: 75% 25% 42% 58% / 72% 73% 27% 28%;
+}
+
+.crop-C {
+    border-radius: 25% 75% 59% 41% / 65% 30% 70% 35%;
+}
+
+.crop-D {
+    border-radius: 59% 41% 76% 24% / 50% 62% 38% 50%;
+}
+*/
