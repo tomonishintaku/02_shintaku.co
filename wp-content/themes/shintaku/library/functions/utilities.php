@@ -62,5 +62,31 @@ $init['apply_source_formatting'] = ture;
 return $init;
 });
 
+//add sidebar widget
+if ( function_exists('register_sidebar') ) {
+  
+    register_sidebar(array(
+        'name'          => 'サイドバー2',
+        'id'            => 'sidebar-2',
+        'description'   => 'for DAILY REPORT',
+        'class'         => 's2',
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>',
+    ));
+  
+}
+// USE php code on the widget
+function widget_text_exec_php( $widget_text ) {
+    if( strpos( $widget_text, '<' . '?' ) !== false ) {
+        ob_start();
+        eval( '?>' . $widget_text );
+$widget_text = ob_get_contents();
+ob_end_clean();
+}
+return $widget_text;
+}
+add_filter( 'widget_text', 'widget_text_exec_php', 99 );
 
 ?>

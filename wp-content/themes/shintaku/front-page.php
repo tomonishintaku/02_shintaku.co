@@ -2,13 +2,15 @@
 
 <article id="content" class="front-page full-width-content">
 
-    <section class="main-visual-wrap">
-        <div class="main-visual-wrap__tagline">
-            <h2><?php the_field('tagline'); ?></h2>
-            <p><?php the_field('tagline_lead'); ?>
-            </p>
+    <section class="main-visual-wrap rotate-line">
+        <div class="main-visual-wrap__tagline rotate-line__bg-bold cp-color">
+            <div class="rotate-line__title">
+                <h2><?php the_field('tagline'); ?></h2>
+                <p><?php the_field('tagline_lead'); ?>
+                </p>
+            </div>
         </div>
-        <?php the_post_thumbnail('full'); ?>
+        <?php //the_post_thumbnail('full'); ?>
     </section>
 
     <div id="inner-content" class="wrap cf">

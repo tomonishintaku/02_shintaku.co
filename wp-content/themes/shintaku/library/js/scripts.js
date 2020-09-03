@@ -149,7 +149,7 @@ function toggleNav() {
 toggleNav();
 
 // Close menu when you click an anchor link on MOBILE version
-$('.navigation a[href]').on('click', function (event) {
+$('.header .navigation a[href]').on('click', function (event) {
     $('.hamburger').trigger('click');
 });
 
@@ -187,3 +187,11 @@ $(function () {
     });
 });
 // modal window END
+
+// acordion function END
+$(function () {
+    $(".ac-menu .show").on("click", function () {
+        $(this).next().slideToggle(200);
+    });
+});
+// acordion function END

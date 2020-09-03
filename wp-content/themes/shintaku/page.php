@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div id="content" class="full-width-content">
-
+    <?php breadcrumb(); ?>
     <div id="inner-content" class="wrap cf">
 
         <main id="main" class="m-all cf" role="main" itemscope itemprop="mainContentOfPage"
@@ -14,21 +14,30 @@
 
                 <header class="article-header">
 
-                    <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+                    <section class="main-visual-wrap rotate-line">
+                        <div class="main-visual-wrap__tagline rotate-line__bg">
+                            <div class="rotate-line__title">
+                                <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+                            </div>
+                        </div>
+                        <?php //the_post_thumbnail('full'); ?>
+                    </section>
 
-                    <style type="text/css">
+                    </style>
+                    <!--
+                              <style type="text/css">
                     .wp-post-image {
                         width: 100%;
                         height: auto;
                     }
                     }
-                    </style>
-                    <?php if( get_the_post_thumbnail() ) : ?>
+              
+                    <?php // if( get_the_post_thumbnail() ) : ?>
                     <div class="post-thumbnail">
-                        <?php the_post_thumbnail(array(1200,630), true); ?>
+                        <?php //the_post_thumbnail(array(1200,630), true); ?>
                     </div>
-                    <?php endif; ?>
-
+                    <?php //endif; ?>
+                    -->
 
                     <!--p class="byline vcard">
                         <?php printf( __( 'Posted', 'bonestheme').' <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> '.__( 'by',  'bonestheme').' <span class="author">%3$s</span>', get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>

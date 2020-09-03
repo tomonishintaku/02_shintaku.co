@@ -78,3 +78,19 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     border-radius: 59% 41% 76% 24% / 50% 62% 38% 50%;
 }
 */
+
+
+// acordion function
+.ac-menu {
+    .show {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hide {
+        line-height: 50px;
+        display: none;
+    }
+}
+
+// acordion function END

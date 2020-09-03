@@ -16,9 +16,14 @@
     itemtype="http://schema.org/BlogPosting">
 
     <header class="article-header entry-header">
-
-        <h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?><span
-                class="entry-title__book-info">(<?php echo $author; ?>/<?php echo $publisher; ?>)</span></h1>
+        <h1 class="entry-title single-title" itemprop="headline" rel="bookmark">
+            <?php the_title(); ?>
+            <?php if(empty($author || $publisher)):?>
+            <!-- none -->
+            <?php else:?>
+            <span class="entry-title__book-info">(<?php echo $author; ?>/<?php echo $publisher; ?>)</span>
+            <?php endif;?>
+        </h1>
 
         <p class="byline entry-meta vcard">
 

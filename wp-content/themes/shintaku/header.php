@@ -8,6 +8,7 @@
     <html <?php language_attributes(); ?> class="no-js">
 
     <!--<![endif]-->
+
     <head>
         <meta charset="utf-8">
         <?php // force Internet Explorer to use the latest rendering engine available ?>
@@ -19,18 +20,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
 
-        <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png">
+        <link rel="apple-touch-icon"
+            href="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png">
+            <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
         <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
         <!--[if IE]>
     			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
     	<![endif]-->
         <?php // or, set /favicon.ico for IE10 win ?>
         <meta name="msapplication-TileColor" content="#2497cc">
-        <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
+        <meta name="msapplication-TileImage"
+            content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
         <meta name="theme-color" content="#2497cc">
         <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/library/css/all.min.css' />
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-        
+
         <?php // wordpress head functions ?>
 
         <?php wp_head(); ?>
@@ -39,16 +43,20 @@
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168564223-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168564223-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-168564223-1');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-168564223-1');
+        </script>
     </head>
+
     <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
         <div id="container">
             <header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
@@ -58,9 +66,10 @@
 
                             <?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
 
-                            <p id="logo" class="header-logo" itemscope itemtype="http://schema.org/Organization">
+                            <p id="logo" class="header__logo" itemscope itemtype="http://schema.org/Organization">
                                 <a href="<?php echo home_url(); ?>" rel="nofollow">
-                               <img src="<?php echo get_template_directory_uri(); ?>/library/images/common/web-design-shintaku-logo.png" alt="<?php bloginfo('name'); ?>" class="header-logo__image">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/library/images/common/web-design-shintaku-logo.png"
+                                        alt="<?php bloginfo('name'); ?>" class="header__logo__image">
                                 </a>
                             </p>
                             <?php // if you'd like to use the site description you can un-comment it below ?>
@@ -114,8 +123,10 @@
                             <div class="modal__content">
                                 <p><?php get_search_form(); ?></p>
                                 <a class="js-modal-close" href=""><i class="fas fa-times"></i></a>
-                            </div><!--modal__inner-->
-                        </div><!--modal-->
+                            </div>
+                            <!--modal__inner-->
+                        </div>
+                        <!--modal-->
                     </section><!-- search-window for blog END-->
                 </div>
             </header>

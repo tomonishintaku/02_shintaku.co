@@ -36,10 +36,16 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-size: $defaut-font-size;
     line-height: 2;
-    background-image: linear-gradient(100deg, #fafafa 14.29%, #fff 14.29%, #fff 50%, #fafafa 50%, #fafafa 64.29%, #fff 64.29%, #fff 100%);
+    //background-image: linear-gradient(100deg, #fafafa 14.29%, #fff 14.29%, #fff 50%, #fafafa 50%, #fafafa 64.29%, #fff 64.29%, #fff 100%);
     background-size: 7.11px 40.31px;
     background-color: white;
     line-height: 1.9rem;
+    overflow-x: hidden;
+
+    #container {
+        overflow-x: hidden;
+    }
+
 }
 
 /********************
@@ -353,6 +359,7 @@ POSTS & CONTENT STYLES
     background-color: $white;
     border-radius: 3px;
     margin-bottom: 1.5em;
+    padding-bottom: 3rem;
 
     @include for-1030up {
         padding: 1rem 2.5rem 3rem 2.5rem;
@@ -704,7 +711,7 @@ PAGE NAVI STYLES
 
         &:hover,
         &:focus {
-            background-color: $blue;
+            text-decoration: underline;
         }
     }
 
@@ -996,7 +1003,6 @@ COMMENT FORM STYLES
 /* comment submit button */
 #submit {
     @extend .blue-btn;
-    float: right;
     font-size: 1em;
 }
 

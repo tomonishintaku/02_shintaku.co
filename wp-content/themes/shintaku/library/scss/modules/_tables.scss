@@ -40,6 +40,7 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         background: #fff;
         overflow: hidden;
         border: none;
+        box-shadow: 8px 8px 8px -4px rgba(0, 0, 0, 0.2);
 
         tr {
             border-left: 1px solid $table-border-color;
@@ -104,3 +105,18 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
 
 // table for daily_report END
+
+
+//dl-list {
+
+dl.horizon-dl-list {
+    dt {
+        float: left;
+        margin-bottom: 1rem;
+    }
+
+    dd {
+        margin-left: 7rem;
+        margin-bottom: 1rem;
+    }
+}

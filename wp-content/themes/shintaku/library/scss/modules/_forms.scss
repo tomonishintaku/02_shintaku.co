@@ -167,9 +167,16 @@ input[type="submit"] {
   padding: 1rem 0;
 }
 
+.form-submit {
+  text-align: center;
+}
+
 
 .contact-form {
 
+  &-wrap {
+    margin-top: 3rem;
+  }
 
   @include for-1030up {
     width: 50%;

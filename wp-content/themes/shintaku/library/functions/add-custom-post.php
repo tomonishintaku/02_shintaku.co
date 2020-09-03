@@ -1,5 +1,12 @@
 <?php
 
+// デフォルトの投稿の記事詳細に`/blog/`(アーカイブ名)を追加する: THIS IS IMPORTANT!!!!
+function add_article_post_permalink( $permalink ) {
+    $permalink = '/blog' . $permalink;
+    return $permalink;
+}
+add_filter( 'pre_post_link', 'add_article_post_permalink' );
+
 // カスタム投稿タイプの追加
 
 add_action( 'init', 'create_post_type' );

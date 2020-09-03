@@ -38,6 +38,7 @@ $disabled-gray: #cfcfcf;
 //ADD shintaku *********************
 $defaut-font-size:14;
 $corporate-color: #2497cc;
+$gradation-blue:#02aad9;
 $sub-color:#191970;
 $text-dark:#555;
 $gray: #a9a9a9;
@@ -47,6 +48,7 @@ $white: #fff;
 $link-color:#2497cc;
 $link-hover: darken($link-color, 9%);
 $star-color: #ffbb00;
+$yellow:#f2d50f;
 
 //category COLOR
 $category-color-web:#32cd32;
@@ -104,15 +106,8 @@ $email: #c71610;
 }
 
 
-/*********************
-GENERAL MIX IN
-*********************/
-
-@mixin mobile-width-setting {
-    padding: 0 4%;
-    width: 92%;
-    margin: 0 auto;
-}
+//width
+$wrap-width:1040px;
 
 //ADD shintaku END *********************
 

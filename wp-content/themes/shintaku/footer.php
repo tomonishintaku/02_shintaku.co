@@ -1,5 +1,5 @@
 			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
-			    <div id="inner-footer" class="wrap cf">
+			    <div class="footer__inner">
 			        <nav class="navigation" role="navigation">
 			            <div class="row">
 			                <div class="col-12 col-lg-9">
@@ -23,7 +23,8 @@
 			            </div>
 			        </nav>
 			        <p class="source-org copyright">&copy;
-			            <!--2020- --><?php echo date('Y'); ?> SHINTAKU。All Rights Reserved.</p>
+			            <!--2020- --><?php echo date('Y'); ?> SHINTAKU。All Rights Reserved.
+			        </p>
 			    </div>
 			</footer>
 			</div>
