@@ -113,7 +113,7 @@
 
   .transform {
     .#{$hbg}__line {
-      background-color: #D600A0;
+      background-color: $accent-color;
 
       &--1 {
         top: -4px;

@@ -42,7 +42,8 @@ $gradation-blue:#02aad9;
 $sub-color:#191970;
 $text-dark:#555;
 $gray: #a9a9a9;
-$red: #dc143c;
+//$red: #dc143c;
+$red:#c70067;
 $pink: #c71585;
 $white: #fff;
 $link-color:#2497cc;
@@ -56,7 +57,6 @@ $category-color-art:#FE7483;
 $category-color-work:#D9C772;
 $category-color-book-review:#4572A9;
 
-
 //general colors
 $deep-dark:#333;
 $dark:#555;
@@ -67,6 +67,9 @@ $border-color:#e0e0e0;
 $table-border-color:#a9a9a9;
 $link-color:#0066c0;
 $link-bg-color:#4169e1;
+$accent-color:#c70067;
+$rotate-line-color-B:#EEE8AA;
+$rotate-line-color-C:#ffddf4;
 
 //SNS colors
 $youtube:#c4302b;
@@ -105,9 +108,19 @@ $email: #c71610;
     color: $email;
 }
 
+//rotate-deg
+$rotate-deg:-8deg;
+$un-rotate-deg:8deg;
 
 //width
 $wrap-width:1040px;
+
+//general-space
+$space_SS:1.25rem;
+$space_S:1.5rem;
+$space_M:1.75rem;
+$space_L:2rem;
+$space_XL:3rem;
 
 //ADD shintaku END *********************
 

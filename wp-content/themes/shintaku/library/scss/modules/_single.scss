@@ -33,7 +33,7 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
 //blog-category-nav
 .blog-category-nav {
-    @include mobile-width-setting;
+    padding: 0 7%;
 
     @include for-1030up {
         width: 668px;
@@ -50,7 +50,7 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
 
     li {
-        padding-right: 15px;
+        padding: 1%;
 
         &:last-child {
             padding-right: 0;
@@ -67,6 +67,7 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
             padding: 0.5rem 0;
             margin: 0 auto;
             border: 1px solid $white;
+            background: $white;
         }
 
         &.web {
@@ -275,21 +276,6 @@ $tag: ".article-list__tag a";
 
 }
 
-@mixin article-list-img {
-    object-fit: cover;
-    -webkit-box-shadow: 4px 4px 5px -4px rgba(0, 0, 0, 0.43);
-    -moz-box-shadow: 4px 4px 5px -4px rgba(0, 0, 0, 0.43);
-    box-shadow: 4px 4px 5px -4px rgba(0, 0, 0, 0.43);
-    width: 100px;
-    height: 100px;
-
-    @include for-768up {
-        width: 148px;
-        height: 148px;
-    }
-
-}
-
 
 .article-list {
 
@@ -303,6 +289,7 @@ $tag: ".article-list__tag a";
 
     &__tag {
         margin-bottom: 1rem;
+        white-space: nowrap;
     }
 
     &__link {
@@ -327,6 +314,28 @@ $tag: ".article-list__tag a";
     }
 }
 
-.popular-articles img {
-    @include article-list-img;
+.popular-articles {
+    a {
+        text-decoration: none;
+    }
+
+    p {
+        margin-top: 0;
+        line-height: $space_S;
+    }
+
+    img {
+        @include article-list-img;
+    }
+}
+
+.sidebar {
+    a {
+        text-decoration: none;
+    }
+
+    .popular-articles img {
+        width: 80px;
+        height: 120px;
+    }
 }

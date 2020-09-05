@@ -1,9 +1,10 @@
-			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
-			    <div class="footer__inner">
-			        <nav class="navigation" role="navigation">
-			            <div class="row">
-			                <div class="col-12 col-lg-9">
-			                    <?php wp_nav_menu(array(
+<?php //breadcrumb(); ?>
+<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+    <div class="footer__inner">
+        <nav class="navigation" role="navigation">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <?php wp_nav_menu(array(
     					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
     					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
     					'menu' => __( 'Footer Links', 'bonestheme' ),   // nav name
@@ -16,20 +17,20 @@
     					'depth' => 0,                                   // limit the depth of the nav
     					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
 						)); ?>
-			                </div>
-			                <div class="col-12 col-lg-3">
-			                    <?php include TEMPLATEPATH . '/inc/sns.php'; ?><?php echo do_shortcode( '[bogo]' ); ?>
-			                </div>
-			            </div>
-			        </nav>
-			        <p class="source-org copyright">&copy;
-			            <!--2020- --><?php echo date('Y'); ?> SHINTAKU。All Rights Reserved.
-			        </p>
-			    </div>
-			</footer>
-			</div>
-			<?php // all js scripts are loaded in library/bones.php ?>
-			<?php wp_footer(); ?>
-			</body>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <?php include TEMPLATEPATH . '/inc/sns.php'; ?><?php echo do_shortcode( '[bogo]' ); ?>
+                </div>
+            </div>
+        </nav>
+        <p class="source-org copyright">&copy;
+            <!--2020- --><?php echo date('Y'); ?> SHINTAKU。All Rights Reserved.
+        </p>
+    </div>
+</footer>
+</div>
+<?php // all js scripts are loaded in library/bones.php ?>
+<?php wp_footer(); ?>
+</body>
 
-			</html> <!-- end of site. what a ride! -->
+</html> <!-- end of site. what a ride! -->

@@ -75,6 +75,11 @@ probably best not to use it. I mean, were you going to anyway? */
 GENERAL MIX IN
 *********************/
 
+
+@mixin full-width {
+    margin: 0 calc(50% - 50vw);
+}
+
 @mixin mobile-width-setting {
     padding: 0 4%;
     width: 92%;
@@ -82,11 +87,21 @@ GENERAL MIX IN
 }
 
 @mixin rotate-setting {
-    height: 150px;
-    transform: rotate(-12deg);
-    width: 130%;
-    margin-left: -15%;
-    margin-right: -15%;
+    transform: rotate($rotate-deg);
+    width: 120vw;
+    margin-left: -10vw;
+}
+
+@mixin rotate-line {
+    content: '';
+    width: 600%;
+    top: -8rem;
+    left: -200%;
+    transform: rotate($rotate-deg);
+    display: block;
+    margin-bottom: -7rem;
+    margin-top: 4rem;
+    height: 40px;
 }
 
 @mixin z-index_0 {
@@ -97,4 +112,25 @@ GENERAL MIX IN
 @mixin z-index_1 {
     position: relative;
     z-index: 1;
+}
+
+@mixin z-index_2 {
+    position: relative;
+    z-index: 2;
+}
+
+
+@mixin article-list-img {
+    object-fit: cover;
+    -webkit-box-shadow: 4px 4px 5px -4px rgba(0, 0, 0, 0.43);
+    -moz-box-shadow: 4px 4px 5px -4px rgba(0, 0, 0, 0.43);
+    box-shadow: 4px 4px 5px -4px rgba(0, 0, 0, 0.43);
+    width: 100px;
+    height: 150px;
+
+    @include for-768up {
+        width: 148px;
+        height: 222px;
+    }
+
 }

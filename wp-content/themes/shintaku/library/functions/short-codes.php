@@ -3,7 +3,7 @@
 // Make short code for FEE
 
 function JA_fee($atts) {
-    return '<span class="scrl-add-class'.isset($atts['num']).'">3,000<span class="currency">円</span><span class="tax">(税別)</span></span>';
+    return '<span class="scrl-add-class'.isset($atts['num']).'">3,000<span class="currency">円</span><span class="tax">(税込)</span></span>';
 }
 add_shortcode('JA_hourly_fee', 'JA_fee');
 

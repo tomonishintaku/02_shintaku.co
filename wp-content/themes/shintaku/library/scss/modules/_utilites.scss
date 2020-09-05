@@ -43,7 +43,6 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     text-align: center;
 }
 
-
 @include for-480below {
     .for-480below {
         display: none;
@@ -52,11 +51,7 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
 // beyond parentElement
 .full-width {
-    margin: 0 calc(50% - 50vw);
-}
-
-@mixin full-width {
-    margin: 0 calc(50% - 50vw);
+    @include full-width;
 }
 
 //image crop CSS

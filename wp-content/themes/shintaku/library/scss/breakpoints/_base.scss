@@ -40,10 +40,9 @@ body {
     background-size: 7.11px 40.31px;
     background-color: white;
     line-height: 1.9rem;
-    overflow-x: hidden;
 
     #container {
-        overflow-x: hidden;
+        overflow: hidden;
     }
 
 }
@@ -179,7 +178,7 @@ a:visited {
     /* on hover */
     &:hover,
     &:focus {
-        color: $link-hover;
+        color: $accent-color;
     }
 
     /* on click */
@@ -1044,10 +1043,68 @@ SIDEBARS & ASIDES
 .widgettitle {}
 
 .widget {
+    &_categories {
+        white-space: nowrap;
+
+        li {
+            transform: skewX(-9deg);
+            padding-left: 1rem;
+            border-left-style: solid;
+            border-width: 3px;
+        }
+
+        a {
+            transform: skewX(9deg);
+            display: inline-block;
+        }
+
+        .cat-item-31 {
+            //art
+            border-color: $category-color-art;
+        }
+
+        .cat-item-29 {
+            //web
+            border-color: $category-color-web;
+        }
+
+        .cat-item-30 {
+            //news
+            border-color: $black;
+        }
+
+        .cat-item-27 {
+            //work
+            border-color: $category-color-work;
+        }
+
+        .cat-item-12 {
+            //book-review
+            border-color: $category-color-book-review;
+        }
+    }
+
+
+    &_recent_entries {
+        line-height: $space_S;
+
+        li {
+            a {
+                transform: skewX(9deg);
+                display: block;
+            }
+
+            transform: skewX(-9deg);
+            border-left: 2px solid $accent-color;
+            padding-left: 1rem;
+        }
+
+    }
 
     ul {
 
         li {
+            margin-bottom: $space_S;
 
             &:first-child {}
 

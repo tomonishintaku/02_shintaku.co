@@ -65,7 +65,7 @@ textarea,
   box-shadow: none;
   border: 1px solid $border-color;
   width: 100%;
-  font-family: $lato;
+  font-family: $font-setting;
   background-color: $white;
   @include transition(background-color 0.24s ease-in-out);
 
@@ -157,14 +157,15 @@ select {
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
-  background: #2497cc;
+  background: #9fc24d;
   border: none;
   color: #fff;
-  margin: 0 auto;
+  margin: 2.5rem auto 0 auto;
   display: block;
-  width: 60%;
   border-radius: 4px;
-  padding: 1rem 0;
+  padding: 1rem;
+  width: 70%;
+  font-size: 1.35rem;
 }
 
 .form-submit {
@@ -176,6 +177,9 @@ input[type="submit"] {
 
   &-wrap {
     margin-top: 3rem;
+
+    .short-copy {}
+
   }
 
   @include for-1030up {
@@ -184,17 +188,64 @@ input[type="submit"] {
 
 }
 
+
 //contact form 7
 .wpcf7 {
   h3 {
     font-size: 1.75rem;
-    font-weight: bold;
     text-align: center;
-    border-top: 1px dashed #2497cc;
     padding-top: 5rem;
+  }
+}
+
+.contact-form-wrap {
+  .require {
+    padding: 0 8px;
+    background: $accent-color;
+    color: $white;
+    border-radius: 3px;
   }
 
 
+  &__title {
 
+    font-family: $font-serif;
 
+    span {
+      @include z-index_0;
+    }
+
+    &+p {
+      text-align: center;
+    }
+
+    &::before {
+
+      @include rotate-line;
+      height: 20px;
+      background: $rotate-line-color-C;
+      @include z-index_0;
+
+      @include for-1030up {
+        top: -14rem;
+      }
+    }
+  }
 }
+
+//.contact-form-wrap END
+
+
+
+
+
+//taro-explosion 
+.taro-explosion {
+  input[type="submit"]:hover {
+    background-image: url("https://shintaku.co/wp-content/uploads/2020/09/https-__i.pinimg.com_originals_96_36_9c_96369c946f407458d05b93032e9a337a.gif");
+    background-repeat: no-repeat;
+    height: 200px;
+  }
+}
+
+//taro-explosion END

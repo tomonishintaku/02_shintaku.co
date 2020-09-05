@@ -27,7 +27,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 %btn {
   display: inline-block;
   position: relative;
-  font-family: $sans-serif;
+  font-family: $font-setting;
   text-decoration: none;
   color: $white;
   font-size: 0.9em;
@@ -41,18 +41,25 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   @include transition(background-color 0.14s ease-in-out);
 
   // hovering on the btn
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $white;
     text-decoration: none;
     outline: none;
-  } // end hover
+  }
+
+  // end hover
 
   // clicking on the button
   &:active {
     top: 1px; // adds a tiny hop to the click
-  } // end active
+  }
 
-} // end .button
+  // end active
+
+}
+
+// end .button
 
 /*
 An example button.
@@ -66,10 +73,16 @@ and it will create a button dependant on those variables.
   &:hover,
   &:focus {
     background-color: darken($blue, 4%);
-  } // end hover
+  }
+
+  // end hover
 
   &:active {
     background-color: darken($blue, 5%);
-  } // end active
+  }
 
-} // end blue button
+  // end active
+
+}
+
+// end blue button

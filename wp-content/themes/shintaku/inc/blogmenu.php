@@ -1,5 +1,30 @@
 <!-- /*USE for {index.php} and {archive.php}*/ -->
 
+<section class="rotate-line">
+    <div class="rotate-line__bg">
+        <div class="rotate-line__title">
+            <h1 class="page-title" itemprop="headline">
+                <?php if( is_category( 29 ) ) : 
+		echo $cat_name = get_the_category_by_ID( 29 ); 	  
+ 	elseif( is_category( 31 ) ) :
+
+		echo $cat_name = get_the_category_by_ID( 31 );
+
+	elseif( is_category( 27 ) ) :
+
+                echo $cat_name = get_the_category_by_ID( 27 );
+                
+	elseif( is_category( 12 ) ) :
+		
+                echo $cat_name = get_the_category_by_ID( 12 );
+        else :                
+                echo 'ブログ';
+        endif; ?>
+            </h1>
+        </div>
+    </div>
+</section>
+
 <?php if( is_category( 29 ) ) : 
 		$current_web = '-current';
  	  

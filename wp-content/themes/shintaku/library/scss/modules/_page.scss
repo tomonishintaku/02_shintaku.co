@@ -40,15 +40,11 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         margin: 4.25rem 0 2rem 0;
         padding: 0;
         width: 100%;
-        //border-bottom: 2px solid #02aad9;
-        //border-image: linear-gradient(90deg, #02aad9 0%, #ffffff 100%);
-        //border-image-slice: 1;
-        /*padding: 0 0 0 1rem;
-        -webkit-transform: skewX(-9deg);
-        -moz-transform: skewX(-9deg);
-        transform: skewX(-9deg);
-        border-left: 2px solid #2497cc !important;
-        */
+        margin: 8rem 0 2rem 0;
+
+        &:first-of-type {
+            margin: 4.25rem 0 2rem 0;
+        }
 
         @include for-1030up {
             padding-left: 0;
@@ -59,48 +55,29 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
             @include z-index_1;
         }
 
-        &.title::after,
-        &.contact-form-wrap__title::before {
-            content: '';
-            width: 600%;
-            top: -8rem;
-            left: -200%;
-            transform: rotate(-12deg);
-            display: block;
-            margin-bottom: -7rem;
-            margin-top: 4rem;
-            height: 40px;
-            background: #EEE8AA;
+        &.title::after {
+            @include rotate-line;
+
+            background: $rotate-line-color-B;
             @include z-index_0;
 
             @include for-1030up {
                 top: -14rem;
             }
         }
-
-        &.contact-form-wrap__title::before {
-            background: #ffddf4;
-        }
-
     }
 
     h3,
     h4 {
-        &.title::after {
-            content: '';
-            width: 600%;
-            left: -200%;
-            height: 8px;
-            transform: rotate(-12deg);
-            position: relative;
-            z-index: 0;
-            display: block;
-            background: #F0F8FF;
-            margin-bottom: -4rem;
-            margin-top: 4rem;
+        &.title {
+
+            font-family: $font-serif;
+
         }
 
-        /*&:first-of-type {
+    }
+
+    /*&:first-of-type {
             background: linear-gradient(90deg, $yellow 0%, $white 100%);
             border-bottom: none;
             margin: 0 -5% 2rem -10%;
@@ -121,15 +98,21 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         }*/
 
 
+}
+
+.front-page {
+    &__tagline {
+        margin-top: 7rem;
     }
 
+    &__lead {
+        margin-top: 6rem;
+    }
 }
+
 
 .article-header {
     .page-title {
-        -webkit-transform: skewX(-9deg);
-        -moz-transform: skewX(-9deg);
-        transform: skewX(-9deg);
         margin-bottom: 1.5rem;
     }
 }
@@ -141,31 +124,6 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
 
 // for FRONT page
-
-.main-visual-wrap {
-    @include full-width;
-    position: relative;
-
-    &__tagline {
-        /*    position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 80%;
-        transform: translate(-50%, -50%);*/
-        color: $white;
-        font-size: 1.25rem;
-        text-align: center;
-    }
-
-    img {
-        width: 100%;
-        object-fit: cover;
-        height: 480px;
-
-    }
-}
-
-
 .latest-posts {
 
     &__list {
@@ -200,7 +158,7 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     ul,
     dl,
     div {
-        @include z-index_0;
+        @include z-index_2;
     }
 
     .service-guide {
@@ -223,37 +181,31 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
 // TITLE rotate-line for
 .rotate-line {
-    .cp-color {
-        background: $corporate-color;
-    }
+    @include full-width;
 
     &__bg-bold {
+        @include rotate-setting;
+        background: $corporate-color;
         height: 400px;
-        transform: rotate(-12deg);
-        width: 130%;
-        margin-left: -15%;
-        margin-right: -15%;
-        position: relative;
-        z-index: -1;
     }
 
     &__bg {
         @include rotate-setting;
-        z-index: -1;
-        margin-bottom: -2rem;
         background: $corporate-color;
-        margin-top: -3.5rem;
-        //background: linear-gradient(90deg, $white 0%, $gradation-blue 100%);
+        height: 150px;
+        margin-bottom: -2rem;
+        margin-top: -2rem;
     }
 
     &__title {
-        margin: 0 auto;
+        margin-right: auto;
+        margin-left: auto;
         padding-top: 1.5rem;
         width: 66%;
         color: #fff;
         font-size: 1.25rem;
         text-align: center;
-        transform: rotate(12deg);
+        transform: rotate($un-rotate-deg);
         font-weight: normal;
 
         h1,
@@ -262,7 +214,7 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         }
 
         h1 {
-            font-size: 2em;
+            font-size: 1.75em;
             padding-top: 2rem;
         }
     }

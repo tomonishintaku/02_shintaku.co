@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <div id="content" class="full-width-content">
-    <?php breadcrumb(); ?>
     <div id="inner-content" class="wrap cf">
 
         <main id="main" class="m-all cf" role="main" itemscope itemprop="mainContentOfPage"
@@ -14,8 +13,8 @@
 
                 <header class="article-header">
 
-                    <section class="main-visual-wrap rotate-line">
-                        <div class="main-visual-wrap__tagline rotate-line__bg">
+                    <section class="rotate-line">
+                        <div class="rotate-line__bg">
                             <div class="rotate-line__title">
                                 <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
                             </div>
@@ -71,7 +70,7 @@
 									?>
                 </section> <?php // end article section ?>
                 <footer class="article-footer cf">
-                    <?php if(is_page(array( 69, 6519 ))): ?>
+                    <?php if(is_page(array( 69, 6519, 3 ))): ?>
                     <!-- none -->
                     <?php else: ?>
                     <?php echo do_shortcode( '[contact-form-7 id="8" title="main-contact-form"]' ); ?>

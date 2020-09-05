@@ -2,12 +2,10 @@
 
 <article id="content" class="front-page full-width-content">
 
-    <section class="main-visual-wrap rotate-line">
-        <div class="main-visual-wrap__tagline rotate-line__bg-bold cp-color">
+    <section class="rotate-line">
+        <div class="rotate-line__bg-bold">
             <div class="rotate-line__title">
-                <h2><?php the_field('tagline'); ?></h2>
-                <p><?php the_field('tagline_lead'); ?>
-                </p>
+                <h2 class="front-page__tagline"><?php the_field('tagline'); ?></h2>
             </div>
         </div>
         <?php //the_post_thumbnail('full'); ?>
@@ -17,15 +15,20 @@
 
         <main id="main" class="m-all cf" role="main" itemscope itemprop="mainContentOfPage"
             itemtype="http://schema.org/Blog">
-
             <section class="entry-content cf" itemprop="articleBody">
                 <div class="container">
-
+                    <section class="front-page__lead">
+                        <h2 class="title"><span>
+                                <?php the_field('tagline_sub'); ?>
+                            </span></h2>
+                        <p><?php the_field('tagline_lead'); ?>
+                        </p>
+                    </section>
                     <div class="row latest-posts">
                         <div class="col-12 col-lg-6">
 
                             <section class="news">
-                                <h2>NEWS</h2>
+                                <h2 class="title"><span>NEWS</span></h2>
                                 <p><?php the_field('news_lead'); ?>
                                 </p>
                                 <?php
@@ -61,7 +64,7 @@
                         </div>
                         <div class="col-12 col-lg-6">
                             <section class="daily-report">
-                                <h2>業務日報</h2>
+                                <h2 class="title"><span>業務日報</span></h2>
                                 <p><?php the_field('daily_report_lead'); ?>
                                 </p>
                                 <?php 

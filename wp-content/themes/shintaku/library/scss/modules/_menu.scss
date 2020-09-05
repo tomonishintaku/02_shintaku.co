@@ -48,12 +48,23 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         }
     }
 
+    .current_page_item a {
+        border-bottom: 2px solid $accent-color;
+        padding-bottom: 0;
+    }
+
+
     .sns {
         margin: 18px 12px 28px 12px;
 
         @include for-1030up {
             margin: 0.5rem 0 0 0;
             float: right;
+        }
+
+        i {
+            text-shadow: 1px 1px 0 $white, -1px 1px 0 $white, 1px -1px 0 $white, -1px -1px 0 $white;
+            background: $white;
         }
     }
 }
@@ -73,41 +84,28 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     z-index: -1;
     color: $white;
     overflow: hidden;
-
-    @include for-1030up {
-        margin-top: -700px;
-    }
+    position: relative;
+    bottom: -12px;
+    z-index: 1;
 
     &::before {
         content: '';
-        background: $corporate-color;
-        //background: #eee;
-
-        @include rotate-setting;
         display: block;
         position: relative;
-        bottom: -100px;
-        height: 300px;
-    }
-
-    @include for-1030up {
-        bottom: -700px;
-        height: 500px;
+        width: 120vw;
+        border-left: 100vw solid transparent;
+        border-right: 0 solid transparent;
+        border-bottom: 14vw solid $corporate-color;
+        bottom: -1px;
+        margin-bottom: 0;
     }
 
     &__inner {
         background: $corporate-color;
-        //background: #eee;
         padding: 1em 1em 0;
-        margin-bottom: -10px;
-
-        @include for-1030up {
-            position: relative;
-            bottom: -400px;
-            height: 500px;
-        }
+        margin-top: 0;
+        top: 0;
     }
-
 
     .copyright {
         font-size: 0.75rem;
@@ -126,6 +124,15 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     }
 
     .navigation {
+
+        .current_page_item {
+            border-right: 2px solid $accent-color;
+
+            a {
+                color: $accent-color;
+            }
+        }
+
         .bogo-language-switcher {
             display: flex;
             float: right;
@@ -164,10 +171,6 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
             float: left;
             transform: skewX(-9deg);
             border-right: 2px solid $white;
-
-            &:last-child {
-                border-right: none;
-            }
         }
 
         a {
@@ -254,11 +257,26 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         width: $wrap-width;
     }
 
-    z-index: 1;
-    position: relative;
-    margin: 0 auto;
+    margin: 0 auto 10vw auto;
     padding: 0;
     list-style: none;
+
+    &::after {
+
+        @include rotate-line;
+        height: 10px;
+        background: $rotate-line-color-B;
+        @include z-index_0;
+
+        @include for-1030up {
+            top: -14rem;
+        }
+    }
+
+    ul {
+        @include z-index_1;
+        margin: 0;
+    }
 
     li {
         display: inline;
@@ -267,7 +285,7 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         &:after {
             content: '>';
             padding: 0 0.2em;
-            color: $text-dark;
+            color: $accent-color;
         }
 
         &:last-child:after {
@@ -276,7 +294,8 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
         a {
             text-decoration: none;
-            color: $link-color;
+            color: $accent-color;
+            font-weight: bold;
 
             &:hover {
                 text-decoration: underline;
