@@ -188,6 +188,14 @@ input[type="submit"] {
 
 }
 
+.single-post {
+  .contact-form {
+    width: 100%;
+  }
+}
+
+
+
 
 //contact form 7
 .wpcf7 {
@@ -204,6 +212,7 @@ input[type="submit"] {
     background: $accent-color;
     color: $white;
     border-radius: 3px;
+    font-size: 0.75rem;
   }
 
 
@@ -241,10 +250,18 @@ input[type="submit"] {
 
 //taro-explosion 
 .taro-explosion {
-  input[type="submit"]:hover {
-    background-image: url("https://shintaku.co/wp-content/uploads/2020/09/https-__i.pinimg.com_originals_96_36_9c_96369c946f407458d05b93032e9a337a.gif");
-    background-repeat: no-repeat;
-    height: 200px;
+  input[type="submit"] {
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-within,
+    &:focus-visible {
+      background-image: url("https://shintaku.co/wp-content/uploads/2020/09/https-__i.pinimg.com_originals_96_36_9c_96369c946f407458d05b93032e9a337a.gif");
+      background-repeat: no-repeat;
+      background-position: 0 -240px;
+      background-size: 100%;
+    }
   }
 }
 

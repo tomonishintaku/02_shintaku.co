@@ -361,7 +361,7 @@ POSTS & CONTENT STYLES
     padding-bottom: 3rem;
 
     @include for-1030up {
-        padding: 1rem 2.5rem 3rem 2.5rem;
+        padding: 1rem 0 3rem 0;
     }
 
     header {
@@ -559,8 +559,6 @@ POSTS & CONTENT STYLES
 
     dd {
         margin-left: 0;
-        font-size: 0.9em;
-        color: #787878;
         margin-bottom: 1.5em;
     }
 

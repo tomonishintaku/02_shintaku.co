@@ -13,7 +13,9 @@
         <meta charset="utf-8">
         <?php // force Internet Explorer to use the latest rendering engine available ?>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title><?php $seo_title = get_field('seo_title'); ?><?php if(empty($seo_title)):?><?php the_title(); ?><?php else:?><?php the_field('seo_title'); ?><?php endif;?>｜<?php bloginfo( 'name' ); ?></title>
+        <title>
+            <?php $seo_title = get_field('seo_title'); ?><?php if(empty($seo_title)):?><?php the_title(); ?><?php else:?><?php the_field('seo_title'); ?><?php endif;?>｜<?php bloginfo( 'name' ); ?>
+        </title>
         <?php // mobile meta (hooray!) ?>
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
@@ -22,7 +24,7 @@
         <link rel="apple-touch-icon"
             href="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png">
         <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
-        <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+        <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
         <!--[if IE]>
     			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
     	<![endif]-->
