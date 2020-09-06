@@ -74,6 +74,7 @@ textarea,
   &:active {
     background-color: $focus-color;
     outline: none;
+
   }
 
   // end hover or focus
@@ -266,3 +267,34 @@ input[type="submit"] {
 }
 
 //taro-explosion END
+
+//placeholder color 
+input,
+textarea {
+  &::-webkit-input-placeholder {
+    color: $light-gray;
+    opacity: 1;
+  }
+
+  /* Firefox 18 以前 */
+  &:-moz-placeholder {
+    color: $light-gray;
+  }
+
+  /* Firefox 19 以降 */
+  &::-moz-placeholder {
+    color: $light-gray;
+    opacity: 1;
+  }
+
+  /* IE 10 以降 */
+  &:-ms-input-placeholder {
+    color: $light-gray;
+  }
+
+  &:placeholder-shown {
+    color: $light-gray;
+  }
+}
+
+//placeholder color END
