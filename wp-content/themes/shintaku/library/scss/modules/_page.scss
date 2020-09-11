@@ -43,7 +43,7 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         margin: 8rem 0 2rem 0;
 
         &:first-of-type {
-            margin: 4.25rem 0 2rem 0;
+            margin: 2.25rem 0 2rem 0;
         }
 
         @include for-1030up {
@@ -57,7 +57,6 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
         &.title::after {
             @include rotate-line;
-
             background: $rotate-line-color-B;
             @include z-index_0;
 
@@ -100,16 +99,56 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
 }
 
-.front-page {
-    &__tagline {
-        margin-top: 7rem;
+.blog,
+.category {
+    .rotate-line {
+        padding-bottom: 30px;
+
+        &__bg {
+            width: 140vw;
+            margin-top: 0rem;
+        }
     }
 
-    &__lead {
-        margin-top: 6rem;
+    @include for-1030up {
+        h1 {
+            margin-left: 8vw;
+        }
+
+        .sidebar {
+            margin-top: 156px;
+        }
     }
 }
 
+
+
+// FRONT page 
+.home {
+
+    .front-page {
+        &__tagline {
+            margin-top: 6vw;
+            line-height: 3.5rem;
+
+            @include for-768up {
+                white-space: nowrap;
+                line-height: 5.5rem;
+                font-size: 3rem;
+            }
+        }
+
+        &__lead {
+            margin-top: 6rem;
+
+            @include for-767below {
+                margin-top: 3rem;
+            }
+        }
+    }
+}
+
+// FRONT page END
 
 .article-header {
     .page-title {
@@ -119,7 +158,7 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
 
 .article-footer {
-    padding: 1.5em 1.5em 0;
+    padding: 0;
 }
 
 
@@ -218,12 +257,40 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
             padding-top: 2rem;
         }
     }
+}
 
+
+.page {
+    h2.line-desktop {
+        &:after {
+            @include for-1030up {
+                top: -8rem;
+
+            }
+        }
+    }
+
+    h2.line-desktop-none {
+        &:after {
+            @include for-1030up {
+                display: none;
+            }
+        }
+    }
 }
 
 .page-id-25 {
     h1 {
         white-space: nowrap;
+    }
+}
+
+.blog,
+.category {
+    .page-title {
+        @include for-1029below {
+            margin-right: 20vw;
+        }
     }
 }
 

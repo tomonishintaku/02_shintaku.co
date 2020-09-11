@@ -123,6 +123,60 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
 //blog-category-nav END
 
+// sub elements MOBILE width setting
+
+.blog-message,
+.popular-articles,
+.pagination {
+    @include for-1029below {
+        @include mobile-width-setting_sub;
+    }
+}
+
+.blog-message {
+    margin: 0 auto 3rem auto;
+}
+
+// sub elements MOBILE width setting END
+
+//comment-ac-button
+
+.comment-ac-button {
+    margin: 0 auto 3rem auto;
+    text-align: center;
+    border: 1px solid $link-color;
+    color: $link-color;
+    width: 50%;
+
+    .comment-reply-title {
+        display: none;
+    }
+
+    @include for-1029below {
+        width: 90%;
+    }
+
+    border-radius: 4px;
+    padding: 0.25rem 1rem;
+
+    .comment-respond {
+        border-top: 0;
+    }
+
+    .hide {
+        line-height: 1.8rem;
+    }
+
+    &:hover {
+        background: $focus-color;
+    }
+}
+
+//comment-ac-button END
+
+
+
+
 .tag-shape {
     text-decoration: none;
     color: #fff;
@@ -164,7 +218,6 @@ $tag: ".article-list__tag a";
     }
 }
 
-
 @mixin post-width-desktop {
     width: 668px;
     margin: 0 auto;
@@ -177,7 +230,9 @@ $tag: ".article-list__tag a";
     }
 
     h2 {
-        margin: 4rem 0 2rem 0;
+        font-family: $font-serif;
+        margin: 4.5rem 0 1.75rem 0;
+        color: $dark;
     }
 
     &__main-image {
@@ -185,11 +240,17 @@ $tag: ".article-list__tag a";
     }
 
     .entry-title {
-        font-size: 2rem;
+        font-size: 2.25rem;
+        font-family: $font-serif;
+        color: $dark;
 
         &__book-info {
             font-size: 1rem;
             display: block;
+            line-height: 1.5rem;
+            margin: 0.75rem 0;
+            font-family: $font-setting;
+            color: $text-color;
         }
     }
 
@@ -214,7 +275,7 @@ $tag: ".article-list__tag a";
 
         &__reading_time {
             margin-top: 1rem;
-            text-align: right;
+            text-align: center;
             padding: 0.3rem 0 0.3rem 0.5rem;
         }
 
@@ -223,7 +284,10 @@ $tag: ".article-list__tag a";
             margin: 0 0 2rem 0;
             padding: 0 0 0.5rem 0;
             background: #fff;
+            font-size: 1.25rem;
             border-bottom: 1px solid $pink;
+            font-family: $font-serif;
+            color: $dark;
 
             strong {
                 font-size: 0.8rem;
@@ -285,6 +349,7 @@ $tag: ".article-list__tag a";
 
     .hentry {
         padding: 0;
+        margin-bottom: 0;
     }
 
     &__tag {
@@ -300,12 +365,24 @@ $tag: ".article-list__tag a";
         font-size: 1.5rem;
         line-height: 2.25rem;
         margin-top: 0;
+
+        @include for-480below {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            margin-top: -5px;
+        }
     }
 
     &__books-info {
         font-size: 1rem;
         display: block;
         line-height: 1.5rem;
+
+        @include for-480below {
+            font-size: 0.75rem;
+            line-height: 1rem;
+            margin-top: 0.5rem;
+        }
     }
 
     &__image,
@@ -329,6 +406,13 @@ $tag: ".article-list__tag a";
     }
 }
 
+.post-footer {
+    h3 {
+        font-size: 1.5rem;
+        margin-top: 4rem;
+    }
+}
+
 .sidebar {
     a {
         text-decoration: none;
@@ -336,6 +420,28 @@ $tag: ".article-list__tag a";
 
     .popular-articles img {
         width: 80px;
-        height: 120px;
+        height: 80px;
     }
+}
+
+
+//daily-report-list
+
+.daily-report-list {
+    width: 668px;
+
+    @include for-1029below {
+        @include mobile-width-setting;
+    }
+
+    h1 {
+        margin-bottom: 3rem;
+    }
+
+    li {
+        border-bottom: 1px solid $border-color;
+        padding-bottom: $space_S;
+        margin-bottom: $space_S;
+    }
+
 }

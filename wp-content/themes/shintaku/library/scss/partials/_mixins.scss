@@ -86,6 +86,12 @@ GENERAL MIX IN
     margin: 0 auto;
 }
 
+@mixin mobile-width-setting_sub {
+    padding: 0 2.5%;
+    width: 95%;
+    margin: 0 auto;
+}
+
 @mixin rotate-setting {
     transform: rotate($rotate-deg);
     width: 120vw;
@@ -126,11 +132,11 @@ GENERAL MIX IN
     -moz-box-shadow: 4px 4px 5px -4px rgba(0, 0, 0, 0.43);
     box-shadow: 4px 4px 5px -4px rgba(0, 0, 0, 0.43);
     width: 100px;
-    height: 150px;
+    height: 100px;
 
     @include for-768up {
         width: 148px;
-        height: 222px;
+        height: 148px;
     }
 
 }

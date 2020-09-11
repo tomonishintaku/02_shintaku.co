@@ -13,9 +13,6 @@ hljs.initHighlightingOnLoad();
 
 <div id="content" class="full-width-content">
 
-    <?php echo get_post_type_archive_link( 'daily_report' ); ?>
-
-
     <?php //breadcrumb(); ?>
     <div id="inner-content" class="wrap cf">
 
@@ -45,11 +42,17 @@ hljs.initHighlightingOnLoad();
             <?php endif; ?>
 
             <aside class="post-footer">
-                <?php include TEMPLATEPATH . '/inc/blogmessage.php'; ?>
-                <?php comments_template(); ?>
+
+                <?php if( in_category('30') ) : ?>
+                    <!-- none -->
+                <?php else: ?>
+                    <?php include TEMPLATEPATH . '/inc/blogmessage.php'; ?>
+                <?php endif; ?>
+
+                <?php get_template_part( 'post-formats/format-comment', get_post_format() ); ?>
 
                 <!-- next and pre navigation -->
-                <section class="pagination">
+                <section class="pagination-pre-next">
                     <?php if (get_previous_post()):?>
                     <?php previous_post_link('<i class="fas fa-angle-left"></i> 前の記事 %link'); ?>
                     <?php endif; ?>

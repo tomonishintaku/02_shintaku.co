@@ -44,6 +44,10 @@
     overflow-y: auto;
     /* when menu full of device height, will scroll */
 
+    li {
+      margin-bottom: 0.5rem;
+    }
+
     .menu-item {
       float: none;
       padding-left: 1rem;

@@ -51,6 +51,11 @@ body {
 WORDPRESS BODY CLASSES
 style a page via class
 ********************/
+em {
+    font-weight: bold;
+    font-style: normal;
+}
+
 
 .rtl {}
 
@@ -495,7 +500,6 @@ POSTS & CONTENT STYLES
     blockquote {
         border: none;
 
-
         .sub_txt {
             text-align: right;
             margin-top: 1rem;
@@ -505,7 +509,6 @@ POSTS & CONTENT STYLES
             display: block;
 
         }
-
 
         &:before {
             content: '';
@@ -520,7 +523,7 @@ POSTS & CONTENT STYLES
         overflow: hidden;
 
         p {
-
+            min-height: 2.75rem;
             margin-bottom: 0;
 
             &:before,
@@ -691,6 +694,8 @@ PAGE NAVI STYLES
         display: inline;
         overflow: hidden;
         border-right: 1px solid $gray;
+        transform: skewX(-9deg);
+
     }
 
     a,
@@ -705,6 +710,7 @@ PAGE NAVI STYLES
         min-width: 1em;
         display: block;
         color: $blue;
+        transform: skewX(9deg);
 
         &:hover,
         &:focus {
@@ -714,7 +720,7 @@ PAGE NAVI STYLES
 
     .current {
         cursor: default;
-        color: $text-color;
+        color: $accent-color;
 
         &:hover,
         &:focus {
@@ -723,6 +729,14 @@ PAGE NAVI STYLES
         }
     }
 
+    &-pre-next {
+        @include mobile-width-setting;
+
+        a {
+            display: block;
+            margin-bottom: 1rem;
+        }
+    }
 }
 
 /* end .bones_page_navi */
@@ -801,7 +815,6 @@ COMMENT STYLES
         time {
             display: block;
             font-size: 0.9em;
-            font-style: italic;
 
             a {
                 color: $meta-gray;
@@ -955,7 +968,6 @@ COMMENT STYLES
 
 /* edit comment link */
 .comment-edit-link {
-    font-style: italic;
     margin: 0 7px;
     text-decoration: none;
     font-size: 0.9em;
@@ -969,7 +981,7 @@ COMMENT FORM STYLES
 
 .comment-respond {
     @extend .cf;
-    padding: 1.5em;
+    padding: 0.5em;
     border-top: 1px solid $light-gray;
 }
 
@@ -979,7 +991,6 @@ COMMENT FORM STYLES
 
 .logged-in-as {
     color: $meta-gray;
-    font-style: italic;
     margin: 0;
 
     a {
@@ -1044,11 +1055,24 @@ SIDEBARS & ASIDES
     &_categories {
         white-space: nowrap;
 
+
+        &_recent_entries {
+            ul li {
+                margin-bottom: 1rem;
+                border-bottom: 1px solid $border-color;
+                padding-bottom: 1rem;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+
         li {
             transform: skewX(-9deg);
             padding-left: 1rem;
             border-left-style: solid;
-            border-width: 3px;
+            border-width: 2px;
         }
 
         a {
@@ -1082,42 +1106,26 @@ SIDEBARS & ASIDES
         }
     }
 
+}
 
-    &_recent_entries {
-        line-height: $space_S;
+ul {
 
-        li {
-            a {
-                transform: skewX(9deg);
-                display: block;
-            }
+    li {
+        margin-bottom: $space_S;
 
-            transform: skewX(-9deg);
-            border-left: 2px solid $accent-color;
-            padding-left: 1rem;
-        }
+        &:first-child {}
 
-    }
+        &:last-child {}
 
-    ul {
+        a {}
 
-        li {
-            margin-bottom: $space_S;
-
-            &:first-child {}
-
-            &:last-child {}
-
-            a {}
-
-            /* deep nesting */
-            ul {}
-
-        }
+        /* deep nesting */
+        ul {}
 
     }
 
 }
+
 
 .no-widgets {
     background-color: $white;

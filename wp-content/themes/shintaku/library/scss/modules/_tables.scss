@@ -37,7 +37,7 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
 .entry-content {
     .daily-report-form {
-        background: #fff;
+        background: $white;
         overflow: hidden;
         border: none;
         box-shadow: 8px 8px 8px -4px rgba(0, 0, 0, 0.2);
@@ -53,10 +53,16 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         }
 
         td {
-            padding: 1rem 1.25rem;
+            padding: 1rem;
+
+            &.time,
+            &.name {
+                white-space: nowrap;
+            }
         }
 
         th {
+            white-space: nowrap;
             background: $white;
             font-weight: bold;
             color: $dark;
@@ -65,6 +71,12 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         h1 {
             text-align: center;
             margin: 0 0 0 20%;
+            white-space: nowrap;
+
+            @include for-767below {
+                font-size: 2rem;
+            }
+
         }
 
         &__title {
@@ -88,10 +100,20 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
             height: 100px;
             float: right;
 
+            @include for-767below {
+                width: 50px;
+                height: 70px;
+            }
+
             span {
                 display: block;
                 border-bottom: 1px solid $table-border-color;
                 height: 1.5rem;
+
+                @include for-767below {
+                    font-size: 0.6rem;
+                    white-space: nowrap;
+                }
             }
 
             img {

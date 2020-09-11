@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <div id="content">
-    <?php breadcrumb(); ?>
     <div id="inner-content" class="wrap cf">
 
         <main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage"
@@ -36,6 +35,10 @@ $label_notes = $notes['label'];
  ?>
 
 
+<?php 
+// you can check the URL for archive!!!
+//echo get_post_type_archive_link( 'daily_report' ); ?>
+
                     <table class="daily-report-form">
                         <tr>
                             <td width="80%" colspan="2" class="daily-report-form__title">
@@ -47,10 +50,7 @@ $label_notes = $notes['label'];
                             </td>
                         </tr>
                         <tr>
-                            <td width="60%">
-                                &nbsp;
-                            </td>
-                            <td colspan="2" width="40%" class="daily-report-form__date-area">
+                            <td colspan="3" class="daily-report-form__date-area">
                                 <section>
                                     <span><?php echo get_the_date('Y'); ?></span>
                                     <span class="fix">年</span>
@@ -63,14 +63,14 @@ $label_notes = $notes['label'];
                             </td>
                         </tr>
                         <tr>
-                            <th width="50%"><?php echo $label_name; ?></th>
-                            <th width="25%"><?php echo $label_start_time; ?></th>
-                            <th width="25%"><?php echo $label_leaving_time; ?></th>
+                            <th width="60%"><?php echo $label_name; ?></th>
+                            <th width="20%"><?php echo $label_start_time; ?></th>
+                            <th width="20%"><?php echo $label_leaving_time; ?></th>
                         </tr>
                         <tr>
-                            <td><?php the_field('name'); ?></td>
-                            <td><?php the_field('start_time'); ?></td>
-                            <td><?php the_field('leaving_time'); ?></td>
+                            <td class="name"><?php the_field('name'); ?></td>
+                            <td class="time"><?php the_field('start_time'); ?></td>
+                            <td class="time"><?php the_field('leaving_time'); ?></td>
                         </tr>
                         <tr>
                             <th colspan="3"><?php echo $label_business_overview; ?></th>
@@ -96,10 +96,14 @@ $label_notes = $notes['label'];
 
                 </section> <!-- end article section -->
 
+                <a href="<?php echo get_post_type_archive_link( 'daily_report' ); ?>" style="text-decoration: none;text-align: center;display: block;font-size: 1.25rem;margin-top: 1.5rem;"><i class="fa fa-check" aria-hidden="true"></i>
+ 業務日報一覧を見る</a>
+
             </article>
 
             <?php endwhile; ?>
             <?php else : ?>
+
 
             <article id="post-not-found" class="hentry cf">
                 <header class="article-header">
@@ -116,7 +120,7 @@ $label_notes = $notes['label'];
 
             <?php endif; ?>
             <!-- comments area -->
-            <?php comments_template(); ?>
+            <?php get_template_part( 'post-formats/format-comment', get_post_format() ); ?>
 
         </main>
 

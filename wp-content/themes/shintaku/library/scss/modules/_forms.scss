@@ -155,7 +155,8 @@ select {
 
 
 //submit button
-input[type="submit"] {
+input[type="submit"],
+#submit {
   -webkit-appearance: button;
   cursor: pointer;
   background: #9fc24d;
@@ -165,8 +166,8 @@ input[type="submit"] {
   display: block;
   border-radius: 4px;
   padding: 1rem;
-  width: 70%;
-  font-size: 1.35rem;
+  width: 75%;
+  font-size: 1.25rem;
 }
 
 .form-submit {
@@ -204,12 +205,38 @@ input[type="submit"] {
     font-size: 1.75rem;
     text-align: center;
     padding-top: 5rem;
+    line-height: 2.25rem;
   }
 }
 
 .contact-form-wrap {
+
+  @include for-1029below {
+    margin: 0 auto;
+  }
+
+
+  h4,
+  p {
+    margin: 0;
+  }
+
+  h4 {
+    margin-top: -1.5rem;
+  }
+
+  .in-single-form {
+    h4 {
+      &:first-of-type {
+        margin-top: -1.5rem;
+      }
+
+      margin-top: -4rem;
+    }
+  }
+
   .require {
-    padding: 0 8px;
+    padding: 2px 8px;
     background: $accent-color;
     color: $white;
     border-radius: 3px;
@@ -298,3 +325,13 @@ textarea {
 }
 
 //placeholder color END
+
+
+//line-add-link
+
+.line-add-link {
+  a {
+    display: block;
+    margin-top: 1.5rem;
+  }
+}

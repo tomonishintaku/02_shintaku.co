@@ -14,11 +14,6 @@ function EN_fee($atts) {
 }
 add_shortcode('EN_hourly_fee', 'EN_fee');
 
-function ENblog_link_daily_report($atts) {
-    return '<a href="https://tomonishintaku.com/en/blog/" target="_blank" rel="noopener noreferrer">英語日記執筆、添削内容確認</a>';
-}
-add_shortcode('ENblog_link_dr', 'ENblog_link_daily_report');
-
 function company_name() {
     return 'SHINTAKU。';
 }

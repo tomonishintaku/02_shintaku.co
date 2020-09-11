@@ -1,7 +1,7 @@
 <section class="popular-articles">
-    <h3>
+    <h4 class="widgettitle">
         人気記事一覧
-    </h3>
+    </h4>
     <div class="row">
         <?php
                     // GEt PV data from function 
@@ -12,7 +12,7 @@
                     ?>
 
         <!-- Display Thumbnail -->
-        <div class="col-4">
+        <div class="col-4 mb-3">
             <a href="<?php echo get_permalink(); ?>">
                 <?php $ImgSize = 148; ?>
                 <?php if( get_the_post_thumbnail() ) : ?>
@@ -41,7 +41,7 @@
             </a>
         </div>
         <!-- Display Article Title -->
-        <div class="col-8">
+        <div class="col-8 mb-3">
             <p>
                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
             </p>

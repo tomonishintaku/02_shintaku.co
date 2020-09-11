@@ -5,7 +5,7 @@
     <section class="rotate-line">
         <div class="rotate-line__bg-bold">
             <div class="rotate-line__title">
-                <h2 class="front-page__tagline"><?php the_field('tagline'); ?></h2>
+                <h1 class="front-page__tagline"><?php the_field('tagline'); ?></h1>
             </div>
         </div>
         <?php //the_post_thumbnail('full'); ?>
@@ -16,7 +16,6 @@
         <main id="main" class="m-all cf" role="main" itemscope itemprop="mainContentOfPage"
             itemtype="http://schema.org/Blog">
             <section class="entry-content cf" itemprop="articleBody">
-                <div class="container">
                     <section class="front-page__lead">
                         <h2 class="title"><span>
                                 <?php the_field('tagline_sub'); ?>
@@ -28,7 +27,7 @@
                         <div class="col-12 col-lg-6">
 
                             <section class="news">
-                                <h2 class="title"><span>NEWS</span></h2>
+                                <h2 class="title line-desktop"><span>NEWS</span></h2>
                                 <p><?php the_field('news_lead'); ?>
                                 </p>
                                 <?php
@@ -64,7 +63,7 @@
                         </div>
                         <div class="col-12 col-lg-6">
                             <section class="daily-report">
-                                <h2 class="title"><span>業務日報</span></h2>
+                                <h2 class="title line-desktop-none"><span>業務日報</span></h2>
                                 <p><?php the_field('daily_report_lead'); ?>
                                 </p>
                                 <?php 
@@ -81,9 +80,10 @@
                                     foreach ( $posts as $post ) :
                                       setup_postdata( $post ); ?>
                                     <li>
+                                        <?php the_time( 'Y年m月d日(D)' ); ?>の日報
                                         <a href="<?php the_permalink(); ?>">
                                             <div class="text">
-                                                <h4><?php the_time( 'Y年m月d日(D)' ); ?>の日報</h4>
+                                                <h4><?php the_title(); ?></h4>
                                             </div>
                                         </a>
                                     </li>
@@ -97,9 +97,6 @@
 
                         </div>
                     </div><!-- latest-post-list END -->
-
-
-                </div><!-- /container -->
 
                 <?php  // Display front page content
                     $page_id = 14; // front page ID

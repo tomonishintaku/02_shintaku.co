@@ -11,9 +11,21 @@
 
     <head>
         <meta charset="utf-8">
-        <?php wp_head(); ?>
-        <meta name="viewport" content="width=device-width" />
+        <?php // force Internet Explorer to use the latest rendering engine available ?>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title><?php wp_title(''); ?></title>
+        <title>
+            <?php bloginfo( 'name' ); ?>｜<?php $seo_title = get_field('seo_title'); ?>
+            <?php if(empty($seo_title) || is_page('blog') ):?>
+            <?php the_field('seo_title',1663); ?>
+            <?php elseif(empty($seo_title)):?>
+            <?php the_title(); ?>
+            <?php else:?>
+            <?php the_field('seo_title'); ?>
+            <?php endif;?>
+        </title>
+
+        <?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
         <link rel="apple-touch-icon"
             href="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png">
         <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
@@ -24,6 +36,14 @@
         <?php // or, set /favicon.ico for IE10 win ?>
         <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/library/css/all.min.css' />
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+
+        <?php // wordpress head functions ?>
+
+        <?php wp_head(); ?>
+
+        <?php // end of wordpress head ?>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168564223-1"></script>
@@ -45,12 +65,17 @@
                 <div id="inner-header" class="wrap cf">
                     <div class="row">
                         <div class="col-12 col-lg-3">
+
+                            <?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
+
                             <p id="logo" class="header__logo" itemscope itemtype="http://schema.org/Organization">
                                 <a href="<?php echo home_url(); ?>" rel="nofollow">
                                     <img src="<?php echo get_template_directory_uri(); ?>/library/images/common/web-design-shintaku-logo.png"
                                         alt="<?php bloginfo('name'); ?>" class="header__logo__image">
                                 </a>
                             </p>
+                            <?php // if you'd like to use the site description you can un-comment it below ?>
+                            <?php // bloginfo('description'); ?>
                         </div>
                         <div class="col-12 col-md-9">
                             <nav class="menu global-nav navigation" role="navigation" itemscope

@@ -122,10 +122,81 @@ input[type="search"] {
             top: 50%;
             transform: translate(-50%, -50%);
             width: 65%;
+            border-radius: 4px;
+
+            @include for-1029below {
+                width: 80%;
+            }
+        }
+
+        .searchform {
+            position: relative;
+            top: 15px;
         }
 
     }
 }
+
+
+.search-results-inner {
+
+    @include mobile-width-setting_sub;
+
+    &__lead {
+
+        @include for-1030up {
+            width: 668px;
+            margin: 0 0 2rem 0;
+        }
+
+    }
+
+    .search-word {
+        color: $accent-color;
+    }
+
+    .post-found {
+        border: 1px solid $border-color;
+
+        @include for-1030up {
+            width: 668px;
+            margin: 0 0 2rem 0;
+        }
+
+        .article-footer {
+            @include mobile-width-setting;
+        }
+
+        .entry-content {
+            padding-top: 0;
+        }
+    }
+
+    .sidebar {
+        @include for-1029below {
+            padding: 0;
+            width: 100%;
+        }
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .search-title {
+        font-size: 1.5rem;
+    }
+
+    #post-not-found {
+
+        .article-header,
+        .entry-content {
+            padding: 0;
+        }
+    }
+}
+
 
 
 

@@ -243,8 +243,4 @@ require_once('library/functions/add-custom-post.php');
 require_once('library/functions/utilities.php');
 require_once('library/functions/breadcrumb.php');
 
-
-//generate title tag generate style 
-  add_theme_support( 'title-tag' );
-
 /* DON'T DELETE THIS CLOSING TAG */ ?>
