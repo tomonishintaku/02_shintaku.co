@@ -134,9 +134,19 @@ GENERAL MIX IN
     width: 100px;
     height: 100px;
 
+    @include for-481up {
+        width: 138px;
+        height: 138px;
+    }
+
     @include for-768up {
-        width: 148px;
-        height: 148px;
+        width: 168px;
+        height: 168px;
+    }
+
+    @include for-1030up {
+        width: 178px;
+        height: 178px;
     }
 
 }

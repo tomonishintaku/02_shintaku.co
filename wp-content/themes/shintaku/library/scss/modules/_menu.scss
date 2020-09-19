@@ -35,6 +35,10 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     position: relative;
     z-index: 1;
 
+    &__biz-info {
+        margin: 1rem 0 0.75rem 2rem;
+    }
+
     &__logo {
         text-align: center;
         line-height: 4.25rem;
@@ -48,11 +52,13 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         }
     }
 
-    .current_page_item a {
-        border-bottom: 2px solid $accent-color;
-        padding-bottom: 0;
+    .current_page_item,
+    .current_page_parent {
+        a {
+            border-bottom: 2px solid $accent-color;
+            padding-bottom: 0;
+        }
     }
-
 
     .sns {
         margin: 18px 12px 28px 12px;
@@ -77,7 +83,6 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     }
 }
 
-
 .footer {
     clear: both;
     color: $text-dark;
@@ -87,6 +92,12 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     position: relative;
     bottom: -12px;
     z-index: 1;
+
+    &__biz-info {
+        a {
+            color: $white;
+        }
+    }
 
     &::before {
         content: '';
@@ -145,10 +156,14 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
             a {
                 color: $white;
+
+                &.current {
+                    color: $accent-color;
+                }
             }
 
             .last a::before {
-                color: $white;
+                color: $accent-color;
             }
 
         }
@@ -200,8 +215,8 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     .top-nav {
         @include for-1030up {
             float: right;
-            margin: 0 -1.5rem;
-
+            margin-left: -7rem;
+            margin-right: -1.5rem;
         }
 
     }
@@ -214,6 +229,7 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         .current {
             color: $lighter-dark;
             pointer-events: none;
+            font-weight: normal;
 
         }
 
@@ -242,7 +258,6 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
                 text-decoration: none;
                 font-size: 1.25rem;
                 color: $text-dark;
-                font-weight: bold;
             }
 
         }

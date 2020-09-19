@@ -35,6 +35,12 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: $defaut-font-size;
+
+    @include for-1030up {
+        font-size: $defaut-desktop-font-size;
+        line-height: 2.25rem;
+    }
+
     line-height: 2;
     //background-image: linear-gradient(100deg, #fafafa 14.29%, #fff 14.29%, #fff 50%, #fafafa 50%, #fafafa 64.29%, #fff 64.29%, #fff 100%);
     background-size: 7.11px 40.31px;
@@ -46,6 +52,11 @@ body {
     }
 
 }
+
+.cpny-name {
+    margin-right: -0.25rem;
+}
+
 
 /********************
 WORDPRESS BODY CLASSES
@@ -230,7 +241,7 @@ h5,
 h1,
 .h1 {
     font-size: 2.5em;
-    line-height: 1.333em;
+    line-height: 1.5em;
 }
 
 h2,
@@ -281,7 +292,7 @@ and more scalable.
             display: block;
             color: $text-dark;
             text-decoration: none;
-            padding: 0.75em 0;
+            padding: 0.5em 0;
 
             @include for-1030up {
                 padding: 0.75em;
@@ -730,7 +741,9 @@ PAGE NAVI STYLES
     }
 
     &-pre-next {
-        @include mobile-width-setting;
+        @include for-1029below {
+            @include mobile-width-setting-sub;
+        }
 
         a {
             display: block;
@@ -1052,21 +1065,22 @@ SIDEBARS & ASIDES
 .widgettitle {}
 
 .widget {
-    &_categories {
-        white-space: nowrap;
 
+    &_recent_entries {
+        ul li {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid $border-color;
+            padding-bottom: 1rem;
+            line-height: 1.75rem;
 
-        &_recent_entries {
-            ul li {
-                margin-bottom: 1rem;
-                border-bottom: 1px solid $border-color;
-                padding-bottom: 1rem;
-
-                &:last-child {
-                    border-bottom: none;
-                }
+            &:last-child {
+                border-bottom: none;
             }
         }
+    }
+
+    &_categories {
+        white-space: nowrap;
 
         li {
             transform: skewX(-9deg);
@@ -1092,7 +1106,7 @@ SIDEBARS & ASIDES
 
         .cat-item-30 {
             //news
-            border-color: $black;
+            border-color: $category-color-news;
         }
 
         .cat-item-27 {
@@ -1106,6 +1120,12 @@ SIDEBARS & ASIDES
         }
     }
 
+}
+
+.widget {
+    .cat-item-45 {
+        display: none;
+    }
 }
 
 ul {

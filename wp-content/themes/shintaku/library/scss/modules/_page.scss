@@ -40,7 +40,10 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         margin: 4.25rem 0 2rem 0;
         padding: 0;
         width: 100%;
-        margin: 8rem 0 2rem 0;
+
+        @include for-1030up {
+            margin: 8rem 0 2rem 0;
+        }
 
         &:first-of-type {
             margin: 2.25rem 0 2rem 0;
@@ -99,6 +102,14 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
 }
 
+.page-id-3 .rotate-line__title h1 {
+    @include for-767below {
+        font-size: 1.45em;
+    }
+}
+
+
+
 .blog,
 .category {
     .rotate-line {
@@ -106,14 +117,11 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
         &__bg {
             width: 140vw;
-            margin-top: 0rem;
+            margin-top: 0;
         }
     }
 
     @include for-1030up {
-        h1 {
-            margin-left: 8vw;
-        }
 
         .sidebar {
             margin-top: 156px;
@@ -131,8 +139,29 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
             margin-top: 6vw;
             line-height: 3.5rem;
 
+            @include for-480below {
+                font-size: 1.85rem;
+            }
+
+            .mb-only {
+                display: none;
+
+                @include for-767below {
+                    display: block;
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 879px) {
+                margin-left: -5vw;
+            }
+
+            @include for-767below {
+                margin-top: 5vw;
+            }
+
             @include for-768up {
                 white-space: nowrap;
+                margin-top: 4vw;
                 line-height: 5.5rem;
                 font-size: 3rem;
             }
@@ -145,6 +174,15 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
                 margin-top: 3rem;
             }
         }
+
+        @include for-1030up {
+            .news {
+                margin-top: 45px;
+            }
+        }
+
+
+
     }
 }
 
@@ -169,9 +207,10 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         li {
             border-top: 1px solid $border-color;
             padding: 1rem 0;
+            margin-bottom: 0;
 
             &:last-child {
-                border-bottom: 1px solid $border-color;
+                border-bottom: none;
             }
         }
     }
@@ -282,6 +321,11 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 .page-id-25 {
     h1 {
         white-space: nowrap;
+
+        .cpny-name {
+            margin-right: -1.25rem;
+        }
+
     }
 }
 

@@ -45,6 +45,7 @@
                 </header> <?php // end article header ?>
 
                 <section class="entry-content cf" itemprop="articleBody">
+                    <?php remove_filter ('the_content', 'wpautop'); //remove P and BR tag?>
                     <?php
 										// the content (pretty self explanatory huh)
 										the_content();
@@ -73,7 +74,14 @@
                     <?php if(is_page(array( 69, 6519, 3 ))): ?>
                     <!-- none -->
                     <?php else: ?>
-                    <?php echo do_shortcode( '[contact-form-7 id="8" title="main-contact-form"]' ); ?>
+
+                    <?php $locale = get_locale();
+                            if ('en_US' == $locale  ) { ?>
+                    <?php echo do_shortcode( '[contact-form-7 id="8" title="main-contact-form_EN"]' ); ?>
+                    <?php } else { ?>
+                    <?php echo do_shortcode( '[contact-form-7 id="7101" title="main-contact-form_JP"]' ); ?>
+                    <?php } ?>
+
                     <?php endif; ?>
                 </footer>
 

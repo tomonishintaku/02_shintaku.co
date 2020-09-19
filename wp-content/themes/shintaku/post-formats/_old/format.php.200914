@@ -10,16 +10,12 @@
 <?php $type = get_field('type'); ?>
 <?php $reread = get_field('reread'); ?>
 <?php $text = get_field('text'); ?>
-<?php $status = get_field('status'); ?>
 <?php //CUSTOM FIELD VARS END?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemprop="blogPost"
     itemtype="http://schema.org/BlogPosting">
 
     <header class="article-header entry-header">
-        <aside class="article-tag">
-            <?php printf( get_the_category_list(', ') ); ?>
-        </aside>
         <h1 class="entry-title single-title" itemprop="headline" rel="bookmark">
             <?php the_title(); ?>
             <?php if(empty($author || $publisher)):?>
@@ -30,18 +26,11 @@
         </h1>
 
         <p class="byline entry-meta vcard">
-            <?php $locale = get_locale();
-if ('en_US' == $locale ) { ?>
 
-            <?php printf( __( '<time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> <span class="d-block d-md-inline">by <span class="author"><a href="/en/about">Tomoni Shintaku</a></span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( null ) )); ?>
-            (Artist / WEB designer)</span>
-
-            <?php } else { ?>
-
-            <?php printf( __( '<time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> <span class="d-block d-md-inline">by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-            (現代美術家/WEBデザイナー)</span>
-
-            <?php } ?>
+            <?php printf( __( '').' %1$s',
+                       /* the time the post was published */
+                       '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
+                    ); ?>
 
         </p>
 
@@ -112,7 +101,7 @@ if ('en_US' == $locale ) { ?>
             <!--none-->
             <?php else:?>
 
-            <?php if( get_field('type') == "AfterMain"): //change 'reread' generate place?>
+            <?php if( get_field('type') == "AfterMain"):  //change 'reread' generate place?>
             <?php require_once('formats-inc/reread.php');?>
             <?php endif; //change 'reread' generate place END ?>
 

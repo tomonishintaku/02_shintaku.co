@@ -30,15 +30,25 @@
                                 <h2 class="title line-desktop"><span>NEWS</span></h2>
                                 <p><?php the_field('news_lead'); ?>
                                 </p>
-                                <?php
-                                $arg = array(
-                                          'posts_per_page' => 3,
-                                          'orderby' => 'date',
-                                          'order' => 'DESC', // or ASC
-                                          'category_name' => 'news'
-                                      );
-                                $posts = get_posts( $arg );
-                                if( $posts ): ?>
+                                    <?php
+                                    $locale = get_locale();
+                                    if ('en_US' == $locale ) {
+                                    $arg = array(
+                                              'posts_per_page' => 3,
+                                              'orderby' => 'date',
+                                              'order' => 'DESC', // or ASC
+                                              'category_name' => 'news_en'
+                                          );
+                                    } else { 
+                                    $arg = array(
+                                              'posts_per_page' => 3,
+                                              'orderby' => 'date',
+                                              'order' => 'DESC', // or ASC
+                                              'category_name' => 'news'
+                                          );
+                                    } 
+                                    $posts = get_posts( $arg );
+                                    if( $posts ): ?>
                                 <ul class="latest-posts__list">
                                     <?php
                                     foreach ( $posts as $post ) :

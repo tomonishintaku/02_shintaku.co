@@ -16,7 +16,7 @@ function my_reading_time(){
 if ('en_US' == $locale ) { 
 
 echo <<<EOM
-You could read this article in {$mins} min and {$secs} sec approx.
+You could read this article {$mins} min {$secs} sec approximately.
 EOM;
 
  } else { 

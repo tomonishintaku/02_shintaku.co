@@ -69,6 +69,9 @@ textarea,
   background-color: $white;
   @include transition(background-color 0.24s ease-in-out);
 
+  position: relative;
+  z-index: 9;
+
   // a focused input (or hovered on)
   &:focus,
   &:active {
@@ -137,7 +140,7 @@ input[type="password"] {
 // textareas
 textarea {
   max-width: 100%;
-  min-height: 120px;
+  min-height: 200px;
   line-height: 1.5em;
 }
 
@@ -159,15 +162,22 @@ input[type="submit"],
 #submit {
   -webkit-appearance: button;
   cursor: pointer;
-  background: #9fc24d;
+  background: $submit-color;
   border: none;
   color: #fff;
-  margin: 2.5rem auto 0 auto;
+  margin: 2.5rem auto 1rem auto;
   display: block;
   border-radius: 4px;
   padding: 1rem;
   width: 75%;
   font-size: 1.25rem;
+  border: 1px solid $submit-color;
+
+  &:hover {
+    background: $white;
+    color: $submit-color;
+  }
+
 }
 
 .form-submit {
@@ -185,7 +195,7 @@ input[type="submit"],
   }
 
   @include for-1030up {
-    width: 50%;
+    width: 55%;
   }
 
 }
@@ -195,9 +205,6 @@ input[type="submit"],
     width: 100%;
   }
 }
-
-
-
 
 //contact form 7
 .wpcf7 {
@@ -209,12 +216,33 @@ input[type="submit"],
   }
 }
 
+.contact-page {
+  .contact-form-wrap {
+
+    @include for-1029below {
+      .col-12 {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+
+  }
+}
+
 .contact-form-wrap {
+
+  margin-top: 0;
+
+  .contact-form {
+    label {
+      margin-top: 4.5rem;
+      display: block;
+    }
+  }
 
   @include for-1029below {
     margin: 0 auto;
   }
-
 
   h4,
   p {
@@ -277,7 +305,7 @@ input[type="submit"],
 
 
 //taro-explosion 
-.taro-explosion {
+/*.taro-explosion {
   input[type="submit"] {
 
     &:hover,
@@ -291,7 +319,7 @@ input[type="submit"],
       background-size: 100%;
     }
   }
-}
+}*/
 
 //taro-explosion END
 

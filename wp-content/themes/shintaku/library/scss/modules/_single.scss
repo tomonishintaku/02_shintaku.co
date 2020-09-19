@@ -186,37 +186,70 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 }
 
 $tag: ".article-list__tag a";
+$tag_s: ".article-tag a";
+
+#{$tag},
+#{$tag_s} {
+
+    &:focus,
+    &:hover,
+    &:visited:focus,
+    &:visited:hover {
+        color: $white;
+    }
+}
+
+.article-tag {
+    margin-bottom: 1rem;
+}
 
 .category-art {
-    #{$tag} {
+
+    #{$tag},
+    #{$tag_s},
+    #{$tag_s} {
         @extend .tag-shape;
         background-color: $category-color-art;
     }
 }
 
 .category-book-review {
-    #{$tag} {
 
+    #{$tag},
+    #{$tag_s} {
         @extend .tag-shape;
         background-color: $category-color-book-review;
     }
 }
 
 .category-web {
-    #{$tag} {
 
+    #{$tag},
+    #{$tag_s} {
         @extend .tag-shape;
         background-color: $category-color-web;
     }
 }
 
 .category-work {
-    #{$tag} {
 
+    #{$tag},
+    #{$tag_s} {
         @extend .tag-shape;
         background-color: $category-color-work;
     }
 }
+
+
+.category-news {
+
+    #{$tag},
+    #{$tag_s} {
+        @extend .tag-shape;
+        background-color: $category-color-news;
+    }
+}
+
 
 @mixin post-width-desktop {
     width: 668px;

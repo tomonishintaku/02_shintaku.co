@@ -23,6 +23,13 @@
                 </div>
             </div>
         </nav>
+        <aside class="footer__biz-info">
+            <span class="d-block d-md-inline mr-0 mr-md-4"><i class="fas fa-yen-sign pr-1"></i> 料金一律:
+                <?php echo do_shortcode('[JA_hourly_fee_sp]'); ?>(1h)</span>
+            <span class="d-block d-md-inline mr-0 mr-md-4"><i class="fa fa-clock" aria-hidden="true"></i> 営業時間:
+                10:00-17:00(土日祝休み)</span><i class="fa fa-envelope" aria-hidden="true"></i> お問い合わせ: <a
+                href="mailto:info@shintaku.co">info@shintaku.co</a>
+        </aside>
         <p class="source-org copyright">&copy;
             <!--2020- --><?php echo date('Y'); ?> SHINTAKU。All Rights Reserved.
         </p>

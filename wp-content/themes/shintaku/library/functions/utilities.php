@@ -63,6 +63,7 @@ return $init;
 });
 */
 
+
 //add sidebar widget
 if ( function_exists('register_sidebar') ) {
   
@@ -93,13 +94,13 @@ return $widget_text;
 add_filter( 'widget_text', 'widget_text_exec_php', 99 );
 
 
-//特定のカテゴリの除外
-function exclude_category( $query ) {
+//特定のカテゴリの除外 「-30」など、-を付けてカテゴリ指定し非表示にする 
+/*function exclude_category( $query ) {
   if ( $query->is_home() && $query->is_main_query() ) {
-    $query->set( 'cat', '-30' );//マイナスをつけてカテゴリIDを除外する
+    $query->set( 'cat', '-30' );
   }
 }
-add_action( 'pre_get_posts', 'exclude_category' );
+add_action( 'pre_get_posts', 'exclude_category' );*/
 
 ?>
 

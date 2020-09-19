@@ -36,7 +36,8 @@ $border-color: #ccc;
 $disabled-gray: #cfcfcf;
 
 //ADD shintaku *********************
-$defaut-font-size:16;
+$defaut-font-size:16px;
+$defaut-desktop-font-size:18px;
 $corporate-color: #2497cc;
 $gradation-blue:#02aad9;
 $sub-color:#191970;
@@ -51,12 +52,15 @@ $link-color:#2497cc;
 $link-hover: darken($link-color, 9%);
 $star-color: #ffbb00;
 $yellow:#f2d50f;
+$submit-color:#9fc24d;
 
 //category COLOR
 $category-color-web:#32cd32;
 $category-color-art:#FE7483;
 $category-color-work:#D9C772;
 $category-color-book-review:#20b2aa;
+$category-color-news:#ffa500;
+;
 
 //general colors
 $deep-dark:#333;
