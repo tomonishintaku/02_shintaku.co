@@ -43,7 +43,16 @@
         <!-- Display Article Title -->
         <div class="col-8 mb-3">
             <p>
-                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+            <?php
+            if(mb_strlen($post->post_title)>30) {
+              $title= mb_substr($post->post_title,0,30) ;
+                echo $title . '...';
+              } else {
+                echo $post->post_title;
+              }
+            ?>
+            </a>
             </p>
         </div>
 

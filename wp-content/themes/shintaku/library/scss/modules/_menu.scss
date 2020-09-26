@@ -35,8 +35,21 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     position: relative;
     z-index: 1;
 
+    @include for-1030up {
+        .menu-item-7362 {
+            display: none;
+        }
+    }
+
     &__biz-info {
         margin: 1rem 0 0.75rem 2rem;
+
+        @include for-1029below {
+            padding: 0.25rem 0.75rem;
+            border: 1px solid $light-gray;
+            font-size: 0.9rem;
+        }
+
     }
 
     &__logo {
@@ -94,6 +107,12 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     z-index: 1;
 
     &__biz-info {
+
+        @include for-1029below {
+            padding: 1rem;
+            border: 1px solid $white;
+        }
+
         a {
             color: $white;
         }
@@ -264,6 +283,42 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     }
 
 }
+
+// page top link button
+$left-p:88.5vw;
+$top-p: -20px;
+
+.page-top {
+    display: none;
+    transform: translateY(0);
+
+    &.is-show {
+        color: $corporate-color;
+        display: block;
+        position: relative;
+        font-size: 2rem;
+        animation-duration: .9s;
+        animation-name: pagetop;
+        animation-timing-function: ease-in-out;
+        top: $top-p;
+        left: $left-p;
+    }
+
+    @keyframes pagetop {
+        0% {
+            left: $left-p;
+            top: 120px;
+        }
+
+        100% {
+            left: $left-p;
+            top: $top-p;
+        }
+    }
+}
+
+// page top link button END
+
 
 //breadcrumb ui
 .breadcrumb {

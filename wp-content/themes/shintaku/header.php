@@ -22,14 +22,15 @@
     			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
     	<![endif]-->
         <?php // or, set /favicon.ico for IE10 win ?>
-        <meta property="og:image"
-            content="<?php echo get_template_directory_uri(); ?>/library/images/common/og-image.png" />
-        <meta name="twitter:image"
-            content="<?php echo get_template_directory_uri(); ?>/library/images/common/og-image.png">
         <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/library/css/all.min.css' />
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168564223-1"></script>
+        <script>
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+            ga('send', 'event', 'Contact Form', 'submit');
+        }, false );
+        </script>
         <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -42,7 +43,7 @@
         </script>
     </head>
 
-    <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+    <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage" id="top">
         <div id="container">
             <header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
                 <div id="inner-header" class="wrap cf">
@@ -77,12 +78,21 @@
                                     </div>
                                     <div class="d-md-none d-block">
                                         <aside class='header__biz-info'>
-                                            <span class="d-block"><i class="fas fa-yen-sign pr-1"></i> 料金一律:
-                                                <?php echo do_shortcode('[JA_hourly_fee_sp]'); ?>(1h)</span>
-                                            <span class="d-block"><i class="fa fa-clock" aria-hidden="true"></i> 営業時間:
-                                                10:00-17:00(土日祝休み)</span><i class="fa fa-envelope"
-                                                aria-hidden="true"></i> お問い合わせ: <a
-                                                href="mailto:info@shintaku.co">info@shintaku.co</a>
+
+                <?php $locale = get_locale();
+                if ('en_US' == $locale ) { ?>
+                        <span class="d-block d-md-inline mr-0 mr-md-4"><i class="fas fa-yen-sign pr-1"></i> Fee: <?php echo do_shortcode('[EN_hourly_fee num=null]'); ?>(1h)</span>
+                        <span class="d-block d-md-inline mr-0 mr-md-4"><i class="fa fa-clock" aria-hidden="true"></i> Open:
+                            10:00am-5:00pm(JST)<br>(Closed on Sat, Sun, PH)</span><i class="fa fa-envelope" aria-hidden="true"></i> Contact Us: <a
+                            href="mailto:info@shintaku.co">info@shintaku.co</a>
+                    <?php } else { ?>
+                            <span class="d-block"><i class="fas fa-yen-sign pr-1"></i> 料金一律:
+                                <?php echo do_shortcode('[JA_hourly_fee_sp]'); ?>(1h)</span>
+                            <span class="d-block"><i class="fa fa-clock" aria-hidden="true"></i> 営業時間:
+                                10:00-17:00(土日祝休み)</span><i class="fa fa-envelope"
+                                aria-hidden="true"></i> お問い合わせ: <a
+                                href="mailto:info@shintaku.co">info@shintaku.co</a>
+                    <?php } ?>               
                                         </aside>
                                     </div>
                                     <div class="col-12 col-lg-3">

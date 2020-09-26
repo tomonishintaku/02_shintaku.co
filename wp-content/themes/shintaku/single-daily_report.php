@@ -35,7 +35,7 @@ $label_notes = $notes['label'];
  ?>
 
 
-<?php 
+                    <?php 
 // you can check the URL for archive!!!
 //echo get_post_type_archive_link( 'daily_report' ); ?>
 
@@ -96,8 +96,10 @@ $label_notes = $notes['label'];
 
                 </section> <!-- end article section -->
 
-                <a href="<?php echo get_post_type_archive_link( 'daily_report' ); ?>" style="text-decoration: none;text-align: center;display: block;font-size: 1.25rem;margin-top: 1.5rem;"><i class="fa fa-check" aria-hidden="true"></i>
- 業務日報一覧を見る</a>
+                <a href="<?php echo get_permalink(6618); ?>"
+                    style="text-decoration: none;text-align: center;display: block;font-size: 1.25rem;margin-top: 1.5rem;"><i
+                        class="fa fa-check" aria-hidden="true"></i>
+                    業務日報一覧を見る</a>
 
             </article>
 
@@ -119,17 +121,15 @@ $label_notes = $notes['label'];
             </article>
 
             <?php endif; ?>
+            <section class="entry-content">
+            <p class="mb-3 text-center">
+            ご質問・お問い合わせはコメント欄より匿名で可能です。100％ご回答差し上げます。</p>
             <!-- comments area -->
             <?php get_template_part( 'post-formats/format-comment', get_post_format() ); ?>
-
+            </section>
         </main>
 
-        <div id="sidebar1" class="sidebar m-all t-1of3 d-2of7 last-col cf" role="complementary">
-            <?php if ( is_active_sidebar('sidebar-2') ) : ?>
-            <?php dynamic_sidebar('sidebar-2'); ?>
-            <?php endif; ?>
-        </div><!-- sidebar END -->
-
+        <?php get_template_part( 'post-formats/sidebar-daily_report', get_post_format() ); ?>
     </div>
 </div>
 

@@ -214,9 +214,18 @@ input[type="submit"],
     padding-top: 5rem;
     line-height: 2.25rem;
   }
+
+  form.sent .wpcf7-response-output {
+    border: none;
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+    padding: 0;
+    margin: 1.75rem 0 1rem 0;
+  }
 }
 
-.contact-page {
+.contact-page,
+.single-post {
   .contact-form-wrap {
 
     @include for-1029below {
@@ -230,8 +239,11 @@ input[type="submit"],
 }
 
 .contact-form-wrap {
-
   margin-top: 0;
+
+  .complete {
+    display: none;
+  }
 
   .contact-form {
     label {
@@ -298,10 +310,29 @@ input[type="submit"],
   }
 }
 
+.sent {
+
+  .wpcf7-submit,
+  .short-copy {
+    display: none;
+  }
+
+  .contact-form-wrap {
+    .complete {
+      display: block;
+      border: 1px solid $star-color;
+      padding: 0 1.25rem;
+
+      p {
+        text-align: left;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+}
+
 //.contact-form-wrap END
-
-
-
 
 
 //taro-explosion 

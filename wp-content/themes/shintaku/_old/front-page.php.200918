@@ -23,17 +23,6 @@
                         <p><?php the_field('tagline_lead'); ?>
                         </p>
                     </section>
-
-
-                <?php $locale = get_locale();
-                if ('en_US' == $locale ) { ?>
-                    
-                <?php  // Display front page content
-                    $page_id = 6451; // front page ID
-                    $post = get_post( $page_id );
-                    echo apply_filters('the_content', $post->post_content); 
-                ?>
-                <?php } else { ?>
                     <div class="row latest-posts">
                         <div class="col-12 col-lg-6">
 
@@ -41,25 +30,15 @@
                                 <h2 class="title line-desktop"><span>NEWS</span></h2>
                                 <p><?php the_field('news_lead'); ?>
                                 </p>
-                                    <?php
-                                    $locale = get_locale();
-                                    if ('en_US' == $locale ) {
-                                    $arg = array(
-                                              'posts_per_page' => 3,
-                                              'orderby' => 'date',
-                                              'order' => 'DESC', // or ASC
-                                              'category_name' => 'news_en'
-                                          );
-                                    } else { 
-                                    $arg = array(
-                                              'posts_per_page' => 3,
-                                              'orderby' => 'date',
-                                              'order' => 'DESC', // or ASC
-                                              'category_name' => 'news'
-                                          );
-                                    } 
-                                    $posts = get_posts( $arg );
-                                    if( $posts ): ?>
+                                <?php
+                                $arg = array(
+                                          'posts_per_page' => 3,
+                                          'orderby' => 'date',
+                                          'order' => 'DESC', // or ASC
+                                          'category_name' => 'news'
+                                      );
+                                $posts = get_posts( $arg );
+                                if( $posts ): ?>
                                 <ul class="latest-posts__list">
                                     <?php
                                     foreach ( $posts as $post ) :
@@ -125,9 +104,8 @@
                     echo apply_filters('the_content', $post->post_content); 
                 ?>
 
-                <?php } ?>
-
             </section>
+
 
             <footer class="article-footer">
 

@@ -152,12 +152,13 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         display: none;
     }
 
-    @include for-1029below {
-        width: 90%;
-    }
-
     border-radius: 4px;
     padding: 0.25rem 1rem;
+
+    @include for-1029below {
+        width: 100%;
+        padding: 0.25rem 5%;
+    }
 
     .comment-respond {
         border-top: 0;
@@ -424,7 +425,8 @@ $tag_s: ".article-tag a";
     }
 }
 
-.popular-articles {
+.popular-articles,
+.img-article-list {
     a {
         text-decoration: none;
     }
@@ -451,9 +453,12 @@ $tag_s: ".article-tag a";
         text-decoration: none;
     }
 
-    .popular-articles img {
-        width: 80px;
-        height: 80px;
+    .popular-articles,
+    .img-article-list {
+        img {
+            width: 92px;
+            height: 92px;
+        }
     }
 }
 
@@ -462,6 +467,17 @@ $tag_s: ".article-tag a";
 
 .daily-report-list {
     width: 668px;
+
+    @include for-1030up {
+        padding-right: 60px;
+    }
+
+    .pagination {
+        li {
+            border-bottom: none;
+        }
+    }
+
 
     @include for-1029below {
         @include mobile-width-setting;
@@ -476,5 +492,6 @@ $tag_s: ".article-tag a";
         padding-bottom: $space_S;
         margin-bottom: $space_S;
     }
+
 
 }

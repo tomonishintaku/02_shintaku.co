@@ -48,9 +48,10 @@ hljs.initHighlightingOnLoad();
                 <?php else: ?>
                     <?php include TEMPLATEPATH . '/inc/blogmessage.php'; ?>
                 <?php endif; ?>
-
+                <section class="entry-content">
+                <p class="mb-3 text-center"> 質問やご感想など、匿名でコメント可能です。100％ご返信いたします。</p>
                 <?php get_template_part( 'post-formats/format-comment', get_post_format() ); ?>
-
+                </section>
                 <!-- next and pre navigation -->
                 <section class="pagination-pre-next">
                     <?php if (get_previous_post()):?>

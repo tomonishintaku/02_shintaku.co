@@ -54,6 +54,14 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     @include full-width;
 }
 
+.entry-content {
+    .postscript {
+        margin: 0 0 1em;
+        border-top: 1px solid $border-color;
+        padding-top: 2.5rem;
+    }
+}
+
 //image crop CSS
 //for about page
 /*
@@ -87,9 +95,12 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     }
 }
 
-.tax,
-.currency {
-    font-size: 0.75rem;
+small {
+
+    .tax,
+    .currency {
+        font-size: 0.75rem;
+    }
 }
 
 // acordion function END

@@ -1,7 +1,7 @@
 <section class="blog-message">
 
    <?php if( in_category('12') ) : ?>
-    <div style="border:solid 1px #c71585;padding:1rem;">
+    <div id="order-reading-msg" style="border:solid 1px #c71585;padding:1rem;">
         <div style="color:#000!important;text-decoration:none;display:block;">
         <strong style="display:block;border-bottom:1px solid #ccc; padding-bottom:1rem;margin-bottom:1rem;"><i class="fa fa-info-circle pr-2 pink" aria-hidden="true"></i>このブログは教養とウンチクあるWEBデザインを目指すSHINTAKU。が運営しています。年間100冊超の読書量。</strong>
         「この本を読んでどう感じたか知りたい」、「読書感想を書いてほしい」等ご希望がありましたら、<u>書籍名と該当書籍のAmazonでの購入ページURL</u>を添えて、以下まで<u><em>該当書籍の価格分+300円</em>のAmazonギフト券</u>をお送りください。<em class="red">どんな分野の書籍でも、１ヶ月以内に精読のうえ、読書感想を本サイトに公開</em>いたします。

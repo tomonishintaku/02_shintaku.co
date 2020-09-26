@@ -7,7 +7,7 @@
 
 <div id="content" class="two-column">
     <div id="inner-content" class="wrap cf">
-        <main id="main" class="article-list t-2of3 d-5of7 cf daily-report-list" role="main" itemscope itemprop="mainContentOfPage"
+        <main id="main" class="article-list m-all t-2of3 d-5of7 cf daily-report-list" role="main" itemscope itemprop="mainContentOfPage"
             itemtype="http://schema.org/Blog">
             <section class="rotate-line">
                 <div class="rotate-line__bg">
@@ -65,7 +65,11 @@
                 </ul>
         </main>
 
-            <?php get_template_part( 'post-formats/sidebar-daily_report', get_post_format() ); ?>
+        <div id="sidebar1" class="sidebar m-all t-1of3 d-2of7 last-col cf" role="complementary">
+            <?php if ( is_active_sidebar('sidebar-2') ) : ?>
+            <?php dynamic_sidebar('sidebar-2'); ?>
+            <?php endif; ?>
+        </div><!-- sidebar END -->
 
     </div>
 

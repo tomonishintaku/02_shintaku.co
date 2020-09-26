@@ -43,15 +43,16 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
         @include for-1030up {
             margin: 8rem 0 2rem 0;
+            padding-left: 0;
+            left: 0;
         }
 
         &:first-of-type {
             margin: 2.25rem 0 2rem 0;
-        }
 
-        @include for-1030up {
-            padding-left: 0;
-            left: 0;
+            @include for-1030up {
+                margin-top: 6.25rem;
+            }
         }
 
         span {
@@ -109,11 +110,14 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 }
 
 
-
 .blog,
 .category {
     .rotate-line {
         padding-bottom: 30px;
+
+        @include for-1030up {
+            margin-top: 0.75rem;
+        }
 
         &__bg {
             width: 140vw;
@@ -125,6 +129,49 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
         .sidebar {
             margin-top: 156px;
+        }
+    }
+}
+
+
+.two-column {
+    .rotate-line {
+        @include for-1030up {
+            margin-top: 1rem;
+        }
+
+        padding-bottom: 90px;
+
+        &+h2 span {
+            top: -3rem;
+        }
+
+        &__bg {
+            width: 140vw;
+            margin-top: 0;
+        }
+    }
+
+    &__lead {
+        margin-bottom: 2rem;
+        position: relative;
+        top: -2rem;
+
+    }
+
+    h1 {
+        margin-left: -14vw;
+        margin-top: 0.5rem;
+    }
+
+    @include for-1030up {
+        h1 {
+            margin-left: 7rem;
+            margin-top: -0.5rem;
+        }
+
+        .sidebar {
+            margin-top: 280px;
         }
     }
 }
@@ -315,6 +362,10 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
                 display: none;
             }
         }
+
+        &+p {
+            margin-top: -0.5rem;
+        }
     }
 }
 
@@ -349,7 +400,7 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         line-height: 1.9rem;
         padding-left: 2em;
 
-        .a {
+        .a span {
             color: $pink;
         }
 

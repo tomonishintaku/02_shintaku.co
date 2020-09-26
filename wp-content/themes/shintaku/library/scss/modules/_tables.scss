@@ -31,9 +31,20 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 @include for-1239below {}
 */
 
-
 // table for daily_report 
 
+.daily_report-template-default {
+    .sidebar {
+        @include for-1029below {
+            padding: 0 2.5%;
+            width: 95%;
+        }
+    }
+
+    .entry-content {
+        padding: 0 4%;
+    }
+}
 
 .entry-content {
     .daily-report-form {
@@ -41,6 +52,16 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         overflow: hidden;
         border: none;
         box-shadow: 8px 8px 8px -4px rgba(0, 0, 0, 0.2);
+
+        ul {
+            list-style-type: circle;
+            margin-left: 1.25rem;
+            margin-top: 0;
+
+            li {
+                margin-bottom: 0;
+            }
+        }
 
         @include for-1030up {
             margin-top: -2.35rem;

@@ -39,9 +39,9 @@ var viewport = updateViewportDimensions();
  * Wrap your actions in this function to throttle the frequency of firing them off, for better performance, esp. on mobile.
  * ( source: http://stackoverflow.com/questions/2854407/javascript-jquery-window-resize-how-to-fire-after-the-resize-is-completed )
  */
-var waitForFinalEvent = (function () {
+var waitForFinalEvent = (function() {
     var timers = {};
-    return function (callback, ms, uniqueId) {
+    return function(callback, ms, uniqueId) {
         if (!uniqueId) {
             uniqueId = "Don't call this twice without a uniqueId";
         }
@@ -110,7 +110,7 @@ function loadGravatars() {
     viewport = updateViewportDimensions();
     // if the viewport is tablet or larger, we load in the gravatars
     if (viewport.width >= 768) {
-        jQuery('.comment img[data-gravatar]').each(function () {
+        jQuery('.comment img[data-gravatar]').each(function() {
             jQuery(this).attr('src', jQuery(this).attr('data-gravatar'));
         });
     }
@@ -120,7 +120,7 @@ function loadGravatars() {
 /*
  * Put all your regular jQuery in here.
  */
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function($) {
 
     /*
      * Let's fire off the gravatar function
@@ -139,22 +139,21 @@ function toggleNav() {
     var hamburger = document.getElementById('js-hamburger');
     var blackBg = document.getElementById('js-black-bg');
 
-    hamburger.addEventListener('click', function () {
+    hamburger.addEventListener('click', function() {
         body.classList.toggle('nav-open');
     });
-    blackBg.addEventListener('click', function () {
+    blackBg.addEventListener('click', function() {
         body.classList.remove('nav-open');
     });
 }
 toggleNav();
 
 // Close menu when you click an anchor link on MOBILE version
-$('.header .navigation a[href]').on('click', function (event) {
+$('.header .navigation a[href]').on('click', function(event) {
     $('.hamburger').trigger('click');
 });
 
 // HUMBURGER menu END
-
 
 
 // ADD class when scroll
@@ -162,7 +161,7 @@ $('.header .navigation a[href]').on('click', function (event) {
 
 var startPos = 0,
     winScrollTop = 0;
-$(window).on('scroll', function () {
+$(window).on('scroll', function() {
     winScrollTop = $(this).scrollTop();
     if (winScrollTop >= startPos) {
         $('.hamburger').addClass('transform');
@@ -176,12 +175,12 @@ $(window).on('scroll', function () {
 
 
 // modal window
-$(function () {
-    $('.js-modal-open').on('click', function () {
+$(function() {
+    $('.js-modal-open').on('click', function() {
         $('.js-modal').fadeIn();
         return false;
     });
-    $('.js-modal-close').on('click', function () {
+    $('.js-modal-close').on('click', function() {
         $('.js-modal').fadeOut();
         return false;
     });
@@ -189,24 +188,20 @@ $(function () {
 // modal window END
 
 // acordion function END
-$(function () {
-    $(".ac-menu .show").on("click", function () {
+$(function() {
+    $(".ac-menu .show").on("click", function() {
         $(this).next().slideToggle(200);
     });
 });
 // acordion function END
 
 // ADD class when the element showing
-$(window).on('load scroll', function () {
+$(window).on('load scroll', function() {
     add_class_in_scrolling($('.scrl-add-class_1'));
     add_class_in_scrolling($('.scrl-add-class_2'));
     add_class_in_scrolling($('.scrl-add-class_3'));
     add_class_in_scrolling($('.scrl-add-class_4'));
     add_class_in_scrolling($('.scrl-add-class_5'));
-    add_class_in_scrolling($('.scrl-add-class_6'));
-    add_class_in_scrolling($('.scrl-add-class_7'));
-    add_class_in_scrolling($('.scrl-add-class_8'));
-    add_class_in_scrolling($('.scrl-add-class_9'));
 });
 
 // スクロールで要素が表示された時にclassを付与する
@@ -219,5 +214,29 @@ function add_class_in_scrolling(target) {
         target.addClass('is-show');
     }
 }
-
 // ADD class when the element showing END
+
+
+// smooth scroll
+const links = document.querySelectorAll('a[href^="#"]');
+
+// 各aタグにクリックイベントを設定
+for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', (e) => {
+        // デフォルトのイベントをキャンセル
+        e.preventDefault();
+
+        // 対象（aタグ）のY軸の絶対座標を取得
+        const elemY = links[i].getBoundingClientRect().top;
+        // 現在のスクロール量を取得
+        const scrollY = window.pageYOffset;
+        // 対象までのスクロール量を算出
+        const top = elemY - scrollY;
+
+        window.scroll({
+            top: top, // スクロール量の設定
+            behavior: 'smooth' // スクロール動作の設定
+        });
+    });
+}
+// smooth scroll END
