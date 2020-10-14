@@ -5,12 +5,12 @@
 
 
 function JA_fee($atts) {
-    return '<a href="/blog/taro-award-plan-apply" class="detail-link" style="color:#59616d;"><span class="scrl-add-class_'.$atts['num'].'">3,000<span class="currency">円</span><span class="tax">(税込)</span></span></a>';
+    return '3,000<span class="currency">円</span><span class="tax">(税込)</span>';
 }
 add_shortcode('JA_hourly_fee', 'JA_fee');
 
 function JA_fee_sp($atts) {
-    return '<span style="text-decoration: line-through;">3,000<span class="currency">円</span><span class="tax">(税込)</span></span><strong class="red">米一合</strong></a>';
+    return '3,000<span class="currency">円</span><span class="tax">(税込)</span>';
 }
 add_shortcode('JA_hourly_fee_sp', 'JA_fee_sp');
 
@@ -23,6 +23,16 @@ function ENblog_link_daily_report($atts) {
     return '<a href="https://tomonishintaku.com/en/blog/" target="_blank" rel="noopener noreferrer">英語日記執筆、添削内容確認</a>';
 }
 add_shortcode('ENblog_link_dr', 'ENblog_link_daily_report');
+
+function ENblog_link_single_daily_report($atts) {
+    return '<a href="https://tomonishintaku.com/en/blog/'.$atts['url'].'" target="_blank" rel="noopener noreferrer">英語日記作成、添削内容確認</a>';
+}
+add_shortcode('ENblog_link_single', 'ENblog_link_single_daily_report');
+
+function VoiceBlog_link_single_daily_report($atts) {
+    return '<a href="https://tomonishintaku.com/blog/voice/'.$atts['url'].'" target="_blank" rel="noopener noreferrer">音声ブログ録音・公開</a>';
+}
+add_shortcode('VoiceBlog_link_single', 'VoiceBlog_link_single_daily_report');
 
 function company() {
     return '<span class="cpny-name">SHINTAKU。</span>';
