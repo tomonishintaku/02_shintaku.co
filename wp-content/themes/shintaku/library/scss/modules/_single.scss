@@ -43,18 +43,15 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
         ul {
             margin: 0;
         }
-
     }
 
     //for-1030up END
-
 
     li {
         padding: 1%;
 
         &:last-child {
             padding-right: 0;
-
         }
 
         a {
@@ -118,7 +115,6 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
             }
         }
     }
-
 }
 
 //blog-category-nav END
@@ -146,7 +142,7 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     text-align: center;
     border: 1px solid $link-color;
     color: $link-color;
-    width: 50%;
+    width: 80%;
 
     .comment-reply-title {
         display: none;
@@ -171,12 +167,27 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
     &:hover {
         background: $focus-color;
     }
+    .commentlist {
+        text-align: left;
+    }
+    .comment_content {
+        color: $deep-dark;
+    }
+}
+
+.comment-num {
+    position: absolute;
+    background: #c71585;
+    color: #fff;
+    padding: 10px 11px;
+    height: 2rem;
+    line-height: 0.75rem;
+    border-radius: 1rem;
+    top: -16px;
+    right: -26px;
 }
 
 //comment-ac-button END
-
-
-
 
 .tag-shape {
     text-decoration: none;
@@ -191,7 +202,6 @@ $tag_s: ".article-tag a";
 
 #{$tag},
 #{$tag_s} {
-
     &:focus,
     &:hover,
     &:visited:focus,
@@ -205,7 +215,6 @@ $tag_s: ".article-tag a";
 }
 
 .category-art {
-
     #{$tag},
     #{$tag_s},
     #{$tag_s} {
@@ -215,7 +224,6 @@ $tag_s: ".article-tag a";
 }
 
 .category-book-review {
-
     #{$tag},
     #{$tag_s} {
         @extend .tag-shape;
@@ -224,7 +232,6 @@ $tag_s: ".article-tag a";
 }
 
 .category-web {
-
     #{$tag},
     #{$tag_s} {
         @extend .tag-shape;
@@ -233,7 +240,6 @@ $tag_s: ".article-tag a";
 }
 
 .category-work {
-
     #{$tag},
     #{$tag_s} {
         @extend .tag-shape;
@@ -241,16 +247,13 @@ $tag_s: ".article-tag a";
     }
 }
 
-
 .category-news {
-
     #{$tag},
     #{$tag_s} {
         @extend .tag-shape;
         background-color: $category-color-news;
     }
 }
-
 
 @mixin post-width-desktop {
     width: 668px;
@@ -306,7 +309,6 @@ $tag_s: ".article-tag a";
     }
 
     .post-outline {
-
         &__reading_time {
             margin-top: 1rem;
             text-align: center;
@@ -333,7 +335,7 @@ $tag_s: ".article-tag a";
 
             &::before,
             &::after {
-                content: '';
+                content: "";
                 border: 14px solid transparent;
                 border-top-color: transparent;
                 position: absolute;
@@ -350,7 +352,6 @@ $tag_s: ".article-tag a";
                 border-top-color: $white;
                 bottom: -27px;
             }
-
         }
     }
 }
@@ -371,12 +372,9 @@ $tag_s: ".article-tag a";
     &__title-wrap {
         padding: 0 1.5rem;
     }
-
 }
 
-
 .article-list {
-
     .byline {
         text-align: right;
     }
@@ -462,7 +460,6 @@ $tag_s: ".article-tag a";
     }
 }
 
-
 //daily-report-list
 
 .daily-report-list {
@@ -478,7 +475,6 @@ $tag_s: ".article-tag a";
         }
     }
 
-
     @include for-1029below {
         @include mobile-width-setting;
     }
@@ -492,6 +488,4 @@ $tag_s: ".article-tag a";
         padding-bottom: $space_S;
         margin-bottom: $space_S;
     }
-
-
 }
