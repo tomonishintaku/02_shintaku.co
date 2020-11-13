@@ -50,4 +50,11 @@ function show_post_thumbnail(){
 }
 add_shortcode('featured_image','show_post_thumbnail');
 
+//shortcode for upload folder images 
+add_shortcode('uploads', 'shortcode_up');
+function shortcode_up() {
+$upload_dir = wp_upload_dir();
+return $upload_dir['baseurl'];
+}
+
 ?>
