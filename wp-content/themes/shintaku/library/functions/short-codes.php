@@ -3,6 +3,11 @@
 // Make short code for FEE
 
 
+function Biz_hours($atts) {
+    return '11:30-14:00('.$atts['add'].'年中無休)';
+}
+add_shortcode('Business_hours', 'Biz_hours');
+
 
 function JA_fee($atts) {
     return '3,000<span class="currency">円</span><span class="tax">(税込)</span>';
@@ -25,12 +30,12 @@ function ENblog_link_daily_report($atts) {
 add_shortcode('ENblog_link_dr', 'ENblog_link_daily_report');
 
 function ENblog_link_single_daily_report($atts) {
-    return '<a href="https://tomonishintaku.com/en/blog/'.$atts['url'].'" target="_blank" rel="noopener noreferrer">英語日記作成、添削内容確認</a>';
+    return '<a href="https://tomonishintaku.com/en/blog/'.$atts['url'].'" target="_blank" rel="noopener noreferrer">英語日記'.$atts['article'].'作成、添削内容確認</a>';
 }
 add_shortcode('ENblog_link_single', 'ENblog_link_single_daily_report');
 
 function VoiceBlog_link_single_daily_report($atts) {
-    return '<a href="https://tomonishintaku.com/blog/voice/'.$atts['url'].'" target="_blank" rel="noopener noreferrer">音声ブログ録音・公開</a>';
+    return '<a href="https://tomonishintaku.com/blog/voice/'.$atts['url'].'" target="_blank" rel="noopener noreferrer">音声ブログ'.$atts['article'].'録音・公開</a>';
 }
 add_shortcode('VoiceBlog_link_single', 'VoiceBlog_link_single_daily_report');
 

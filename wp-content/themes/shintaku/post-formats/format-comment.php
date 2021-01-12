@@ -10,9 +10,13 @@
 
 $(document).ready(function(){
 
-    var $element = $('#comments-title span').html();
-    $('.comment-num').html($element);
+      if($('#comments-title span').length){ 
+            var $element = $('#comments-title span').html();
+    		$('.comment-num').html($element);
 
+          } else {
+			 $('.comment-num').css('display','none');
+      }
 });
 
 </script>

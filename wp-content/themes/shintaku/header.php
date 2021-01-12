@@ -10,20 +10,21 @@
     <!--<![endif]-->
 
     <head>
-        <script src="https://www.googleoptimize.com/optimize.js?id=OPT-KDZ6J9J"></script>
+        <script rel="preload" src="https://www.googleoptimize.com/optimize.js?id=OPT-KDZ6J9J" as="script"></script>
         <meta charset="utf-8">
         <?php wp_head(); ?>
         <meta name="viewport" content="width=device-width" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="apple-touch-icon"
-            href="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png">
-        <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+        <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png">
+        <link rel="preload" href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" as="style">
+        <link crossorigin="anonymous" rel='stylesheet' id='sng-fontawesome-css'
+        href='https://use.fontawesome.com/releases/v5.11.2/css/all.css' type='text/css' media='all' />
         <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
         <!--[if IE]>
     			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
     	<![endif]-->
         <?php // or, set /favicon.ico for IE10 win ?>
-        <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/library/css/all.min.css' />
+        <link rel="preload" href='<?php echo get_template_directory_uri(); ?>/library/css/all.min.css' as="style"/>
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168564223-1"></script>
@@ -34,13 +35,13 @@
         </script>
         
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1BM6T539L9"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3TXX9JMTYE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-1BM6T539L9');
+  gtag('config', 'G-3TXX9JMTYE');
 </script>
 
         <script>
@@ -100,8 +101,7 @@
                     <?php } else { ?>
                             <span class="d-block"><i class="fas fa-yen-sign pr-1"></i> 料金一律:
                                 <?php echo do_shortcode('[JA_hourly_fee_sp]'); ?>(1h)</span>
-                            <span class="d-block"><i class="fa fa-clock" aria-hidden="true"></i> 営業時間:
-                                10:00-17:00(土日祝休み)</span><i class="fa fa-envelope"
+                            <span class="d-block"><i class="fa fa-clock" aria-hidden="true"></i> 営業時間: <?php echo do_shortcode( '[Business_hours add=""]' ); ?></span><i class="fa fa-envelope"
                                 aria-hidden="true"></i> お問い合わせ: <a
                                 href="mailto:info@shintaku.co">info@shintaku.co</a>
                     <?php } ?>               

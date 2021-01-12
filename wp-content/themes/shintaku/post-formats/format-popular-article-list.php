@@ -17,10 +17,17 @@
                 <?php $ImgSize = 148; ?>
                 <?php if( get_the_post_thumbnail() ) : ?>
                 <?php the_post_thumbnail(array($ImgSize, $ImgSize, true)); ?>
-                <?php else:?>
+      
+         		<?php elseif(empty($image)) :?>
+
                 <img src="<?php $image = get_field('image'); echo $image; ?>"
                     alt="書籍<?php the_title(); ?>(<?php echo $author; ?>/<?php echo $publisher; ?>)」の表紙画像"
                     width="<?php echo $ImgSize; ?>" height="<?php echo $ImgSize; ?>">
+
+                <?php else:?>
+
+        				<img src="<?php echo get_template_directory_uri(); ?>/library/images/blog-category-img_none.png" alt="画像がない場合に表示されるアイコン" width="<?php echo $ImgSize; ?>" height="<?php echo $ImgSize; ?>" class="article-list__image">
+
                 <?php endif;?>
 
                 <!-- check this if condition 
