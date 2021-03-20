@@ -54,6 +54,7 @@
 
         gtag('config', 'UA-168564223-1');
         </script>
+        <script src="/wp-includes/js/jquery/jquery_stable.js"></script>
     </head>
 
     <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage" id="top">

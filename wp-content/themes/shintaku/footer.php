@@ -40,14 +40,13 @@ if ('en_US' == $locale ) { ?>
 <?php } ?>
         </aside>
         <p class="source-org copyright">&copy;
-            <!--2020- --><?php echo date('Y'); ?> SHINTAKU。All Rights Reserved.
+            <!--2020- -->2020-<?php echo date('Y'); ?> SHINTAKU LLC. All Rights Reserved.
         </p>
     </div>
 </footer>
 </div>
 <?php // all js scripts are loaded in library/bones.php ?>
 <?php wp_footer(); ?>
-
 
 <script>
     // add top link button

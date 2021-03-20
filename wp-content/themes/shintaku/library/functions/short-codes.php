@@ -4,7 +4,7 @@
 
 
 function Biz_hours($atts) {
-    return '11:30-14:00('.$atts['add'].'年中無休)';
+    return '12:00-17:00('.$atts['add'].'年中無休)';
 }
 add_shortcode('Business_hours', 'Biz_hours');
 

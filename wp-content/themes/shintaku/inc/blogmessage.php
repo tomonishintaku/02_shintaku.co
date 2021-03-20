@@ -28,7 +28,7 @@
         <p style="border:solid 1px #c71585;padding:1rem;">
             <a href="/service-and-fees/" style="color:#000!important;text-decoration:none;display:block;">
             <strong style="display:block;border-bottom:1px solid #ccc; padding-bottom:1rem;margin-bottom:1rem;"><i class="fa fa-info-circle pr-2 pink" aria-hidden="true"></i>このブログはWEBデザインSHINTAKU。が運営しています</strong>
-            当記事をご覧になった方に限り<em><u>30分無料(1500円相当)割引</u></em>いたします。WEBサイトやブログの改善・リニューアル・新規制作等をご依頼いただく際にお申し出ください。詳細は<em><span style="color:#2497cc;"><?php $title = get_the_title( 27 ); echo $title; ?></em>参照。</a>
+            当記事をご覧になった方に限り<em><u>30分無料(1500円相当)割引</u></em>いたします。WEBサイトやブログ、ECサイトのリニューアルや新規制作、コーディング、SEO対策等をご依頼いただく際にお申し出ください。詳細は<em><span style="color:#2497cc;"><?php $title = get_the_title( 27 ); echo $title; ?></em>参照。</a>
        </p>
 
     <?php endif; ?>
