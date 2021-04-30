@@ -5,7 +5,10 @@
         <main id="main" class="article-list m-all d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage"
             itemtype="http://schema.org/Blog">
             <header class="article-header">
-                <?php get_template_part( 'post-formats/format-article-list', get_post_format() ); ?>
+                <?php get_template_part(
+    "post-formats/format-article-list",
+    get_post_format()
+); ?>
         </main>
 
         <?php get_sidebar(); ?>
@@ -14,4 +17,5 @@
 
 </div>
 
-<?php get_footer(); ?>
+<?php get_footer();
+?>
