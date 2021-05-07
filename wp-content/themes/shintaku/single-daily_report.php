@@ -52,13 +52,21 @@ $label_notes = $notes['label'];
                         <tr>
                             <td colspan="3" class="daily-report-form__date-area">
                                 <section>
-                                    <span><?php echo get_the_date('Y'); ?></span>
-                                    <span class="fix">年</span>
-                                    <span><?php echo get_the_date('n'); ?></span>
-                                    <span class="fix">月</span>
-                                    <span><?php echo get_the_date('j'); ?></span>
-                                    <span class="fix">日</span>
-                                    <span><?php echo get_the_date('(D)'); ?></span>
+                            <?php
+                                $year = get_the_date('Y'); 
+                                $month = get_the_date('n'); 
+                                $day = get_the_date('j');
+                                $week = get_the_date('D');
+                            ?>
+                                    <time datetime="<?php echo $year.'-'.$month.'-'.$day ; ?>" itemprop="datepublished">
+                                        <span><?php echo $year; ?></span>
+                                        <span class="fix">年</span>
+                                        <span><?php echo $month; ?></span>
+                                        <span class="fix">月</span>
+                                        <span><?php echo $day; ?></span>
+                                        <span class="fix">日</span>
+                                        <span><?php echo '('.$week.')'; ?></span>
+                                    </time>
                                 </section>
                             </td>
                         </tr>
