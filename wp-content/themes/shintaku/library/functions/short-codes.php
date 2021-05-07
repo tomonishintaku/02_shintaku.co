@@ -49,6 +49,11 @@ function company_name() {
 }
 add_shortcode('c_name', 'company_name');
 
+function calendar_check($atts) {
+    return '<i class="far fa-calendar-check"></i><b class="px-2">'.$atts['date'].'</b>';
+}
+add_shortcode('calendar_check_ico', 'calendar_check');
+
 //shortcode for article's featured image 
 function show_post_thumbnail(){
     return get_the_post_thumbnail();
