@@ -50,7 +50,7 @@ function company_name() {
 add_shortcode('c_name', 'company_name');
 
 function calendar_check($atts) {
-    return '<i class="far fa-calendar-check"></i><time datetime="'.$atts['date'].'" class="font-weight-bold px-2">'.$atts['date'].'</time>';
+    return '<a href="'.$atts['url'].'" target="_blank" rel="noopener noreferrer" class="red text-decoration-none"><i class="red far fa-calendar-check"></i><time datetime="'.$atts['date'].'" class="px-2"><small class="inline red">'.$atts['date'].'</small></time></a>';
 }
 add_shortcode('calendar_check_ico', 'calendar_check');
 
