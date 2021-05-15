@@ -234,7 +234,6 @@ $GLOBALS['comment'] = $comment; ?>
     <?php
 } // don't remove this bracket!
 
-
 require_once('library/functions/generate-popular-post.php');
 require_once('library/functions/calculate-reading-time.php');
 require_once('library/functions/search-including-custom-post.php');
@@ -243,8 +242,35 @@ require_once('library/functions/add-custom-post.php');
 require_once('library/functions/utilities.php');
 require_once('library/functions/breadcrumb.php');
 
-
 //generate title tag generate style 
   add_theme_support( 'title-tag' );
+
+//Display custom field data on the list of custom post
+function add_posts_columns( $columns ) {
+  $columns['start_time'] = '開始時刻';
+  $columns['leaving_time'] = '終了時刻';
+  return $columns;
+}
+function custom_posts_column( $column_name, $post_id ) {
+  if ( $column_name == 'start_time' ) {
+    $start_time = get_post_meta( $post_id, 'start_time', true );
+    echo ( $start_time ) ? $start_time : '－';
+  }
+  if ( $column_name == 'leaving_time' ) {
+    $leaving_time = get_post_meta( $post_id, 'leaving_time', true );
+    echo ( $leaving_time ) ? $leaving_time : '－';
+  }
+}
+add_filter( 'manage_daily_report_posts_columns', 'add_posts_columns' );
+add_action( 'manage_daily_report_posts_custom_column', 'custom_posts_column', 10, 2 );  
+
+function my_admin_style() {
+  echo '<style>
+.column-start_time, .column-leaving_time{
+  width: 8%;
+}
+  </style>'.PHP_EOL;
+}
+add_action('admin_print_styles', 'my_admin_style');
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
