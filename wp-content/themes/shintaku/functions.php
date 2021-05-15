@@ -249,6 +249,7 @@ require_once('library/functions/breadcrumb.php');
 function add_posts_columns( $columns ) {
   $columns['start_time'] = '開始時刻';
   $columns['leaving_time'] = '終了時刻';
+  $columns['operating_time'] = '稼働時間';
   return $columns;
 }
 function custom_posts_column( $column_name, $post_id ) {
@@ -260,13 +261,25 @@ function custom_posts_column( $column_name, $post_id ) {
     $leaving_time = get_post_meta( $post_id, 'leaving_time', true );
     echo ( $leaving_time ) ? $leaving_time : '－';
   }
+if ( $column_name == 'operating_time' ) {
+  
+  $start_time = get_post_meta( $post_id, 'start_time', true );
+  $leaving_time = get_post_meta( $post_id, 'leaving_time', true );
+          
+  $start = new DateTime("$start_time");
+  $leaving = new DateTime("$leaving_time");
+  $diff = $start->diff($leaving);
+  $operating_time = $diff->format('%hh%im');
+  
+  echo ( $operating_time ) ? $operating_time : '－';
+}  
 }
 add_filter( 'manage_daily_report_posts_columns', 'add_posts_columns' );
 add_action( 'manage_daily_report_posts_custom_column', 'custom_posts_column', 10, 2 );  
 
 function my_admin_style() {
   echo '<style>
-.column-start_time, .column-leaving_time{
+.column-start_time, .column-leaving_time, .column-operating_time{
   width: 8%;
 }
   </style>'.PHP_EOL;

@@ -41,7 +41,7 @@ $label_notes = $notes['label'];
 
                     <table class="daily-report-form">
                         <tr>
-                            <td width="80%" colspan="2" class="daily-report-form__title">
+                            <td width="80%" colspan="3" class="daily-report-form__title">
                                 <h1>業務日報</h1>
                             </td>
                             <td width="20%">
@@ -50,7 +50,7 @@ $label_notes = $notes['label'];
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="3" class="daily-report-form__date-area">
+                            <td colspan="4" class="daily-report-form__date-area">
                                 <section>
                             <?php
                                 $year = get_the_date('Y'); 
@@ -74,31 +74,41 @@ $label_notes = $notes['label'];
                             <th width="60%"><?php echo $label_name; ?></th>
                             <th width="20%"><?php echo $label_start_time; ?></th>
                             <th width="20%"><?php echo $label_leaving_time; ?></th>
+                            <th width="20%">稼働時間</th>
                         </tr>
                         <tr>
                             <td class="name"><?php the_field('name'); ?></td>
                             <td class="time"><?php the_field('start_time'); ?></td>
                             <td class="time"><?php the_field('leaving_time'); ?></td>
+                            <td class="time"><?php
+                            $start_time = get_field('start_time');
+                            $leaving_time = get_field('leaving_time');
+                                    
+                            $start = new DateTime("$start_time");
+                            $leaving = new DateTime("$leaving_time");
+                            $diff = $start->diff($leaving);
+                            echo $diff->format('%hh%im');
+                                            ?></td>
                         </tr>
                         <tr>
-                            <th colspan="3"><?php echo $label_business_overview; ?></th>
+                            <th colspan="4"><?php echo $label_business_overview; ?></th>
                         </tr>
                         <tr>
-                            <td colspan="3" class="daily-report-form__text-area">
+                            <td colspan="4" class="daily-report-form__text-area">
                                 <?php the_field('business_overview'); ?></td>
                         </tr>
                         <tr>
-                            <th colspan="3"><?php echo $label_tomorrows_goal; ?></th>
+                            <th colspan="4"><?php echo $label_tomorrows_goal; ?></th>
                         </tr>
                         <tr>
-                            <td colspan="3" class="daily-report-form__text-area"><?php the_field('tomorrows_goal'); ?>
+                            <td colspan="4" class="daily-report-form__text-area"><?php the_field('tomorrows_goal'); ?>
                             </td>
                         </tr>
                         <tr>
-                            <th colspan="3"><?php echo $label_notes; ?></th>
+                            <th colspan="4"><?php echo $label_notes; ?></th>
                         </tr>
                         <tr>
-                            <td colspan="3" class="daily-report-form__text-area"><?php the_field('notes'); ?></td>
+                            <td colspan="4" class="daily-report-form__text-area"><?php the_field('notes'); ?></td>
                         </tr>
                     </table>
 
