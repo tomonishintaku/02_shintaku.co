@@ -247,21 +247,31 @@ require_once('library/functions/breadcrumb.php');
 
 //Display custom field data on the list of custom post
 function add_posts_columns( $columns ) {
+  $columns['work_day'] = '出勤日';
   $columns['start_time'] = '開始時刻';
   $columns['leaving_time'] = '終了時刻';
   $columns['operating_time'] = '稼働時間';
   return $columns;
 }
 function custom_posts_column( $column_name, $post_id ) {
+  if ( $column_name == 'work_day' ) {
+$year = get_the_date('Y');
+$month = get_the_date('n'); 
+$day = get_the_date('j');
+$week = get_the_date('D');
+
+echo $year.'/'.$month.'/'.$day.'('.$week.')';
+
+  }
   if ( $column_name == 'start_time' ) {
     $start_time = get_post_meta( $post_id, 'start_time', true );
     echo ( $start_time ) ? $start_time : '－';
   }
-  if ( $column_name == 'leaving_time' ) {
+  else if ( $column_name == 'leaving_time' ) {
     $leaving_time = get_post_meta( $post_id, 'leaving_time', true );
     echo ( $leaving_time ) ? $leaving_time : '－';
   }
-if ( $column_name == 'operating_time' ) {
+else if ( $column_name == 'operating_time' ) {
   
   $start_time = get_post_meta( $post_id, 'start_time', true );
   $leaving_time = get_post_meta( $post_id, 'leaving_time', true );
@@ -273,6 +283,9 @@ if ( $column_name == 'operating_time' ) {
   
   echo ( $operating_time ) ? $operating_time : '－';
 }  
+  else{
+  
+}
 }
 add_filter( 'manage_daily_report_posts_columns', 'add_posts_columns' );
 add_action( 'manage_daily_report_posts_custom_column', 'custom_posts_column', 10, 2 );  
@@ -280,7 +293,10 @@ add_action( 'manage_daily_report_posts_custom_column', 'custom_posts_column', 10
 function my_admin_style() {
   echo '<style>
 .column-start_time, .column-leaving_time, .column-operating_time{
-  width: 8%;
+  width: 7%;
+}
+.column-work_day{
+  width: 9%;
 }
   </style>'.PHP_EOL;
 }
