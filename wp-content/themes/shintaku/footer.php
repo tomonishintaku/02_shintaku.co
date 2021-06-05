@@ -1,10 +1,12 @@
 <?php //breadcrumb(); ?>
+<div class="anchor-wrap">
 <a href="#top" id="PageTop" class="page-top" ><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
+</div>
 <footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
     <div class="footer__inner">
         <nav class="navigation" role="navigation">
             <div class="row">
-                <div class="col-12 col-lg-9">
+                <div class="col-12 col-lg-12">
                     <?php wp_nav_menu(array(
     					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
     					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
@@ -19,9 +21,11 @@
     					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
 						)); ?>
                 </div>
+                <?php /*
                 <div class="col-12 col-lg-3">
                     <?php include TEMPLATEPATH . '/inc/sns.php'; ?><?php echo do_shortcode( '[bogo]' ); ?>
                 </div>
+                */ ?>
             </div>
         </nav>
         <aside class="footer__biz-info">

@@ -74,7 +74,7 @@
                             <nav class="menu global-nav navigation" role="navigation" itemscope
                                 itemtype="http://schema.org/SiteNavigationElement">
                                 <div class="row">
-                                    <div class="col-12 col-lg-9">
+                                    <div class="col-12 col-lg-12>
                                         <?php wp_nav_menu(array(
 
         					         'container' => false,                           // remove nav container
@@ -108,9 +108,11 @@
                     <?php } ?>               
                                         </aside>
                                     </div>
+                                    <?php /*
                                     <div class="col-12 col-lg-3">
                                         <?php include TEMPLATEPATH . '/inc/sns.php'; ?><?php echo do_shortcode( '[bogo]' ); ?>
                                     </div>
+                                    */ ?>
                                 </div>
                             </nav>
                         </div>
