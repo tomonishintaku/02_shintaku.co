@@ -15,7 +15,7 @@ if ( post_password_required() ) {
 <?php if ( have_comments() ) : ?>
 
 <h3 id="comments-title">
-    <?php comments_number( __( 'コメントはまだありません', 'bonestheme' ), __( 'コメント 1件', 'bonestheme' ), __( 'コメント <span>%</span>件', 'bonestheme' ) );?>
+    <?php comments_number( __( 'コメントはまだありません', 'bonestheme' ), __( 'コメント <span>1</span>件', 'bonestheme' ), __( 'コメント <span>%</span>件', 'bonestheme' ) );?>
 </h3>
 
 <section class="commentlist">
