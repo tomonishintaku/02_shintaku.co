@@ -216,10 +216,9 @@ function add_class_in_scrolling(target) {
 }
 // ADD class when the element showing END
 
-
 // smooth scroll
 $(function() {
-    $('a[href^="#"]').click(function() {
+    $('.anchor-wrap a[href^="#"]').click(function() {
         var speed = 500;
         var href = $(this).attr("href");
         var target = $(href == "#" || href == "" ? 'html' : href);

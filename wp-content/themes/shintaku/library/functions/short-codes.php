@@ -54,6 +54,11 @@ function calendar_check($atts) {
 }
 add_shortcode('calendar_check_ico', 'calendar_check');
 
+function calendar_minus($atts) {
+    return '<a href="'.$atts['url'].'" target="_blank" rel="noopener noreferrer" class="blue text-decoration-none"><i class="blue far fa-calendar-minus"></i><time datetime="'.$atts['date'].'" class="px-2"><small class="inline blue">'.$atts['date'].'</small></time></a>';
+}
+add_shortcode('calendar_minus_ico', 'calendar_minus');
+
 //shortcode for article's featured image 
 function show_post_thumbnail(){
     return get_the_post_thumbnail();

@@ -1,6 +1,6 @@
 <?php //breadcrumb(); ?>
 <div class="anchor-wrap">
-<a href="#top" id="PageTop" class="page-top" ><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
+<a href="#top" id="PageTop" class="page-top" ><i class="far fa-hand-point-up"></i></a>
 </div>
 <footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
     <div class="footer__inner">
@@ -51,23 +51,6 @@ if ('en_US' == $locale ) { ?>
 </div>
 <?php // all js scripts are loaded in library/bones.php ?>
 <?php wp_footer(); ?>
-
-<script>
-    // add top link button
-    $(window).on("scroll", function() {
-    var scrollHeight = $(document).height();
-    var scrollPosition = $(window).height() + $(window).scrollTop();
-    console.log(scrollPosition + ":" + scrollHeight);
-
-    if (scrollPosition >= scrollHeight * 0.9) {
-        $('#PageTop').addClass('is-show');
-    } else {
-        $('#PageTop').removeClass('is-show');
-    }
-});
-    // add top link button END
-</script>
-
 
 </body>
 

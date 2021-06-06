@@ -55,6 +55,21 @@
         gtag('config', 'UA-168564223-1');
         </script>
         <script src="/wp-includes/js/jquery/jquery_stable.js"></script>
+        <script>
+          // add top link button
+          $(window).on("scroll", function() {
+          var scrollHeight = $(document).height();
+          var scrollPosition = $(window).height() + $(window).scrollTop();
+          console.log(scrollPosition + ":" + scrollHeight);
+      
+          if (scrollPosition >= scrollHeight * 0.9) {
+              $('#PageTop').addClass('is-show');
+          } else {
+              $('#PageTop').removeClass('is-show');
+          }
+      });
+          // add top link button END
+      </script>
     </head>
 
     <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage" id="top">
@@ -74,7 +89,7 @@
                             <nav class="menu global-nav navigation" role="navigation" itemscope
                                 itemtype="http://schema.org/SiteNavigationElement">
                                 <div class="row">
-                                    <div class="col-12 col-lg-12>
+                                    <div class="col-12 col-lg-12">
                                         <?php wp_nav_menu(array(
 
         					         'container' => false,                           // remove nav container
