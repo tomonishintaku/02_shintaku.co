@@ -10,12 +10,12 @@ add_shortcode('Business_hours', 'Biz_hours');
 
 
 function JA_fee($atts) {
-    return '3,000<span class="currency">円</span><span class="tax">(税込)</span>';
+    return '4,000<span class="currency">円</span><span class="tax">(税込)</span>';
 }
 add_shortcode('JA_hourly_fee', 'JA_fee');
 
 function JA_fee_sp($atts) {
-    return '3,000<span class="currency">円</span><span class="tax">(税込)</span>';
+    return '4,000<span class="currency">円</span><span class="tax">(税込)</span>';
 }
 add_shortcode('JA_hourly_fee_sp', 'JA_fee_sp');
 
@@ -50,7 +50,7 @@ function company_name() {
 add_shortcode('c_name', 'company_name');
 
 function calendar_check($atts) {
-    return '<a href="'.$atts['url'].'" target="_blank" rel="noopener noreferrer" class="red text-decoration-none"><i class="red far fa-calendar-check"></i><time datetime="'.$atts['date'].'" class="px-2"><small class="inline red">'.$atts['date'].'</small></time></a>';
+    return '<a href="'.$atts['url'].'" target="_blank" rel="noopener noreferrer" class="general-text-color text-decoration-none"><i class="far fa-calendar-check"></i><time datetime="'.$atts['date'].'" class="px-2"><small class="inline">'.$atts['date'].'</small></time></a>';
 }
 add_shortcode('calendar_check_ico', 'calendar_check');
 
