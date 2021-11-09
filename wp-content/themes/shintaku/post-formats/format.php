@@ -39,7 +39,7 @@ if ('en_US' == $locale ) { ?>
             <?php } else { ?>
 
             <?php printf( __( '<time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> <span class="d-block d-md-inline">by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-            (現代美術家/WEBデザイナー)</span>
+            (代表社員)</span>
 
             <?php } ?>
 
