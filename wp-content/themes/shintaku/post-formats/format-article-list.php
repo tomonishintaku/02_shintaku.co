@@ -1,4 +1,22 @@
-            <?php include TEMPLATEPATH . '/inc/blogmenu.php'; ?>
+<!--No Category Navigation area-->
+
+<!-- /*USE for {index.php} and {archive.php}*/ -->
+
+<section class="rotate-line">
+    <div class="rotate-line__bg">
+        <div class="rotate-line__title">
+            <h1 class="page-title" itemprop="headline">ブログ
+            </h1>
+        </div>
+    </div>
+</section>
+<nav class="blog-category-nav">
+</nav>
+
+<?php //Remove category navigation
+//include TEMPLATEPATH . '/inc/blogmenu.php'; ?>
+
+<!--No Category Navigation area END-->
 
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
