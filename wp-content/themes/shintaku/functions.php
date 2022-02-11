@@ -302,4 +302,7 @@ function my_admin_style() {
 }
 add_action('admin_print_styles', 'my_admin_style');
 
+/** Undisplay PHP error due to update for PHP version */
+error_reporting(0);
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
